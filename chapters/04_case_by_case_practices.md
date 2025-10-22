@@ -29,9 +29,6 @@ suggestions about how to create workflow diagrams.
 [datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/#workflow-diagrams
 
 
-### Use Issue Tracking
-
-
 ### Make a Data Management Plan
 
 :::{seealso}
