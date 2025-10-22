@@ -95,14 +95,6 @@ for you---think of them as an external hard drive for your brain. Organize the
 notes in whatever way works best for you. One thing that can be helpful is to
 include the date whenever you add to the notes.
 
-:::{tip}
-Reference management software like [Zotero][] are helpful for organizing and
-searching references.
-:::
-
-[Zotero]: https://www.zotero.org/
-
-
 Whether you take notes on paper or digitally, the important thing is that you
 take notes. Paper notes are convenient for diagramming and doodling, and can be
 digitized after the fact to share with the team. Digital notes are convenient
