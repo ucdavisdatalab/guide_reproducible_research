@@ -86,7 +86,7 @@ tables, consider using a {ref}`database<databases>` to store the data.
 
 
 (keep-running-notes)=
-### Keep Running Notes
+### Keep a Research Log
 
 > You're part of a lab working on a research project that began three years
 > ago. When you were introducing a new graduate student to the project this
