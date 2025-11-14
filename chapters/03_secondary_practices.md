@@ -73,43 +73,6 @@ they're convenient for data entry.
 :::
 
 
-(choose-a-license)=
-### Choose a License
-
-A **license** is a legal document that grants others permission to do, use, or
-possess something. If you plan to make your project widely or publicly
-available, it's a good idea to select a license so that you can retain some
-control over how it's used and protect yourself against certain kinds of legal
-claims.
-
-Different kinds of licenses are appropriate for different kinds of content.
-There are licenses designed specifically for software and code, as well as
-licenses for other media.
-
-An **open-source** license is one that mandates access to or distribution of
-original sources for any derivative products. For software, this means that the
-original source code must be accessible. Open-source licenses ensure that
-software can continue to be maintained and extended even if the original
-developers cease development. They also benefit transparency and collaboration,
-since anyone with the software can inspect and modify the code.
-
-DataLab uses open-source licenses for a majority of our projects, whether they
-consist of software or other materials (like this reader).
-
-:::{seealso}
-For licensing software, see [choosealicense.com][gh-cal] (maintained by GitHub)
-or the Open Source Initiative's [FAQ answer about which license to
-choose][osi-cal].
-
-For licensing data, writing, art, or other materials, see Creative Commons'
-[Choose a License page][cc-cal].
-:::
-
-[gh-cal]: https://choosealicense.com/
-[osi-cal]: https://opensource.org/faq/#which-license
-[cc-cal]: https://creativecommons.org/choose/
-
-
 Artifact Preservation
 ---------------------
 
@@ -174,8 +137,10 @@ for free to publish their data.
 [Dryad]: https://datadryad.org/stash
 
 To satisfy the "I" standard, {ref}`use-file-formats-effectively`. To satisfy
-the "R" standard, a good start is to {ref}`keep-running-notes`,
-{ref}`write-readmes` and {ref}`choose-a-license`.
+the "R" standard, a good start is to {ref}`keep-running-notes` and
+{ref}`write-readmes`.
+
+<!-- FIXME: this used to refer to choose-a-license too -->
 
 :::{seealso}
 See UC Davis Library's [Publish, Share, and Preserve Your Data
