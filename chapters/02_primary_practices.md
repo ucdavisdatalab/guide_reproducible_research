@@ -86,54 +86,120 @@ tables, consider using a {ref}`database<databases>` to store the data.
 
 
 (keep-running-notes)=
-### Keep Running Notes
+### Keep a Research Log
+
+> You're part of a lab working on a research project that began three years
+> ago. When you were introducing a new graduate student to the project this
+> morning, they asked whether the lab considered investigating treatment Z,
+> because they've seen lots of excitement about it in recent literature. You
+> remember mentioning treatment Z to the principal investigator a few years ago
+> and eventually deciding not to pursue it, but can't remember when or why you
+> made that decision. Now you're wondering whether your decision was too hasty
+> and reviewers will question why treatment Z wasn't considered. If only you
+> had detailed notes to refresh your memory as to why treatment Z isn't
+> relevant.
 
 Set up one or more running notes documents when you set up your project. Use
 the notes to keep track of things you've tried, things you want to try,
-relevant references, and more. If you're working alone, these notes are just
-for you---think of them as an external hard drive for your brain. Organize the
-notes in whatever way works best for you. One thing that can be helpful is to
-include the date whenever you add to the notes.
+decisions, relevant references, and more. If you have collaborators, take notes
+about your meetings. Record anything there's a chance you'll want to remember
+later: results (positive or negative), new ideas, new leads, decisions, changes
+of plan, action items, and scheduling details.
 
-:::{tip}
-Reference management software like [Zotero][] are helpful for organizing and
-searching references.
+<!--
+Whether you take notes on paper or digitally, the important thing is that you
+take notes.
+-->
+
+When you start a notes document, make sure to consider whether you'll need to
+include figures, code, or other media, and choose an appropriate format. Paper
+notes are convenient for diagramming and doodling, and can be digitized after
+the fact to share with the team. Digital notes are convenient for collaborating
+with team members who aren't physically present, and can be shared as they are
+being written.
+
+:::{admonition} For Collaboration
+:class: important
+Put some thought into what note-taking methods work best for everyone engaged
+with the project. It's good to share notes with the entire team, so that
+everyone can contribute and misunderstandings can be corrected quickly, unless
+your research topic or data require restricting access.
+
+Take notes during meetings. Some people like to take notes during meetings,
+while others prefer to take summary notes immediately after, so that they can
+be fully engaged. Collaborating on notes or rotating who takes notes in each
+meeting can help lessen the burden, but having a designated note-taker can help
+ensure consistency.
 :::
 
-[Zotero]: https://www.zotero.org/
+One way to keep your notes digitally is to use **electronic lab notebook**
+(ELN) software, which provide a searchable interface for entering notes. Most
+ELNs automatically capture metadata about notes, such as the date and time they
+were written, and can also store experimental data. Some also have other
+features, such as file storage and sharing, version control, and publishing
+tools. Depending on your discipline and research topic, you might be expected
+or required to use a specific ELN system.
+
+:::{seealso}
+See the [Electronic Lab Notebooks][ELN] section of the UC Davis Library's
+Research Data Management guide to learn more about ELNs.
+
+[ELN]: https://guides.library.ucdavis.edu/data-management/electronic-lab-notebooks
+:::
+
+Another way to keep notes digitally is to use **issue tracking** software.
+Issue tracking software were originally created to keep track of and help
+organize work to be done, or "issues", in (large) software development
+projects. However, most work equally well for keeping track of work in
+computational research projects. Services such as [GitHub][], [GitLab][], and
+[Tangled][] provide issue tracking.
+
+[Tangled]: https://tangled.org/
+
+:::{seealso}
+See the [Working with GitHub][issues] section of DataLab's Git for Teams
+workshop reader to learn more about issue tracking.
+
+[issues]: https://ucdavisdatalab.github.io/workshop_reproducible_research/chapters/git-for-teams/02_working-with-github.html
+:::
 
 
-Whether you take notes on paper or digitally, the important thing is that you
-take notes. Paper notes are convenient for diagramming and doodling, and can be
-digitized after the fact to share with the team. Digital notes are convenient
-for collaborating with team members who aren't physically present, and can be
-shared as they are being written. When you start a notes document, make sure to
-consider whether you'll need to include figures, code, or other media, and
-choose an appropriate format. At DataLab, we frequently use paper notes, Google
-Docs, and [Markdown][].
-
-[Markdown]: https://commonmark.org/
 
 
-#### For Collaborations
+(document-every-experiment)=
+#### Document Every Experiment
 
-If you have collaborators, take notes about your meetings. Record anything
-there's a chance you'll want to remember later: results (positive or negative),
-new ideas, new leads, decisions, changes of plan, action items, and scheduling
-details.
+:::{note}
+An "experiment" doesn't necessarily have to be an experiment done in a lab.
+Doing an experiment could mean running a simulation, testing a model, or
+something else.
+:::
 
-Consider what note-taking method works best for everyone. Some people like to
-take notes during meetings, while others prefer to take summary notes
-immediately after, so that they can be fully engaged. Collaborating on notes or
-rotating who takes notes in each meeting can help lessen the burden, but having
-a designated note-taker can help ensure consistency.
+In your notes, keep a record of every experiment that you do. Document
+parameters, the results, and anything else you think is relevant for:
 
-It's usually a good idea to share the notes with everyone who attended the
-meeting, so that misunderstandings can be corrected quickly. You can do this by
-having a shared notes document or by sending out the notes after each meeting.
-If you use a shared notes document, make sure it's in a format everyone can
-access and edit; some collaborators may not be comfortable working with
-Markdown or other plain-text formats.
+* Repeating experiments in the future. Research projects are often
+  iterative---you may need to repeat an experiment to make adjustments to a few
+  parameters or because you discovered a bug in your code.
+
+* Comparing across experiments. Think of the documentation as a high-level
+  overview of your project. Use it to get a sense of which experiments had
+  promising results, which didn't, and which you might want to try next.
+
+* Avoiding redundant work. By keeping track of what's already been done, you
+  can avoid accidentally and unnecessarily repeating an experiment that you or
+  your collaborators have already done.
+
+Get in the habit of recording experiments as soon as you start to plan them,
+and recording the results as soon as they finish. Assign a unique name or
+number to each experiment so that you can reference specific experiments in
+your other notes and files. If you have collaborators, make sure they can
+access the documentation and understand how to use it.
+
+:::{tip}
+ELNs or spreadsheets are often a good format for this kind of documentation,
+since they're convenient for data entry.
+:::
 
 
 (write-readmes)=

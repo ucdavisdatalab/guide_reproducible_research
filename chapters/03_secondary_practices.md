@@ -37,42 +37,6 @@ about how to document data.
 [datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
 
 
-(document-every-experiment)=
-### Document Every Experiment
-
-:::{note}
-An "experiment" doesn't necessarily have to be an experiment done in a lab.
-Doing an experiment could mean running a simulation, testing a model, or
-something else.
-:::
-
-Keep a record of every experiment that you do. Document parameters, the
-results, and anything else you think is relevant for:
-
-* Repeating experiments in the future. Research projects are often
-  iterative---you may need to repeat an experiment to make adjustments to a few
-  parameters or because you discovered a bug in your code.
-
-* Comparing across experiments. Think of the documentation as a high-level
-  overview of your project. Use it to get a sense of which experiments had
-  promising results, which didn't, and which you might want to try next.
-
-* Avoiding redundant work. By keeping track of what's already been done, you
-  can avoid accidentally and unnecessarily repeating an experiment that you or
-  your collaborators have already done.
-
-Get in the habit of recording experiments as soon as you start to plan them,
-and recording the results as soon as they finish. Assign a unique name or
-number to each experiment so that you can reference specific experiments in
-your other notes and files. If you have collaborators, make sure they can
-access the documentation and understand how to use it.
-
-:::{tip}
-Spreadsheets are often a good format for this kind of documentation, since
-they're convenient for data entry.
-:::
-
-
 (choose-a-license)=
 ### Choose a License
 
