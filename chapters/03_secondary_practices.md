@@ -12,31 +12,6 @@ relevant, and we recommend you do too.
 Documentation
 -------------
 
-### Document the Data
-
-In a perfect world, every data set would come with detailed documentation or
-**metadata** about how the data were collected, what assumptions were made,
-what biases might be present, any ethical concerns, the overall structure, what
-each observation means, what each feature means, and more. Good data
-documentation guides researchers towards appropriate, responsible use of the
-data.
-
-Collecting data as part of a project gives you and your collaborators control
-over how the data are documented, so you can ensure there are no gaps. If your
-project uses data collected earlier or by someone else, it's a good practice to
-fill gaps in the existing documentation with your own. Thorough documentation
-isn't just beneficial to other researchers, it's also beneficial to future
-you---small details you notice and document about features could be important
-later in the project.
-
-:::{seealso}
-See DataLab's [README, Write Me! workshop reader][datalab-readme] for more
-about how to document data.
-:::
-
-[datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
-
-
 (document-every-experiment)=
 ### Document Every Experiment
 
