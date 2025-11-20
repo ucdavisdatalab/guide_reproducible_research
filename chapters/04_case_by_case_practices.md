@@ -19,16 +19,6 @@ chapters and want to learn even more.
 Documentation
 -------------
 
-### Make Workflow Diagrams
-
-:::{seealso}
-See DataLab's [README, Write Me! workshop reader][datalab-readme] for
-suggestions about how to create workflow diagrams.
-:::
-
-[datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/#workflow-diagrams
-
-
 ### Use Issue Tracking
 
 
