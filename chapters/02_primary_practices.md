@@ -529,39 +529,107 @@ instance, it's usually a helpful to have separate naming conventions for files
 and for code.
 
 
+For more practical examples, we can consider this example project:
 #### File and Directory Names
 
 Choose filenames that are human-readable, machine-readable, and have a
-meaningful order when sorted alphabetically. Many data scientists recommend the
-following rules for naming files:
+meaningful order when sorted alphabetically. The UC Davis Library [Research Data 
+Managment Guide][rdm-guide-filenaming] has a good overview of the basic principles to consider when naming
+files and directories.
 
-+ Make the name descriptive (can someone guess the contents from the name?)
-+ Avoid spaces, punctuation, accented characters, and other special characters
-+ Use lowercase unless there is a compelling reason for uppercase
-+ Use underscores `_` to separate fields (distinct pieces of information, such
-  as dates and descriptions)
-+ Use dashes `-` to separate words within fields
-+ Write dates and times in [ISO 8601 format][iso-8601], which orders units from
-  largest to smallest (for example, year-month-day as in `2023-09-20`; also see
-  {numref}`Figure %s<xkcd-iso-8601>`)
-+ Pad numbers with leading zeros to the width of the largest number you
-  anticipate
+[rdm-guide-filenaming]: https://guides.library.ucdavis.edu/data-management/file-naming
 
-[iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-
-At DataLab, we follow these rules for almost all of our projects, with some
-simplifying exceptions around how we use underscores and dashes.
-
-```{figure} /images/xkcd_iso_8601.png
----
-name: xkcd-iso-8601
-alt:
----
-"ISO 8601" from ["xkcd"][xkcd] by Randall Munroe ([license][xkcd-license]).
+For more practical examples, we can consider this example project:
+```{image} /images/AmandaUnorganizedProject.jpg
+:alt: A diagram showing an unorganized directory structure for Amanda's Research Project.
+:width: 600px
+:align: center
 ```
 
-[xkcd]: https://xkcd.com/
-[xkcd-license]: https://xkcd.com/license.html
+```{dropdown} Text version of directory structure
+* **Amanda's Research Project/**
+    * **observations/**
+        * 20121103_ra179.7dec12.1_g.fits
+        * 20121103_ra179.7dec12.1_r.fits
+        * 20121103_ra179.7dec12.1_spec.fits
+        * 20121104_ra180.0dec12.1_g.fits
+        * 20121104_ra180.0dec12.1_r.fits
+        * 20121104_ra180.0dec12.1_spec.fits
+        * galaxy1_g_crop.fits
+        * galaxy1_r_crop.fits
+        * galaxy1_spec_restframe.fits
+        * galaxy2_g_crop.fits
+        * galaxy2_r_crop.fits
+        * galaxy2_spec_restframe.fits
+    * 1303.7762.pdf
+    * 2dfft.py
+    * BHmass.py
+    * E&M class notes
+    * mass & pitch angle scatter.png
+    * paper on mass estimates.pdf
+    * redshift(z)histogram
+    * results
+    * spiral paper.pdf
+```
+
+At a glance it is very difficult to see what is going on in this project.
+There many of the file names are unclearly named (for instance "spiral paper.pdf"). 
+It makes it difficult for anyone examining the project to understand what is going on.
+
+
+Here is a cleaned up version of the project:
+```{image} /images/AmandaCorrectedStructure.jpg
+:alt: A diagram showing the directory structure for the BlackHoleMass project.
+:width: 600px
+:align: center
+```
+
+```{dropdown} Text version of directory structure
+* **BlackHoleMass_SpiralGalaxy/**
+  * **analysis/**
+    * **plots/**
+      * mass_pitchangle_scatter.png
+      * redshift_histogram.png
+    * 2dfft.py
+    * BHmass.py
+    * results.csv
+    * README.txt
+  * **data/**
+    * **processed/**
+      * galaxy1_g_crop.fits
+      * galaxy1_r_crop.fits
+      * galaxy1_spec_restframe.fits
+      * galaxy2_g_crop.fits
+      * galaxy2_r_crop.fits
+      * galaxy2_spec_restframe.fits
+      * README.txt
+      * README_methods.txt
+    * **raw/**
+      * 20121103_ra179.7dec12.1_g.fits
+      * 20121103_ra179.7dec12.1_r.fits
+      * 20121103_ra179.7dec12.1_spec.fits
+      * 20121104_ra180.0dec12.1_g.fits
+      * 20121104_ra180.0dec12.1_r.fits
+      * 20121104_ra180.0dec12.1_spec.fits
+      * README.txt
+  * **literature/**
+    * BHmass_pitch.bib
+    * KormandyHo2013.pdf
+    * Lusso2010.pdf
+    * Vertergaard2006.pdf
+  * README.txt
+```
+
+We can see a number of changes and choices the project author made to the project.
+The folder structure helps immensely as do the inclusion of README.txt files that would contain additional context.
+However they also changed the file names to be more machine readable ("mass & pitch angle scatter.png" to "mass_pitchangle_scatter.png"
+and added names that explain more about what the file is ("spiral paper.pdf" to "KormandyHo2013.pdf").
+Even without a background in astronomical physics, it is much easier to understand what all of these file
+are and their role in the overall project.
+
+Adapted from [Schilling, Amanda, et al. “Managing Research Files.” OSF, 7 Feb. 2025. Web.][ou-osf-files]
+
+[ou-osf-files]: https://osf.io/ukq6b/overview
 
 :::{seealso}
 The rules in this section are based on Jenny Bryan's [How to Name Files
