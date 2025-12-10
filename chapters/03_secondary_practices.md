@@ -264,7 +264,11 @@ reader][datalab-r-clean] to learn how to clean data in R.
 (use-file-formats-effectively)=
 ### Use File Formats Effectively
 
-Store data sets in file formats that:
+For any dataset, there are many different ways to store that data. For tabular
+data (rows and columns) alone, there are at least seven different file formats.
+So how do you choose?
+
+It is best to store data sets in file formats that:
 
 * Are accessible to you, your collaborators, and other researchers across a
   variety of software
@@ -290,9 +294,64 @@ Arrow is faster to read and write and a good choice for short-term storage.
 Parquet is a better choice for long-term storage because the standard is more
 stable.
 
+
+
 [arrow]: https://arrow.apache.org/
 [feather]: https://arrow.apache.org/docs/python/feather.html
 [parquet]: https://parquet.apache.org/
+
+(prefer-open-standard-file-formats)=
+#### Prefer Open Standard File Formats
+
+For any file format, there is a defined standard for how any file of that format
+should be structured on a computer. Open standard file formats have these
+standards openly published and updated when they changed. They can be 
+implementented by anyone in any application or software without paying licensing
+fees. Additionally, they are not encumbered by copyrights, patents
+or other legal restrictions to their use.
+
+Standards for proprietary file formats are not publicly available and can be
+changed unilaterally by the file format owner at any time. They may require
+expensive software to read or write files of those formats, and if the company
+stops maintaining the software, data in a proprietary file format may become
+completely inaccessible.
+
+Using open file formats means your data will be accessible to the largest
+number of people, for the longest period of time. The following are a list of 
+open standard file formats by data type. It is not exhaustive but is a place to
+start. 
+
+
+| Data Structure            | File Formats                                |
+|---------------------------|---------------------------------------------|
+|**Tabular Data**           | Plain-text (.csv, .tsv, .txt), Apache Arrow (.feather), Apache Parquet (.parquet), OpenOffice Calc (.ods)|
+|**Nested/Tree Data**       | JSON, XML                                   |
+|**Geospatial Data**        | GeoJSON (vector), GeoTIFF (raster), NetCDF (raster), Hierarchical Data Format (HDF, raster), OGC GeoPackge (both)|
+|**Network or Graph**       | GraphML, Graph Exchange XML Format (GEXF), Graph Modeling Language (GML), Turtle/RDF|
+|**Still Images**           | PNG (raster), TIFF (raster), SVG (vector)   |
+|**Audio**                  | WAVE, AIFF, MP3, MXF                        |
+|**Moving Images**          | MOV, MP4, AVI                               |
+|**Databases**              | Postgres, SQLite, DuckDB, MongoDB, Neo4j, Apache CouchDB |
+
+
+:::{admonition} A Word on Industry Standards  
+:class: note
+There are some fields that are so heavily dominated
+by a particular proprietary software that the file format associated with that
+software becomes the de facto file format for the entire field. In this case,
+using the proprietary format will make data more accessible than using a niche
+open standard format. However, you should back up your data in a non-proprietary
+format in case you lose access to the proprietary software.
+:::
+
+:::{seealso}
+For more information about file formats for long term data storage formats, see
+the Library of Congress's [Recommended Formats Statement][rsf] and their webpage
+on the [Sustainability of Digital Formats][sdf].
+:::
+
+[rsf]: https://www.loc.gov/preservation/resources/rfs/TOC.html
+[sdf]: https://www.loc.gov/preservation/digital/formats/index.shtml
 
 
 (databases)=
