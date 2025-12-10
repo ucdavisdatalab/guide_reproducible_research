@@ -140,17 +140,8 @@ groups:
 
 1. **Primary practices** are the ones you should always adopt for every
    project. For example, you should always keep notes (documentation).
-2. **Secondary practices** are the ones that are generally a good idea, but
-   aren't relevant to every project. For example, if your project includes a
-   lot of Python code, you should use an environment manager, but if your
-   project doesn't include any code, you might not need one.
-3. **Case-by-case practices** are the ones that have a high cost-to-benefit
-   ratio, so you should consider the details of your project carefully before
-   adopting them. For certain kinds of projects, they can be very important,
-   but for others, not so much. For example, turning your code into a
-   redistributable package is a great way to share it with others, but there's
-   a cost in additional effort and technical complexity. It might not be worth
-   it unless you expect to have many users.
+2. **Secondary practices** are generally a good idea, but may require more technical skills and/or time to implement. You should consider the details of your project carefully before adopting them. 
+3. **Case-by-case practices** are the ones that are generally a good idea, but aren't relevant to every project. For example, if your project includes a lot of Python code it is very important for you to use an environment manager, but if your project doesn't include any code, you might not need one. Some of these recommendations may also require more technical skills and/or time to implement. For example, turning your code into a redistributable package is a great way to share it with others, but there's a cost in additional effort and technical complexity. In this case it might not be worth making a package unless you expect to have many users.
 
 Each of the next three chapters addresses one of these groups. The practices
 were sorted into these groups based on the author's and DataLab's research

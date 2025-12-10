@@ -43,60 +43,53 @@ and how to actually use the included artifacts (data, code, figures, etc.).
 
 ### Start with the Scope
 
-At the beginning of a project, write a **scope document** or research proposal
-to lay out the research question and goals. The funding mechanisms in your
-discipline may require this, but even if they don't, it's a excellent way to
-clarify what you're trying to achieve and can help you identify potential
-problems or gaps in reasoning early. The scope document will help you stay
-focused and organized as you work. Later on, it can help you and your
-collaborators understand the history of the project.
+At the beginning of a project, write a **scoping document** or research proposal describing your research question and the goals. The process of writing this document is an excellent way to
+clarify what you're trying to achieve, ensure alignment among your collaborators, and identify potential problems or gaps early when they can be more easily addressed. Depending on your specific funding mechanism and discipline, a scoping document may also be required before you begin collecting data. Later, once you have your data, this document can help you and your
+collaborators explain the history of the project and the original reasoning for how you collected the data, your overall research design, and specific project goals.
 
-This is also a good time to establish a timeline with milestones you'd like to
-reach. The milestones should be specific, measurable, and concrete, so that you
+Your scoping document can also be a powerful project management tool, helping you stay focused and organized as you work. It's a good idea to establish a timeline in your document that includes the milestones you'd like to
+accomplish. The milestones should be specific, measurable, and concrete, so that you
 can easily tell when you've completed one. Be generous with yourself and your
-collaborators: it can be hard to predict the directions research will take you,
+collaborators; it can be hard to predict the directions research will take you,
 and tasks that seem short (especially programming tasks) can end up taking
-longer than expected. It's almost always better to finish things earlier than
-planned rather than later.
+longer than expected. It's almost always better to finish a deliverable earlier rather than having to pivot to accommodate delays.
 
-For projects which involve data analysis, investigate potential data sources.
-Sometimes a data set can sound promising, but lack the features you need, have
-too few observations, or have too much missing data. If you'll collect the data
-yourself, make a plan for data collection. You should have a clear picture of
-which data sets will be available at the analysis stage and how they will be
-structured. Pay particular attention to whether there are any biases, ethical
-concerns, privacy concerns, licensing fees, or other issues.
+For projects that involve data analysis, incorporate into your scoping process necessary time to investigate your planned data sources.
+Sometimes a data set that seems promising can lack the exact features you need, have
+too few observations, have too much missing data, or otherwise be untenable for your planned research. If you are collecting the data
+yourself, make a plan for how you will collect the data. Describe what data sets will be available at the analysis stage, and how they will be recorded and need to be structured for analysis. Failure to do this may result in the need for extensive data restructuring or, in the worst case, unusable data.
+
+During the process of writing your scoping document, consider whether there are any biases, ethical concerns, privacy concerns, licensing fees, or other issues that may influence your research. Include these, and how you will address them, in your research plan.
 
 :::{tip}
-If you use spreadsheet software like Microsoft Excel or Google Sheets to
-collect or analyze data, check out DataLab's [Excelling with Excel workshop
+When deciding how you will structure your data, it's helpful to review "tidy data" principles, especially if you are recording your data in spreadsheet software like Microsoft Excel or Google Sheets. Check out DataLab's [Excelling with Excel workshop
 reader][datalab-excel] to learn how to keep your data neat and tidy.
 
-To level-up your reproducibility, consider using a programming language like R
-or Python to analyze data instead. Analyses you carry out in a spreadsheet can
-be difficult for others to reproduce unless you meticulously document every
-step. When you write code, anyone you share that code with can repeat your
-steps.
+To level-up your reproducibility, consider using an open source programming language like R
+or Python to analyze your data. Analyses you carry out in a spreadsheet or graphical user interface (GUI) based program that involes a lot of pointing and clicking to set options for the analysis can
+be difficult for others to reproduce even when you meticulously document every
+step. The advantage of programming is that anyone you share your analysis code with should be able to exactly repeat the steps of your analysis.
 
-If you need to store a lot of data, especially many different closely related
-tables, consider using a {ref}`database<databases>` to store the data.
+If you need to store a lot of data, consider using a {ref}`database<databases>`. This is especially helpful when your data is stored in many different closely related
+tables, or your datasheet is really wide with numerous columns containing repeated information. You can learn more about databases and data storage technologies in DataLab's [Overview of Databases and Data Storage workshop reader][datalab-database], and how to work with databases using a Structured Query Language (SQL) in DataLab's [Introduction to SQL for Querying Databases workshop reader][datalab-sql].
 :::
 
 [datalab-excel]: https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/
-
+[datalab-database]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
+[datalab-sql]:https://ucdavisdatalab.github.io/workshop_intro_to_sql/
 
 (keep-running-notes)=
 ### Keep Running Notes
 
 Set up one or more running notes documents when you set up your project. Use
-the notes to keep track of things you've tried, things you want to try,
+the notes to keep track of decisions you made, things you've tried, things you want to try,
 relevant references, and more. If you're working alone, these notes are just
-for you---think of them as an external hard drive for your brain. Organize the
+for you- and you can think of them as an external hard drive for your brain. Organize your
 notes in whatever way works best for you. One thing that can be helpful is to
-include the date whenever you add to the notes.
+include the date whenever you add to the notes so you can trace when different decisions and actions occurred during your project's hisory. These notes will be helpful when you are producing your final report, manuscript, or other research product.
 
 :::{tip}
-Reference management software like [Zotero][] are helpful for organizing and
+Reference management software, such as [Zotero][], are helpful for organizing and
 searching references.
 :::
 
@@ -109,85 +102,80 @@ digitized after the fact to share with the team. Digital notes are convenient
 for collaborating with team members who aren't physically present, and can be
 shared as they are being written. When you start a notes document, make sure to
 consider whether you'll need to include figures, code, or other media, and
-choose an appropriate format. At DataLab, we frequently use paper notes, Google
-Docs, and [Markdown][].
+choose an appropriate format. At DataLab, we frequently use a combination of paper notes, Google Docs, GitHub issues or wiki, and/or [Markdown][].
 
 [Markdown]: https://commonmark.org/
 
 
-#### For Collaborations
+#### For Collaborative Projects
 
-If you have collaborators, take notes about your meetings. Record anything
-there's a chance you'll want to remember later: results (positive or negative),
-new ideas, new leads, decisions, changes of plan, action items, and scheduling
-details.
+If you have collaborators, take notes during your meetings. Record everything you might want to remember later. This may include results (positive or negative),
+new ideas, new leads, decisions, changes in your research plan, action items (and who is responsbile for them), and scheduling details.
 
 Consider what note-taking method works best for everyone. Some people like to
 take notes during meetings, while others prefer to take summary notes
 immediately after, so that they can be fully engaged. Collaborating on notes or
-rotating who takes notes in each meeting can help lessen the burden, but having
-a designated note-taker can help ensure consistency.
+rotating who takes notes in each meeting can help lessen the burden, while having
+a designated note-taker can help ensure consistency. At DataLab we always have one primary shared digital notes document per project that we live edit during project meetings, and keep up to date in between meetings by adding pertinent information from our personal notes to the next meeting agenda, as needed.
 
-It's usually a good idea to share the notes with everyone who attended the
+It's usually a good idea to share the notes with everyone working directly on the project who attended the
 meeting, so that misunderstandings can be corrected quickly. You can do this by
 having a shared notes document or by sending out the notes after each meeting.
 If you use a shared notes document, make sure it's in a format everyone can
-access and edit; some collaborators may not be comfortable working with
-Markdown or other plain-text formats.
-
+easily access and edit. For one project you might all be comfortable working with Markdown or other plain-text formats, while other research teams might find a text processor like Google Docs to be an easier solution.
 
 (write-readmes)=
 ### Write READMEs
 
 :::{margin}
 ```{note}
-A **directory** or folder is a container for files (and other directories) on a
-computer's file system. It can be helpful to think of directories like folders
-in a filing cabinet.
+A **directory** is a container for the files on your computer. It can be helpful to think of directories like the folders in a filing cabinet. Keeping your file system organized is important because it makes finding and accessing a specific file a lot easier, and enables you to more easily backup and share your work on a project. A directory can have multiple directories nested within it, which further helps keep the different files, such as your documents and datasets, organized. For example, your "research project" directory may contain "documentation", "data", and "code" directories that each contain the relative files for your project. For more tips about organizing your digigtal files, see the [UC Davis Library Research Data Management Guide on Directory Structures][libguide-directory]
 ```
 :::
 
-A **README** is a document that introduces and explains a project or directory
-within a project. READMEs should generally be plain-text (`.txt`) or Markdown
-(`.md`) files, because these are non-proprietary formats accessible to anyone
-with a text editor. READMEs help people---including future you---find and use
+[libguide-directory]: https://guides.library.ucdavis.edu/data-management/directories
+
+A **README** is one of the most important documents in your research project. The README introduces and explains a project, or the contents of a specific directory
+within a project. READMEs should generally be pin a lain-text (`.txt`) or Markdown
+(`.md`) file format because these are non-proprietary formats meaning they are accessible to anyone
+with a text editor regardless of their operating system and environment. READMEs help people---including future you---discover, understand, and use
 your project.
 
 ```{tip}
 Each time you start a new project, create a new directory for the project. Use
 this **project directory** to store all files related to the project. This
 directory is sometimes also called the **top-level** directory for the project,
-since all files for the project exist beneath it.
+since all other directories and files for the project exist beneath it.
 
 {numref}`establish-directory-structure` elaborates on this idea.
 ```
 
-A project should always have a README in the top-level directory to serve as an
-introduction. The top-level README will often be the first thing someone new to
+A project should always have a README in the top-level directory that serves as an
+introduction to the entire research project. This top-level README will often be the first thing someone new to
 the project sees. At a minimum, the top-level README should contain:
 
 * The project title
 * A brief description of the project
-* A list of the contributors and their affiliations
+* A list of the project contributors and their affiliations
 * A primary contact (typically a name and email address)
-* A list of links to other project resources, including data sets and papers,
-  which are stored separately
 * A {ref}`manifest that describes the files and directories<file-manifests>`
+* A list of links to any other project resources, including data sets and papers,
+  that are stored or accessed separately
 
 For projects with data or code, the top-level README should also contain
-instructions for installation and use (more about this in {numref}`workflows`).
+instructions for relevant software installation and code use. To learn more about this see {numref}`workflows`).
 
 :::{margin}
 ```{note}
-A directory structure is **shallow** if there are not many sub-directories.
+A directory structure is **shallow** if there are not many sub-directories. 
 ```
 :::
 
 A top-level README is usually sufficient documentation for projects with a
-shallow directory structure and where methodology is published elsewhere (such
-as journal articles or technical reports). For projects with a deep directory
+shallow directory structure, and where the methodology is published elsewhere (such
+as in linkable journal articles or technical reports). For projects with a deep directory
 structure, additional READMEs in important directories can be helpful for
-understanding where files are. For projects with technical details that are not
+navigating their contents. For projects with technical details that are not
 explained elsewhere, it's a good idea to provide additional documentation in
 the form of READMEs or other files.
 
@@ -202,18 +190,16 @@ about how to write READMEs.
 #### File Manifests
 
 A **file manifest** is a description of the files and directories in a project.
-For intuition, think of a shipping manifest on a box sent to you in the mail. A
+This list is analogous to the shipping manifest on a box your receive in the mail. Just as the shipping manifest lists all the items in the box, the file manifest lists all files in a project directory. A
 file manifest serves two important purposes:
 
 1. It describes which files and directories are supposed to be included with
    the project. If you, a collaborator, or an outside researcher thinks they
    might be missing a file, consulting the file manifest is one way they can
-   check.
+   verify this.
 2. It documents the purpose of each directory (and often, each file).
 
-A good file manifest lists files and directories in alphabetical order, with
-the exception that sometimes listing all of the directories first is clearer.
-A manifest should also show the directory hierarchy through indentation,
+A good file manifest will list the directories in alphabetical order, followed by all files in alphabetical order. A manifest should also show the directory hierarchy through indentation,
 symbols, or both. Here's an example of a manifest from a DataLab project:
 
 ```
@@ -226,8 +212,7 @@ tests/          Scripts for testing workflows, examining outputs, etc.
 toy_data/       Very (very!) small pieces of data for dev testing
 ```
 
-If a directory contains many files or subdirectories, consider whether it's
-clearer to write a separate manifest specifically for that directory.
+If a directory contains many files or subdirectories, you might consider writing a separate file manifest specifically for that directory.
 
 
 (workflows)=
