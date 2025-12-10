@@ -423,91 +423,180 @@ scripts.
 [datalab-shell-scripts]: https://ngs-docs.github.io/2021-august-remote-computing/automating-your-analyses-and-executing-long-running-analyses-on-remote-computers.html
 
 
-Environment Management
-----------------------
+## Prefer Open-Source Software
 
-### Use an Environment Manager
+> You're excited to start working on a project about how a particular virus
+> spreads among domesticated poultry populations. The project seems promising,
+> because your collaborator has been collecting data for over 10 years. When
+> they send you the data, you notice that the first 3 years of data are
+> anomalous compared to the rest. You ask your collaborator about it, and they
+> mention that they used to calibrate the data with software from Big Money
+> Corporation. After 3 years, they switched to an open-source calibration
+> software, because Big Money Corp. went out of business. You'd like to confirm
+> that the calibration software from Big Money Corp. used the same algorithm as
+> the open-source calibration software, but the documentation is vague, the
+> source code is not available, and no one online seems to know. You're glad
+> your collaborator still has copies of the raw, uncalibrated data, but it
+> looks like you'll have to spend a few days running all of it through the
+> open-source calibration software.
 
-A **computing environment** is a collection of hardware and software used to
-run computations. Whether a computation runs correctly or at all depends on the
-computing environment, so an important part of making a project reproducible is
-documenting the environment where the code was originally developed and tested.
+Software is **open-source** if its source code is freely available. Most
+commercial software is closed-source: only the developers have access to the
+source code. Using open-source software makes your research more reproducible
+in at least three ways:
 
-In high-level programming languages like R and Python, details of the hardware
-are mostly hidden away. That is, hardware has little to no impact on how you
-write code, with only a few exceptions. Hardware may affect how quickly your
-code runs, but usually not the final result. As a consequence, for many
-research computing projects, the hardware environment is of less concern than
-the software environment.
+* Transparency: When you use closed-source software, you have limited insight
+  into how it actually works. The algorithms the software uses might not be the
+  ones the distributor claims, and there might be bugs in their
+  implementations. When you use open-source software, if you have these
+  concerns, you can inspect the source code yourself to determine how the
+  software works.
 
-One of the major advantages of the open-source and open-science ecosystem is
-the trove of packages and other software developed and published by members of
-the community. As these are updated, projects that rely on older versions may
-cease to work correctly unless they are also updated. So for most projects,
-keeping track of the software environment means keeping track of the specific
-versions of packages and other software with which the project was carried out.
+* Longevity: The lifespan of closed-source software is entirely up to its
+  developers and distributor. In contrast, for open-source software, even if
+  the original developers retire from or abandon development, someone else can
+  step in and continue to develop the software. Many open-source software have
+  continued to receive updates for 20-30 years or more, and run well on modern
+  computers---an achievement few closed-source software can claim.
 
-A **virtual environment** is a computing environment with specific software
-versions that can coexist alongside other virtual environments with different
-software versions. An **environment manager** is a software tool that can
-create virtual environments. Environment managers can usually also install,
-update, and remove software.
+* Extensibility: Whether a new feature is added to closed-source software is up
+  to the whims of its developers. With open-source software, you can add the
+  feature yourself (or hire someone else to do it). 
 
-```{figure} /images/xkcd_python_environment.png
----
-name: xkcd-python
-alt:
----
-"Python Environment" from ["xkcd"][xkcd] by Randall Munroe
-([license][xkcd-license]).
-```
-
-[xkcd]: https://xkcd.com/
-[xkcd-license]: https://xkcd.com/license.html
-
-Many different open-source environment managers exist. Among those explicitly
-designed for research computing, [conda][] is the de facto standard. Conda was
-originally developed to manage Python environments, but now supports other
-languages such as R and Julia.
-
-[conda]: https://docs.conda.io/
-
-:::{tip}
-A relatively new package manager, [Pixi][], is faster and is better at
-accurately reproducing environments than conda, while maintaining compatibility
-with conda packages. Pixi also provides several other features that make it
-pleasant to use. At DataLab, we are just starting to switch over to Pixi.
-
-[Pixi]: https://pixi.sh/
-:::
-
-:::{note}
-If you exclusively use R and prefer to use an environment manager developed
-specifically for R, check out the [renv][] package.
-
-[renv]: https://rstudio.github.io/renv/
-:::
-
-By using an environment manager like conda, you can ensure that the versions of
-packages and software your projects depend on are recorded. Generally you
-should create a new virtual environment for each project, and switch between
-them as needed. Environment managers provide tools to save a description of a
-virtual environment to a file and to recreate an environment from such a file.
-This way you and your collaborators can set up a project on a new computer and
-make sure it has the correct software environment.
-
+We recommend using open-source software whenever possible because of these
+benefits. That said, make sure to take into account the norms and expectations
+of your collaborators and your discipline, and whether the available
+open-source software meets your needs. In some disciplines, closed-source
+software is widely-used, and using anything else can make it difficult to
+collaborate or to convince peers of the soundness of your work. For specialized
+tasks, closed-source software is sometimes the only software available. It's
+wonderful if you want to be an open-source trailblazer (or even developer) in
+your discipline, but make sure it's an informed decision. 
 
 :::{seealso}
-See [the Setting Up Software chapter][datalab-micromamba] in DataLab's
-Introduction to Remote Computing workshop reader for a technical introduction
-to micromamba, a fast and efficient drop-in replacement for conda.
+Many universities, including UC Davis, have an Open Source Program Office
+(OSPO) to train and support contributors and maintainers of open-source
+software. You can learn more about UC OSPOs at the [UC OSPO Network][ospo]
+website.
 
-If you prefer to use the original conda, instead see DataLab's [Making Python
-Projects & Environments Reproducible workshop reader][datalab-conda]. Then see
-DataLab's and DIB Lab's [Installing Software on Remote Computers with Conda
-workshop reader][datalab-conda-remote] for even more technical details.
+[ospo]: https://ucospo.net/
 :::
 
-[datalab-micromamba]: https://ucdavisdatalab.github.io/workshop_intro_to_remote_computing/chapters/02_environment-setup.html
-[datalab-conda]: https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/02_reproducible.html
-[datalab-conda-remote]: https://ngs-docs.github.io/2021-august-remote-computing/installing-software-on-remote-computers-with-conda.html
+
+(use-a-programming-language)=
+### Compute with Code
+
+:::{note}
+This practice is recommended for projects that involve computations. If your
+project doesn't, or if all computations are handled by specialized software,
+then you might not need a programming language.
+
+Nevertheless, we've included writing code as a primary practice to emphasize
+that it's uniquely important for reproducibility if your project does involve
+computations.
+:::
+
+Code is an explicit, unambiguous record of every step in a computation. This is
+a major benefit for reproducible research. You can share your code with someone
+else, and if they run it with all of the same inputs, they'll get the same
+outputs. The same is difficult or impossible to achieve using software that has
+a graphical user interface.
+
+Another benefit of programming is that code is reusable and often scalable. If
+you write code to solve a general problem, you can then apply it to any number
+of specific instances of that problem. The only constraints are time and the
+computing resources available to you. Most popular programming languages have
+supportive, active communities that create and distribute thousands of
+user-contributed packages, so often it's not even necessary to solve a problem
+yourself---you can reuse someone else's code.
+
+::::{grid}
+:::{grid-item}
+```{image} /images/logo_r.png
+:alt:
+:width: 50%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_python_device.svg
+:alt:
+:width: 40%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_julia.svg
+:alt:
+:width: 50%
+:align: center
+```
+:::
+::::
+
+:::{margin}
+```{note}
+A **high-level** programming language is one which uses abstractions to hide
+most of the details of the hardware.
+```
+:::
+
+Choosing a programming language doesn't just mean choosing a particular syntax,
+it also means choosing a community and ecosystem. Different languages have
+different strengths, weaknesses, community cultures, and packages. We recommend
+choosing an open-source, high-level language designed for research computing
+and data analysis, such as:
+
+* [R][]: a "software environment for statistical computing and graphics," R is
+  especially well-suited to cleaning and analyzing tabular data, training
+  statistical models, and creating data visualizations. R has support for
+  missing values built-in, a friendly and active community, and tens of
+  thousands of user-contributed packages, mostly related to statistics and data
+  science.
+
+* [Python][]: a general-purpose programming language that "lets you work
+  quickly and integrate systems more effectively." The Python community
+  supports research computing through its user-contributed NumPy, SciPy, and
+  Pandas packages, as well as others. Python's syntax encourages well-organized
+  code, and its community is enormous and spans many different disciplines.
+  It's also one of the primary languages for deep learning. Python's facilities
+  for data analysis are not as mature as R's, with equivalent features and
+  stability but some rough edges.
+
+* [Julia][]: a relatively new programming language "appropriate for scientific
+  and numerical computing, with performance comparable to [languages like C]."
+  Julia is designed from the ground up for research computing and uses modern
+  optimizations to run substantially faster than R or Python for many tasks.
+  Julia's community is small but growing. Julia's facilities for data analysis
+  are not as mature as R's or Python's, with many still in early development.
+  Expect to occasionally have to develop things yourself when you wouldn't in
+  more mature languages.
+
+[R]: https://www.r-project.org/
+[Python]: https://www.python.org/
+[Julia]: https://julialang.org/
+
+When choosing a language, always make sure to consider the specific needs of
+your project. Projects with specific requirements for performance or other
+features (for example, developing web applications) may benefit from using
+other languages or a mix of languages.
+
+:::{seealso}
+If you want to learn R, see DataLab's [R Basics workshop reader][r-basics] and
+consider joining the [Davis R Users Group][drug].
+
+If you want to learn Python, see DataLab's [Python Basics workshop
+reader][py-basics] and consider joining the [Davis Python Users Group][dpug].
+
+If you want to learn Julia, see the [official Julia documentation][julia-docs]
+and consider joining the [UC Julia Users Group][ucjug].
+:::
+
+[r-basics]: https://ucdavisdatalab.github.io/workshop_r_basics/
+[drug]: https://d-rug.github.io/
+[py-basics]: https://ucdavisdatalab.github.io/workshop_python_basics/
+[dpug]: https://datalab.ucdavis.edu/davis-python-users-group/
+[julia-docs]: https://docs.julialang.org/
+[ucjug]: https://datalab.ucdavis.edu/julia-users-group/

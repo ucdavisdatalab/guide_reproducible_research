@@ -231,20 +231,23 @@ clearer to write a separate manifest specifically for that directory.
 
 
 (workflows)=
-#### Workflows
+## Document the Workflows & Code
+
+> Suppose you're working on a study of passenger rail systems in the United
+> States. You use 3 scripts to produce plots that summarize how often trains
+> are late and how late they are for various cities. The scripts must be run in
+> a specific order and with specific arguments. A new student is about to join
+> the project, and you need to make sure they're able to run the scripts and
+> make the plots.
 
 A **workflow** is a way of using your project. Often this will be a series of
-commands you can run to produce a specific output. For example, if your project
-is a study of passenger rail systems in the U.S., you might have three scripts
-that you run in a specific order and with specific parameters in order to
-produce a plot that summarizes how often trains are late and how late they are
-for lines in Chicago. Remembering the order in which to run commands and the
-settings for each one might seem easy while your project only has a few
-workflows and you use them frequently. If your project grows or you spend time
-away from it, you may find it much harder to remember what to do. Moreover,
-your collaborators may have a hard time remembering how to run a workflow you
-set up, and vice-versa. Thus it's important to document your project's
-workflows.
+commands you can run to produce a specific output. Remembering the order in
+which to run commands and the settings for each one might seem easy while your
+project only has a few workflows and you use them frequently. If your project
+grows or you spend time away from it, you may find it much harder to remember
+what to do. Moreover, your collaborators may have a hard time remembering how
+to run a workflow you set up, and vice-versa. Thus it's important to document
+your project's workflows.
 
 There's one workflow that's essential to almost every project: downloading the
 files and installing the necessary software. It's a good idea to provide
@@ -273,12 +276,115 @@ command-line tool for searching within files.
 
 [rg-user-guide]: https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md
 
-Although documenting workflows is listed here under the documentation
-principle, it's also closely related to the workflow automation principle.
-Documenting workflows is important because it enables you and other people to
-repeat commands you used to get a particular output. Workflow automation
-practices take this a step further by bundling all of the commands in a
-workflow into a single command.
+Documenting workflows is important for reproducibility because it enables you
+and other people to repeat commands you used to get a particular output.
+Workflow automation practices (see {ref}`FIXME`) take this a step further by
+bundling all of the commands in a workflow into a single command.
+
+
+### Make Workflow Diagrams
+
+Workflows with multiple interdependent tasks can be confusing, especially for
+people new to a project. Diagrams that lay out the sequence of and
+relationships between inputs, tasks, and outputs (as a graph, network, or flow
+chart) make understanding and using these workflows easier and faster. For
+instance, if you can't remember what the inputs are for a particular task, you
+can simply glance at the diagram.
+
+It's usually a good idea to make more than one workflow diagram. Use separate
+diagrams for independent workflows, and make multiple diagrams at different
+levels of abstraction. Diagrams at different levels are especially helpful for
+explaining workflows where some of the steps are relatively complex in their
+own right.
+
+There many different ways to make workflow diagrams, including:
+
+* Sketching the diagram freehand. This is a fast, easy way to make a diagram
+  that doesn't require learning new tools. Depending on your sketching skills,
+  the resulting diagrams might look rough or be difficult to read. You might
+  sketch:
+    * On paper or a whiteboard (and take photos), which is wonderfully easy,
+      but can make editing later difficult.
+    * On a tablet (or with a mouse), which requires drawing software, but makes
+      it possible to collaborate from different locations and makes editing
+      later easier.
+* Designing the diagram in vector graphics software (such as [Lucidchart][] and
+  [Inkscape][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. The drawbacks are that it requires everyone to
+  have a license for and learn the software, and is generally more
+  time-consuming than sketching.
+    * Presentation software (such as [Google Slides][slides] and [LibreOffice
+      Impress][impress]) are widely known and usually provide some support for
+      designing diagrams.
+* Describing the diagram in a graph language (such as [Mermaid][] and
+  [Graphviz][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. It's more time-consuming than sketching but
+  can be less time-consuming than vector graphics software. GitHub and other
+  Git hosts often have built-in support for Mermaid. The drawbacks are that you
+  have to (learn and) use yet another language, and you have less control over
+  how the diagram is drawn and laid out.
+
+[Lucidchart]: https://www.lucidchart.com/
+[Inkscape]: https://inkscape.org/
+[slides]: https://workspace.google.com/products/slides/
+[impress]: https://www.libreoffice.org/discover/impress/
+[Mermaid]: https://mermaid.js.org/
+[Graphviz]: https://graphviz.org/
+
+DataLab uses a mix of sketching, Lucidchart, Inkscape, and Mermaid, depending
+on the complexity of the diagram, who will see it, and other needs of the
+project. In general, you should choose whatever diagramming method works best
+for you (and your team)---making the diagrams is more important than how you
+make them.
+
+:::{seealso}
+See DataLab's [README, Write Me! workshop reader][datalab-readme] for
+suggestions about how to create workflow diagrams.
+:::
+
+
+### Document the Code
+
+Provide documentation for your project's code. Think about how people
+(including you) will typically use the code. Will they:
+
+* Run entire scripts?
+* Call individual functions?
+* Import your code as a package?
+* Do something else?
+* Do some combination of these?
+
+The point of the documentation is to help other people reproduce the typical
+workflows. Even if you {ref}`sec-use-a-task-runner`, documentation is important
+to help people understand what each workflow does and how it works.
+
+Use READMEs to summarize the code's purpose, intended use cases, and
+organization across files. See {ref}`FIXME` for more about how to write
+READMEs.
+
+Most programming languages support comments as a way to intersperse
+documentation with code. Use comments to explain, in natural language, what
+your code is meant to do. This is especially important for parts of the code
+that are terse, complicated, or potentially counter-intuitive. An excellent
+programming strategy is to first write comments outlining the steps you want to
+complete, and then fill in the code between the comments; this strategy is a
+form of **[literate programming][lit]**.
+
+[lit]: https://en.wikipedia.org/wiki/Literate_programming
+
+Place comments at the beginning of each code file to explain the file's
+purpose, inputs, assumptions, outputs, and any pitfalls. If the code is
+organized into functions, do the same for each function. Some programming
+languages have syntax or packages specifically for writing this kind of
+documentation. These tools typically enforce some kind of organization and
+remind you about important details to include. They can also make it easier for
+others to find your documentation by making it available through the language's
+built-in help system. Python's [docstrings][] and R's [roxygen2][] package are
+examples of such tools. This kind of documentation is essential if you plan to
+package your code and/or release it to a wider audience.
+
+[docstrings]: https://peps.python.org/pep-0257/#what-is-a-docstring
+[roxygen2]: https://roxygen2.r-lib.org/
 
 
 Artifact Preservation
@@ -722,125 +828,3 @@ point functions across all of your scripts.
 <!--
 See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
 -->
-
-
-Workflow Automation
--------------------
-
-(use-a-programming-language)=
-### Compute with Code
-
-:::{note}
-This practice is recommended for projects that involve computations. If your
-project doesn't, or if all computations are handled by specialized software,
-then you might not need a programming language.
-
-Nevertheless, we've included writing code as a primary practice to emphasize
-that it's uniquely important for reproducibility if your project does involve
-computations.
-:::
-
-Code is an explicit, unambiguous record of every step in a computation. This is
-a major benefit for reproducible research. You can share your code with someone
-else, and if they run it with all of the same inputs, they'll get the same
-outputs. The same is difficult or impossible to achieve using software that has
-a graphical user interface.
-
-Another benefit of programming is that code is reusable and often scalable. If
-you write code to solve a general problem, you can then apply it to any number
-of specific instances of that problem. The only constraints are time and the
-computing resources available to you. Most popular programming languages have
-supportive, active communities that create and distribute thousands of
-user-contributed packages, so often it's not even necessary to solve a problem
-yourself---you can reuse someone else's code.
-
-::::{grid}
-:::{grid-item}
-```{image} /images/logo_r.png
-:alt:
-:width: 50%
-:align: center
-```
-:::
-
-:::{grid-item}
-```{image} /images/logo_python_device.svg
-:alt:
-:width: 40%
-:align: center
-```
-:::
-
-:::{grid-item}
-```{image} /images/logo_julia.svg
-:alt:
-:width: 50%
-:align: center
-```
-:::
-::::
-
-:::{margin}
-```{note}
-A **high-level** programming language is one which uses abstractions to hide
-most of the details of the hardware.
-```
-:::
-
-Choosing a programming language doesn't just mean choosing a particular syntax,
-it also means choosing a community and ecosystem. Different languages have
-different strengths, weaknesses, community cultures, and packages. We recommend
-choosing an open-source, high-level language designed for research computing
-and data analysis, such as:
-
-* [R][]: a "software environment for statistical computing and graphics," R is
-  especially well-suited to cleaning and analyzing tabular data, training
-  statistical models, and creating data visualizations. R has support for
-  missing values built-in, a friendly and active community, and tens of
-  thousands of user-contributed packages, mostly related to statistics and data
-  science.
-
-* [Python][]: a general-purpose programming language that "lets you work
-  quickly and integrate systems more effectively." The Python community
-  supports research computing through its user-contributed NumPy, SciPy, and
-  Pandas packages, as well as others. Python's syntax encourages well-organized
-  code, and its community is enormous and spans many different disciplines.
-  It's also one of the primary languages for deep learning. Python's facilities
-  for data analysis are not as mature as R's, with equivalent features and
-  stability but some rough edges.
-
-* [Julia][]: a relatively new programming language "appropriate for scientific
-  and numerical computing, with performance comparable to [languages like C]."
-  Julia is designed from the ground up for research computing and uses modern
-  optimizations to run substantially faster than R or Python for many tasks.
-  Julia's community is small but growing. Julia's facilities for data analysis
-  are not as mature as R's or Python's, with many still in early development.
-  Expect to occasionally have to develop things yourself when you wouldn't in
-  more mature languages.
-
-[R]: https://www.r-project.org/
-[Python]: https://www.python.org/
-[Julia]: https://julialang.org/
-
-When choosing a language, always make sure to consider the specific needs of
-your project. Projects with specific requirements for performance or other
-features (for example, developing web applications) may benefit from using
-other languages or a mix of languages.
-
-:::{seealso}
-If you want to learn R, see DataLab's [R Basics workshop reader][r-basics] and
-consider joining the [Davis R Users Group][drug].
-
-If you want to learn Python, see DataLab's [Python Basics workshop
-reader][py-basics] and consider joining the [Davis Python Users Group][dpug].
-
-If you want to learn Julia, see the [official Julia documentation][julia-docs]
-and consider joining the [UC Julia Users Group][ucjug].
-:::
-
-[r-basics]: https://ucdavisdatalab.github.io/workshop_r_basics/
-[drug]: https://d-rug.github.io/
-[py-basics]: https://ucdavisdatalab.github.io/workshop_python_basics/
-[dpug]: https://datalab.ucdavis.edu/davis-python-users-group/
-[julia-docs]: https://docs.julialang.org/
-[ucjug]: https://datalab.ucdavis.edu/julia-users-group/
