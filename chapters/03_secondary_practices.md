@@ -36,6 +36,39 @@ about how to document data.
 
 [datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
 
+### Document Methods
+
+You can think of your methods like a recipe you might use for cooking or baking. A good
+recipe clearly documents the steps needed to to make a cake or a dish so that you can
+reliably produce the same result (if you follow the recipe!). Imagine a recipe that doesn't
+give clear measurements (or uses obscure or outdated units), or gives vague instructions 
+(bake the cake for a bit), or uses overly technical terminology or language (be sure to 
+autolyse your bread). Any of these would make it very difficult for someone to reliably
+make the dish in question.
+
+The same is true of your research methodology. You should make sure that you document your
+methods in such a way that someone else (or future-you) can reliably recreate your experiment.
+Good things to consider include:
+
+* Make and model of probes, analyzers, questionnaires or other instruments used
+* Realistic ranges of expected data (e.g. 100s of nanograms vs thousands of milligrams vs 10s of kilograms)
+* Quality Assuracnce\Quality Control protocols (QA/QC)
+* Reagents and standards
+* References to established protocols (e.g. EPA methods)
+* Descriptions of qualitative data collection methods
+* Develop written Standard Operating Proceedures (SOPs) for your research group
+
+You can also document your methods using tools which can enable sharing those methods as well.
+
+* [Open Science Framework][osf-link]
+* [protocols.io][protocolsio-link]
+
+
+[osf-link]: https://osf.io/
+[protocolsio-link]: https://www.protocols.io
+:::{tip}
+Consider {ref} 'PREREGISTRATION_SECTION' to make your methods even more reproducible!
+:::
 
 (document-every-experiment)=
 ### Document Every Experiment
