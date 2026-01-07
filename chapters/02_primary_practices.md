@@ -95,13 +95,6 @@ for you---think of them as an external hard drive for your brain. Organize the
 notes in whatever way works best for you. One thing that can be helpful is to
 include the date whenever you add to the notes.
 
-:::{tip}
-Reference management software like [Zotero][] are helpful for organizing and
-searching references.
-:::
-
-[Zotero]: https://www.zotero.org/
-
 
 Whether you take notes on paper or digitally, the important thing is that you
 take notes. Paper notes are convenient for diagramming and doodling, and can be
@@ -135,6 +128,23 @@ If you use a shared notes document, make sure it's in a format everyone can
 access and edit; some collaborators may not be comfortable working with
 Markdown or other plain-text formats.
 
+### Citation Managers
+You will likely find a great deal of literature (journal articles, reports, etc.)
+that you will need to keep organized. Citation managers (like Zotero, EndNote,
+Lean Library, and many others) can help with this. Modern citation managers have
+browser extensions that can pull articles right from your web browser into your tool
+in a single click. They also offer a variety of oraganizational techniques ranging from
+collection folders to tagging systems. Most also integrate with Microsoft Word, Google Docs, 
+or LibreOffice to help manage your bibliography while writing. They aren't perfect and 
+you need to check their work but they can save you a lot of time. They also assist with 
+collaborations because you can have a shared library with collaborators
+that you can all add papers too.
+
+You can learn more about the citation managers available at UCD [here][citation_managers]. They all have pros and cons.
+ And if you need support choosing or working with one you can [consult with a librarian][research_consultation] anytime!
+
+[citation_managers]: https://library.ucdavis.edu/citations/citation-management-tools/
+[research_consultation]: https://library.ucdavis.edu/schedule-a-research-consultation/ 
 
 (write-readmes)=
 ### Write READMEs
