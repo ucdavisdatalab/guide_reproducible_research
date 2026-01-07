@@ -352,7 +352,37 @@ See DataLab's [README, Write Me! workshop reader][datalab-readme] for
 suggestions about how to create workflow diagrams.
 :::
 
+### Make a Data Management Plan
+Increasingly, funders are requiring Data Managment and Sharing Plans (DMSPs) as a condition 
+of funding. Beyond being a necessity for grants, these are also an excellent reproducibility 
+practice. Ideally, you should make your plan as early in your research process as possible. 
+We often think of "data" as numbers in a spreadsheet but you should take a broad view of "data". 
+Field notebooks, conceptual sketches, interview transcripts, photographs, and many other items 
+often can and should be considered "data" as well.
 
+Some general considerations when starting a data management plan would be to ask yourslef questions about the data:
+* What sort of data will be generated?
+	* Numbers in spreadsheets, images, recordings, etc.
+* How much data will be generated?
+	* A handful of spreadsheets? Hundreds of csv files? Millions of rows?
+* How much space will the data take?
+	* Megabytes? Gigabytes? Terrabytes?
+What is the cost/ability of replace lost data?
+	* Can you rerun the experiment or reinterview a subject? Or is it a one time chance?
+What do people (or future you) need to understand about your data to work with it?
+	* Units? Logical structure? Metadata and Documentation?
+	
+Also consider making "dummy" or "hypothetical" data about your project to help you think through these and more questions.
+
+:::{seealso}
+See DataLab's [Data Management Plan toolkit][datalab-dmp] for instructions
+about how to make a data management plan.
+Ask the Library's [Research Data Managment Team][rdm_email] for questions or conusltations.
+
+[rdm_email]: dataservices@ucdavis.edu
+:::
+
+[datalab-dmp]: https://datalab.ucdavis.edu/data-management-plans/
 ### Document the Code
 
 Provide documentation for your project's code. Think about how people

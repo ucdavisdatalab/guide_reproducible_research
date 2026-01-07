@@ -22,16 +22,6 @@ Documentation
 ### Use Issue Tracking
 
 
-### Make a Data Management Plan
-
-:::{seealso}
-See DataLab's [Data Management Plan toolkit][datalab-dmp] for instructions
-about how to make a data management plan.
-:::
-
-[datalab-dmp]: https://datalab.ucdavis.edu/data-management-plans/
-
-
 Artifact Preservation
 ---------------------
 
