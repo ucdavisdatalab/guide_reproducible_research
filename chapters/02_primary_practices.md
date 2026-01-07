@@ -360,6 +360,15 @@ We often think of "data" as numbers in a spreadsheet but you should take a broad
 Field notebooks, conceptual sketches, interview transcripts, photographs, and many other items 
 often can and should be considered "data" as well.
 
+:::{important}
+Many projects (such as those with personal health data or other sensitive information) require 
+extra consideration when developing your DMSP. You must consider things like deidentification of data, 
+secure storage, and other privasy considerations. Learn more on the Library [Research Data Management Guide][rdmguide_privacy] 
+or [consult with a librarian][rdm_email]!
+
+[rdmguide_privacy]: https://guides.library.ucdavis.edu/data-management/confidentiality
+:::
+
 Some general considerations when starting a data management plan would be to ask yourslef questions about the data:
 * What sort of data will be generated?
 	* Numbers in spreadsheets, images, recordings, etc.
@@ -367,10 +376,12 @@ Some general considerations when starting a data management plan would be to ask
 	* A handful of spreadsheets? Hundreds of csv files? Millions of rows?
 * How much space will the data take?
 	* Megabytes? Gigabytes? Terrabytes?
-What is the cost/ability of replace lost data?
+* What is the cost/ability of replace lost data?
 	* Can you rerun the experiment or reinterview a subject? Or is it a one time chance?
-What do people (or future you) need to understand about your data to work with it?
+* What do people (or future you) need to understand about your data to work with it?
 	* Units? Logical structure? Metadata and Documentation?
+	
+
 	
 Also consider making "dummy" or "hypothetical" data about your project to help you think through these and more questions.
 
@@ -378,9 +389,11 @@ Also consider making "dummy" or "hypothetical" data about your project to help y
 See DataLab's [Data Management Plan toolkit][datalab-dmp] for instructions
 about how to make a data management plan.
 Ask the Library's [Research Data Managment Team][rdm_email] for questions or conusltations.
-
-[rdm_email]: dataservices@ucdavis.edu
 :::
+[rdm_email]: dataservices@ucdavis.edu
+
+
+
 
 [datalab-dmp]: https://datalab.ucdavis.edu/data-management-plans/
 ### Document the Code
