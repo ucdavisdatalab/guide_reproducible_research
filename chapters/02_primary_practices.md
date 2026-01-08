@@ -132,7 +132,7 @@ Markdown or other plain-text formats.
 You will likely find a great deal of literature (journal articles, reports, etc.)
 that you will need to keep organized. Citation managers (like Zotero, EndNote,
 Lean Library, and many others) can help with this. Modern citation managers have
-browser extensions that can pull articles right from your web browser into your tool
+browser extensions that can pull articles right from your web browser into your citation manager
 in a single click. They also offer a variety of oraganizational techniques ranging from
 collection folders to tagging systems. Most also integrate with Microsoft Word, Google Docs, 
 or LibreOffice to help manage your bibliography while writing. They aren't perfect and 
@@ -355,8 +355,9 @@ suggestions about how to create workflow diagrams.
 ### Make a Data Management Plan
 Increasingly, funders are requiring Data Managment and Sharing Plans (DMSPs) as a condition 
 of funding. Beyond being a necessity for grants, these are also an excellent reproducibility 
-practice. Ideally, you should make your plan as early in your research process as possible. 
-We often think of "data" as numbers in a spreadsheet but you should take a broad view of "data". 
+practice and should be implemented regardless of funder requirements. Ideally, you should make your plan as early in your research process as possible. 
+If you haven't collected any data yet, you can create "dummy" or "hypothetical" data for your project to help you think through the data management process.
+We often think of "data" as numbers in a spreadsheet, but you should take a broad view of "data". 
 Field notebooks, conceptual sketches, interview transcripts, photographs, and many other items 
 often can and should be considered "data" as well.
 
@@ -369,7 +370,7 @@ or [consult with a librarian][rdm_email]!
 [rdmguide_privacy]: https://guides.library.ucdavis.edu/data-management/confidentiality
 :::
 
-Some general considerations when starting a data management plan would be to ask yourslef questions about the data:
+Some general considerations when starting a data management plan would be to ask yourself questions about the data:
 * What sort of data will be generated?
 	* Numbers in spreadsheets, images, recordings, etc.
 * How much data will be generated?
@@ -380,22 +381,31 @@ Some general considerations when starting a data management plan would be to ask
 	* Can you rerun the experiment or reinterview a subject? Or is it a one time chance?
 * What do people (or future you) need to understand about your data to work with it?
 	* Units? Logical structure? Metadata and Documentation?
-	
-
-	
-Also consider making "dummy" or "hypothetical" data about your project to help you think through these and more questions.
+* Who will be responsible for the data?
+	* Consider both in the short-term and the long-term.
 
 :::{seealso}
-See DataLab's [Data Management Plan toolkit][datalab-dmp] for instructions
-about how to make a data management plan.
+See the [Research Data Managment Guide][libguide-dmp] for instructions
+about how to make a data management plan or the Library .
 Ask the Library's [Research Data Managment Team][rdm_email] for questions or conusltations.
+
+You may also find these external guides useful:
+* [Harvard DMSP Guide][harvard_guide]
+* [National Library of Medicine DMSP Guide][nlm_rdm]
+* [MIT Libraries Data Managment Guide][mit_dmp]
+* [DMPTool Guidance][dmp_guide]
+* [Digital Curation Centre DMSP Guide][dcc_guide]
+
+[harvard_guide]:[https://datamanagement.hms.harvard.edu/plan-design/data-management-and-sharing-plan]
+[nlm_rdm]:https://www.nnlm.gov/guides/data-glossary/data-management-plan
+[mit_dmp]:https://libraries.mit.edu/data-management/plan/write/
+[dmp_guide]: https://dmptool.org/general_guidance
+[dcc_guide]:https://www.dcc.ac.uk/dmps
+
 :::
 [rdm_email]: dataservices@ucdavis.edu
+[libguide-dmp]: https://guides.library.ucdavis.edu/data-management/planning
 
-
-
-
-[datalab-dmp]: https://datalab.ucdavis.edu/data-management-plans/
 ### Document the Code
 
 Provide documentation for your project's code. Think about how people
