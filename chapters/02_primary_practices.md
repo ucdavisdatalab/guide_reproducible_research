@@ -143,8 +143,16 @@ that you can all add papers too.
 You can learn more about the citation managers available at UCD [here][citation_managers]. They all have pros and cons.
  And if you need support choosing or working with one you can [consult with a librarian][research_consultation] anytime!
 
+```{tip}
+While there are several free options listed on the Library guide, note that Zotero is an open source tool.
+That means that Zotero will travel with you if/when you leave UC Davis. Also see the <INSERT LINK TO OPEN SOURCE SECTION> for
+more information about why open source tools are preferred for reproducibility.
+```
+
 [citation_managers]: https://library.ucdavis.edu/citations/citation-management-tools/
 [research_consultation]: https://library.ucdavis.edu/schedule-a-research-consultation/ 
+
+
 
 (write-readmes)=
 ### Write READMEs
