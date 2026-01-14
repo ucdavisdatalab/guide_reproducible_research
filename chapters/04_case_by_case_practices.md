@@ -72,7 +72,7 @@ alt:
 [xkcd-license]: https://xkcd.com/license.html
 
 
-
+(sec-use-a-task-runner)=
 ### Use a Task Runner
 
 > You're working on a project where you receive a new dataset every few weeks.
@@ -111,9 +111,9 @@ Task runners usually have other features that are also helpful, such as:
 
 DataLab recommends [Pixi][] as a task runner for most projects, since it's
 relatively easy-to-use and also has other features related to reproducibility
-(see {numref}`FIXME`). For projects with many interdependent tasks, DataLab
-recommends [Snakemake][] as a build system. Many other task runners and build
-systems also exist.
+(see {ref}`sec-use-a-task-runner`). For projects with many interdependent
+tasks, DataLab recommends [Snakemake][] as a build system. Many other task
+runners and build systems also exist.
 
 [Pixi]: https://pixi.sh/
 [Snakemake]: https://snakemake.github.io/
@@ -421,9 +421,9 @@ in the following sections.
 ### Document the Code
 
 Provide documentation with your code, so that others will know how to use it
-(see {ref}`FIXME`). For code you plan to share, it's especially important to
-include set up or installation instructions, instructions for how to run the
-code, and an overview of what's included with the code.
+(see {ref}`write-readmes`). For code you plan to share, it's especially
+important to include set up or installation instructions, instructions for how
+to run the code, and an overview of what's included with the code.
 
 
 ### Choose an Open-Source License
@@ -458,8 +458,8 @@ is [choosealicense.com][gh-cal] (maintained by GitHub). Popular licenses tend
 to be a good choice because they've withstood the test of time and are familiar
 to many people. For software, the GNU Public License (GPL) and MIT License are
 particularly popular. For data, writing, art, and other content, [Creative
-Commons licenses][cc-cal] are popular; section {ref}`FIXME` provides more
-details about licensing non-software content.
+Commons licenses][cc-cal] are popular; section {ref}`sec-open-access` provides
+more details about licensing non-software content.
 
 [gh-cal]: https://choosealicense.com/
 [cc-cal]: https://creativecommons.org/choose/
