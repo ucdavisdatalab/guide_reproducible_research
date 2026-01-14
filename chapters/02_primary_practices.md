@@ -568,8 +568,9 @@ command-line tool for searching within files.
 
 Documenting workflows is important for reproducibility because it enables you
 and other people to repeat commands you used to get a particular output.
-Workflow automation practices (see {ref}`FIXME`) take this a step further by
-bundling all of the commands in a workflow into a single command.
+Workflow automation practices (see {ref}`sec-use-a-task-runner`) take this a
+step further by bundling all of the commands in a workflow into a single
+command.
 
 
 ### Make Workflow Diagrams
@@ -649,7 +650,7 @@ workflows. Even if you {ref}`sec-use-a-task-runner`, documentation is important
 to help people understand what each workflow does and how it works.
 
 Use READMEs to summarize the code's purpose, intended use cases, and
-organization across files. See {ref}`FIXME` for more about how to write
+organization across files. See {ref}`write-readmes` for more about how to write
 READMEs.
 
 Most programming languages support comments as a way to intersperse
@@ -1121,6 +1122,7 @@ See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slid
 
 ## Publishing
 
+(sec-open-access)=
 ### Open Access 
 
 Not having access to a piece of research or its underlying data and materials can be the main roadblock to reproducibility. Open access not only allows anyone to access and read the papers, but it also permits reproducibility, replicability, and the opportunity to build on or reuse all or part of your work in a future project to advance science and knowledge. Many grant providers and institutions may also require your work to be published open access.
