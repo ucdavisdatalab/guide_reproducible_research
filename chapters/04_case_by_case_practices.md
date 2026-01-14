@@ -272,8 +272,6 @@ environment manager also provides several other benefits:
 Many different open-source environment managers exist. For most research
 computing projects, we recommend and use [Pixi][]. Pixi can:
 
-[Pixi]: https://pixi.sh/
-
 * Install general-purpose software packages (such as Git, R, and Python)
 * Install Python packages from PyPI or Conda-Forge
 * Install R packages
@@ -325,7 +323,6 @@ specifically for R, check out the [renv][] package.
 If you prefer to use the original conda, instead see DataLab's [Making Python
 Projects & Environments Reproducible][datalab-conda] workshop reader.
 
-[datalab-pixi]: https://ucdavisdatalab.github.io/workshop_reproducible_research/chapters/installing-software/01_environment-managers.html
 [renv]: https://rstudio.github.io/renv/
 [datalab-conda]: https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/retired/reproducible.html
 :::
