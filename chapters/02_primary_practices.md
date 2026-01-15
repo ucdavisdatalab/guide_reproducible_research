@@ -1,4 +1,4 @@
-Primary Practices
+﻿Primary Practices
 =================
 
 This chapter covers primary practices for reproducibility. At DataLab, we adopt
@@ -61,6 +61,46 @@ yourself, make a plan for how you will collect the data. Describe what data sets
 
 During the process of writing your scoping document, consider whether there are any biases, ethical concerns, privacy concerns, licensing fees, or other issues that may influence your research. Include these, and how you will address them, in your research plan.
 
+If you are submitting your scoping document as a grant or other formal research
+proposal, the organization you submit to may have specific structure
+requirements. If they don't, or if you aren't submitting your research proposal
+anywhere, consider the following as a potential outline for a scoping document:
+
+- **Collaborators:** Who is working on the project? Include where
+  they work and how to get in touch with them. Typically this will include their email address.
+- **Background Information:** What does someone need to know to understand the goals
+  of the project?
+- **Project Duration:** How long will the project take? 
+- **Data:** What data sources will be used in the project? If there are ethical
+  or privacy concerns about the data, outline them here and describe mitigation
+  strategies. If you will be collecting data, what data will you collect and 
+  how?
+- **Statement of Work and Milestones:** Who will do what by when? This is a good 
+  place to describe key deliverables and associated milestones you expect to accomplish, with
+  approximately when they will be achieved.
+- **Collaborator Responsibilities:** Additional responsibilities outside the 
+  statement of work can go here, like who will complete periodic stakeholder updates and funder reports, or who brings the donuts to the team meetings. :) 
+- **Project Deliverables:** What is the final product of the project? This could
+  be a publication, website, piece of software, infographic, or something else
+  entirely.
+- **Ownership and Licensing of Work Products:** Many universities, publishers,
+  and funders have requirements as to who owns research and how its products
+  should be licensed. For more information about licensing at UC Davis, check
+  out the [Open Source Program Office resources][ospo-licensing].  
+- **Funding Sources and Pay Schedule:** If money is changing hands, it is a good
+  idea to lay out the specifics of how that will happen.
+
+Not every project will require every section. However, including more
+information early on in a project will make your life easier down the line. In
+general, reproducibility requires you to know what you did and when. While a
+project proposal or scoping document will inevitably differ from what actually
+happens, having a starting point will make reconstructing your research process
+much easier. Additionally, don't hesitate to update your project prosposal as
+things change. Updating your plan as you figure out what works and what doesn't
+isn't a failing -- it's good research practice. And your project proposal can help
+you keep track of those changes as you make them.
+ 
+
 :::{tip}
 When deciding how you will structure your data, it's helpful to review "tidy data" principles, especially if you are recording your data in spreadsheet software like Microsoft Excel or Google Sheets. Check out DataLab's [Excelling with Excel workshop
 reader][datalab-excel] to learn how to keep your data neat and tidy.
@@ -77,52 +117,124 @@ tables, or your datasheet is really wide with numerous columns containing repeat
 [datalab-excel]: https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/
 [datalab-database]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
 [datalab-sql]:https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[ospo-licensing]: https://ucospo.net/oss-resources/#understanding-licensing--compliance
+
 
 (keep-running-notes)=
-### Keep Running Notes
+### Keep a Research Log
 
-Set up one or more running notes documents when you set up your project. Use
-the notes to keep track of decisions you made, things you've tried, things you want to try,
-relevant references, and more. If you're working alone, these notes are just
-for you- and you can think of them as an external hard drive for your brain. Organize your
-notes in whatever way works best for you. One thing that can be helpful is to
-include the date whenever you add to the notes so you can trace when different decisions and actions occurred during your project's hisory. These notes will be helpful when you are producing your final report, manuscript, or other research product.
+> You're part of a lab working on a research project that began three years
+> ago. When you were introducing a new graduate student to the project this
+> morning, they asked whether the lab considered investigating treatment Z,
+> because they've seen lots of excitement about it in recent literature. You
+> remember mentioning treatment Z to the principal investigator a few years ago
+> and eventually deciding not to pursue it, but can't remember when or why you
+> made that decision. Now you're wondering whether your decision was too hasty
+> and reviewers will question why treatment Z wasn't considered. If only you
+> had detailed notes to refresh your memory as to why treatment Z isn't
+> relevant.
 
-:::{tip}
-Reference management software, such as [Zotero][], are helpful for organizing and
-searching references.
+A **research log** is a collection of running notes about your progress on your
+research project. You can set up one or more notes documents when you set up
+your project. Use the notes to keep track of things you've tried, things you
+want to try, decisions, relevant references, and more. If you have
+collaborators, take notes about your meetings. Record anything there's a chance
+you'll want to remember later: results (positive or negative), new ideas, new
+leads, decisions, changes of plan, action items, and scheduling details.
+
+<!--
+Whether you take notes on paper or digitally, the important thing is that you
+take notes.
+-->
+
+When you start a notes document, make sure to consider whether you'll need to
+include figures, code, or other media, and choose an appropriate format. Paper
+notes are convenient for diagramming and doodling, and can be digitized after
+the fact to share with the team. Digital notes are convenient for collaborating
+with team members who aren't physically present, and can be shared as they are
+being written.
+
+:::{admonition} For Collaboration
+:class: important
+Put some thought into what note-taking methods work best for everyone engaged
+with the project. It's good to share notes with the entire team, so that
+everyone can contribute and misunderstandings can be corrected quickly, unless
+your research topic or data require restricting access.
+
+Take notes during meetings. Some people like to take notes during meetings,
+while others prefer to take summary notes immediately after, so that they can
+be fully engaged. Collaborating on notes or rotating who takes notes in each
+meeting can help lessen the burden, but having a designated note-taker can help
+ensure consistency.
 :::
 
-[Zotero]: https://www.zotero.org/
+One way to keep your notes digitally is to use **electronic lab notebook**
+(ELN) software, which provide a searchable interface for entering notes. Most
+ELNs automatically capture metadata about notes, such as the date and time they
+were written, and can also store experimental data. Some also have other
+features, such as file storage and sharing, version control, and publishing
+tools. Depending on your discipline and research topic, you might be expected
+or required to use a specific ELN system.
+
+:::{seealso}
+See the [Electronic Lab Notebooks][ELN] section of the UC Davis Library's
+Research Data Management guide to learn more about ELNs.
+
+[ELN]: https://guides.library.ucdavis.edu/data-management/electronic-lab-notebooks
+:::
+
+Another way to keep notes digitally is to use **issue tracking** software.
+Issue tracking software were originally created to keep track of and help
+organize work to be done, or "issues", in (large) software development
+projects. However, most work equally well for keeping track of work in
+computational research projects. Services such as [GitHub][], [GitLab][], and
+[Tangled][] provide issue tracking.
+
+[Tangled]: https://tangled.org/
+
+:::{seealso}
+See the [Working with GitHub][issues] section of DataLab's Git for Teams
+workshop reader to learn more about issue tracking.
+
+[issues]: https://ucdavisdatalab.github.io/workshop_reproducible_research/chapters/git-for-teams/02_working-with-github.html
+:::
 
 
-Whether you take notes on paper or digitally, the important thing is that you
-take notes. Paper notes are convenient for diagramming and doodling, and can be
-digitized after the fact to share with the team. Digital notes are convenient
-for collaborating with team members who aren't physically present, and can be
-shared as they are being written. When you start a notes document, make sure to
-consider whether you'll need to include figures, code, or other media, and
-choose an appropriate format. At DataLab, we frequently use a combination of paper notes, Google Docs, GitHub issues or wiki, and/or [Markdown][].
+(document-every-experiment)=
+#### Document Every Experiment
 
-[Markdown]: https://commonmark.org/
+:::{note}
+An "experiment" doesn't necessarily have to be an experiment done in a lab.
+Doing an experiment could mean running a simulation, testing a model, or
+something else.
+:::
 
+In your notes, keep a record of every experiment that you do. Document
+parameters, the results, and anything else you think is relevant for:
 
-#### For Collaborative Projects
+* Repeating experiments in the future. Research projects are often
+  iterative---you may need to repeat an experiment to make adjustments to a few
+  parameters or because you discovered a bug in your code.
 
-If you have collaborators, take notes during your meetings. Record everything you might want to remember later. This may include results (positive or negative),
-new ideas, new leads, decisions, changes in your research plan, action items (and who is responsbile for them), and scheduling details.
+* Comparing across experiments. Think of the documentation as a high-level
+  overview of your project. Use it to get a sense of which experiments had
+  promising results, which didn't, and which you might want to try next.
 
-Consider what note-taking method works best for everyone. Some people like to
-take notes during meetings, while others prefer to take summary notes
-immediately after, so that they can be fully engaged. Collaborating on notes or
-rotating who takes notes in each meeting can help lessen the burden, while having
-a designated note-taker can help ensure consistency. At DataLab we always have one primary shared digital notes document per project that we live edit during project meetings, and keep up to date in between meetings by adding pertinent information from our personal notes to the next meeting agenda, as needed.
+* Avoiding redundant work. By keeping track of what's already been done, you
+  can avoid accidentally and unnecessarily repeating an experiment that you or
+  your collaborators have already done.
 
-It's usually a good idea to share the notes with everyone working directly on the project who attended the
-meeting, so that misunderstandings can be corrected quickly. You can do this by
-having a shared notes document or by sending out the notes after each meeting.
-If you use a shared notes document, make sure it's in a format everyone can
-easily access and edit. For one project you might all be comfortable working with Markdown or other plain-text formats, while other research teams might find a text processor like Google Docs to be an easier solution.
+Get in the habit of recording experiments as soon as you start to plan them,
+and recording the results as soon as they finish. Assign a unique name or
+number to each experiment so that you can reference specific experiments in
+your other notes and files. If you have collaborators, make sure they can
+access the documentation and understand how to use it.
+
+:::{tip}
+ELNs or spreadsheets are often a good format for this kind of documentation,
+since they're convenient for data entry.
+:::
+
 
 (write-readmes)=
 ### Write READMEs
@@ -215,22 +327,208 @@ toy_data/       Very (very!) small pieces of data for dev testing
 
 If a directory contains many files or subdirectories, you might consider writing a separate file manifest specifically for that directory.
 
+### Document the Data
+
+**Metadata**, or data that describes data, is critical to the research process.
+It delineates how the data were collected, what assumptions were made, what
+biases might be present, any ethical concerns, the overall structure, what each
+observation means, what each feature means, and more. Good data
+documentation guides researchers towards appropriate, responsible use of the
+data for both the current and future studies.
+
+Good metadata should answer the questions the who, what, when, where, why, and
+how questions about your data. How your metadata answers these questions will
+depend on conventions in your field of research. If you are submitting your data
+to a particular data repository, it will likely have a required metadata scheme
+to you will need to follow. Otherwise, pick a metadata scheme that aligns with
+other researchers in your field. If you have to submit a Data Management Plan,
+it will specifically ask how you will apply and adhere to field specific data
+standards. For more information about Data Management Plans, see the UC Davis
+Library's [Data Management Research Guide][lib-dmp] and the California 
+Digital Library's [DMPTool][]
+
+If you aren't sure what the standard is in your field, there are several online
+repositories to help you out. The [Metadata Standards Catalog][msc] has a fairly
+exhaustive list of metadata schemes, which you can browse [by
+subject][msc-subject]. [Fairsharing.org][fairshare] also stores metadata and
+other documentation standards. By using an existing community standard metadata
+scheme, you make it possible for future researchers (including you!) to compare
+your data to data from other, heterogeneous, sources.
+
+```{note}
+Many metadata resources include a **[controlled
+vocabulary][c-vocab]**. This is a list of specific values, each with a
+predefined meaning. It is designed to provide consistency and uniqueness across
+data sources. One common example of a controlled vocabulary is a list of
+geographic names, like the [Thesaurus of Geographic Names (TGN)][tgn]. There are
+many ways you can refer to New York City (NYC, the Big Apple, Manhattan etc).
+But if you want to be able to group together all data about New York City, it is
+helpful if everyone calls it the same thing.
+```
+
+Even if you don't know where your data will end up, documenting your data when
+you collect it will help ensure your documentation doesn't have any gaps. Timely
+documentation also maximizes the likelihood that your research can be
+reproduced, as well as reused by other researchers increasing your overall
+research impact. If your project uses data collected earlier or by someone else,
+it's a good practice to fill gaps in the existing documentation with your own.
+Thorough documentation isn't just beneficial to other researchers, it's also
+beneficial to future you. Small details you notice and document can be important
+later in the project.
+
+```{figure} /images/michener_information_entropy.png
+---
+name: information-entropy
+figwidth: 550px
+align: center
+alt: 
+---
+Information Entropy (Figure 1) from ([Michener et al. 1997][michener]) &copy; 
+1997 by the Ecological Society of America.
+```
+
+:::{note}
+One of the simplest and most widely used metadata standards is the [Dublin
+Core][dublin-core], a set of 15 metadata elements originally defined at a 1995
+workshop in Dublin, Ohio. The exact definition of the Dublin Core elements can
+be a bit technical, but the University College Dublin (Ireland) Library provides
+simplified explanations and examples [here][dublin-ex]. 
+:::
+
+If all of this seems overwhelming, that's okay. The Consortium of European
+Social Science Data Archives (CESSDA) has a great introductory
+[video][cessda-video] for those who have never documented data before. CESSDA
+also provides detailed explanations of what information to document at both
+project and data level in their [Data Management Expert Guide][cessda-guide].
+This includes detailed information about documenting quantitative and
+qualitative data. Just make sure to expand all the collapsed sections.
+
+
+:::{seealso} 
+There are many resouces on documenting your data available. Here are a selection
+of them:
+- [Metadata Standards Catalog][msc]
+- [Fairsharing.org][fairshare]
+- [README, Write Me! DataLab workshop reader][datalab-readme]
+- [UC Davis Research Data Management LibGuide][lib-metadata]
+- [CESSDA's Data Management Expert Guide][cessda-guide]
+- [The Turing Way on Documentation and Metadata][turing-metadata]
+- [MIT Metadata Info][mit-metadata]
+- [Harvard Biomedical Documentation and Metadata][harvard-metadata] 
+- University College Dublin on [Metadata][dublin-ex] and [Documentation][ucd-doc]
+:::
+
+
+[lib-metadata]: https://guides.library.ucdavis.edu/data-management/documentation
+[lib-dmp]: https://guides.library.ucdavis.edu/data-management/planning
+[DMPTool]: https://dmptool.org/
+[msc]: https://rdamsc.bath.ac.uk/
+[msc-subject]: https://rdamsc.bath.ac.uk/subject-index
+[fairshare]: https://fairsharing.org/
+[michener]: https://esajournals.onlinelibrary.wiley.com/doi/10.1890/1051-0761%281997%29007%5B0330%3ANMFTES%5D2.0.CO%3B2
+[mit-metadata]: https://libraries.mit.edu/data-management/store/documentation/
+[dublin-core]: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
+[dublin-ex]: https://libguides.ucd.ie/data/metadata
+[cessda-video]: https://www.youtube.com/watch?v=cjGz-I0GgKk
+[cessda-guide]: https://dmeg.cessda.eu/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata
+[tgn]: https://www.getty.edu/research/tools/vocabularies/tgn/index.html
+[turing-metadata]: https://book.the-turing-way.org/reproducible-research/rdm/rdm-metadata/
+[harvard-metadata]: https://datamanagement.hms.harvard.edu/collect-analyze/documentation-metadata
+[c-vocab]: https://rdf-vocabulary.ddialliance.org/
+[ucd-doc]: https://libguides.ucd.ie/data/documentation
+
+(create-data-dictionary)=
+#### Create a Data Dictionary
+
+A **data dictionary**, part of your metadata, is a document that explains what
+every field or element in your dataset means as well as any restrictions on
+their values. This includes things like the data type (ex. number, date, text,
+boolean), and whether that field can be missing. The more information you
+include, the more helpful it will be down the line (see [Captain
+Obvious][captain_o]). Data dictionaries are the most efficient way to
+communicate the structure and content of your data to other collaborators,
+including future you! A very basic one could look like this:
+
+|Field Name |Field Description                         |Data Type   |Notes     |
+|-----------|------------------------------------------|------------|----------|
+|person_id  |autogenerated by database                 |integer     |          |
+|name       |legal full name (family name, given name) |string      |          |
+|occupation |A person's job or vocation                |string      |Must come from the Bureau of Labor Statistics Occupation List |
+|...        |...                                       |...         |...       |
+
+
+
+If you aren't sure where to start with creating a data dictionary, DataLab has a
+[template][datalab_dd_template] you can use as a jumping off point. If you
+prefer step by step instructions, Kristin Briney's [Create a Data Dictionary
+exercise][create_dd] minght be for you. [Open Science Framework (OSF)][osf_dd] has
+resources on what details to add to your data dictionary, and the
+[USGS][usgs_dd] provides many examples of data dictionaries and how they are
+used in different contexts. If you are working with multiple data sets, make
+sure to clarify which data dictionary to use with each data set.
+
+If your dataset looks less like a series of rows and columns, and more like a
+long list of files, consider creating a **data inventory** instead. A data
+inventory should include the author or source, title, publication year and DOI
+(if published), and file name for each file, and can include more file metadata
+as necessary. For example, a data inventory for works of fiction in the public
+domain could look something like this.
+
+|Author              |Title               |Year |Filename                                  |
+|--------------------|--------------------|-----|------------------------------------------|
+|Bronte,Charlotte    |JaneEyre            |1847 |EN_1847_BronteCharlotte_JaneEyre.txt      |
+|Austen,Jane         |SenseandSensibility |1811 |EN_1811_AustenJane_SenseandSensibility.txt|
+|Wollstonecraft,Mary |Maria               |1798 |EN_1798_WollstonecraftMary_Maria.txt      |
+|...                 |...                 |...  |...                                       |
+
+
+If you also need to keep track of things like the provenance or license
+associated with each file or data set, DataLab's 
+[data inventory template][datalab_di_template] provides a comprehensive
+starting point. 
+
+If your data uses numbers, acronyms, or abbreviations to store information, you
+should include a [**codebook**][codebook] in your metadata. Like a data
+dictionary, a codebook lists all of the variables in a data set. However, a
+codebook also lists the meaning of each value (or code) for each variable. For
+example, it is very common to store biological sex as a binary variable where
+the values are either 0 or 1. The codebook for such a data set would tell you
+that 0=male and 1=female for the sex variable.
+
+[osf_dd]: https://help.osf.io/article/217-how-to-make-a-data-dictionary
+[usgs_dd]: https://www.usgs.gov/data-management/data-dictionaries
+[captain_o]: https://dataedo.com/blog/captain-obivous-guide-to-column-descriptions-data-dictionary-best-practices
+[datalab_dd_template]: https://docs.google.com/spreadsheets/d/12N0hKyeT0ndZnt7rVZsz7LTW--BHhbb6TOegXEKQoxE/edit?usp=sharing
+[datalab_di_template]: https://docs.google.com/spreadsheets/d/1nUb-eu82Q7VplDpk0np5rYuaN52mYHLdql18pRD0i4Y/edit?usp=sharing
+[create_dd]: https://caltechlibrary.github.io/RDMworkbook/documentation.html#data-dictionary
+[codebook]: https://www.icpsr.umich.edu/sites/icpsr/posts/shared/what-is-a-codebook-2
+
+:::{seealso}
+See [OSF][osf_dd] and the [Research Data Management Workbook][create_dd] for how
+to create a data dictionary, UC Davis DataLab for [data
+dictionary][datalab_dd_template] and [data inventory][datalab_di_template]
+templates, and [USGS][usgs_dd] for examples.
+:::
+
 
 (workflows)=
-#### Workflows
+## Document the Workflows & Code
+
+> Suppose you're working on a study of passenger rail systems in the United
+> States. You use 3 scripts to produce plots that summarize how often trains
+> are late and how late they are for various cities. The scripts must be run in
+> a specific order and with specific arguments. A new student is about to join
+> the project, and you need to make sure they're able to run the scripts and
+> make the plots.
 
 A **workflow** is a way of using your project. Often this will be a series of
-commands you can run to produce a specific output. For example, if your project
-is a study of passenger rail systems in the U.S., you might have three scripts
-that you run in a specific order and with specific parameters in order to
-produce a plot that summarizes how often trains are late and how late they are
-for lines in Chicago. Remembering the order in which to run commands and the
-settings for each one might seem easy while your project only has a few
-workflows and you use them frequently. If your project grows or you spend time
-away from it, you may find it much harder to remember what to do. Moreover,
-your collaborators may have a hard time remembering how to run a workflow you
-set up, and vice-versa. Thus it's important to document your project's
-workflows.
+commands you can run to produce a specific output. Remembering the order in
+which to run commands and the settings for each one might seem easy while your
+project only has a few workflows and you use them frequently. If your project
+grows or you spend time away from it, you may find it much harder to remember
+what to do. Moreover, your collaborators may have a hard time remembering how
+to run a workflow you set up, and vice-versa. Thus it's important to document
+your project's workflows.
 
 There's one workflow that's essential to almost every project: downloading the
 files and installing the necessary software. It's a good idea to provide
@@ -259,12 +557,116 @@ command-line tool for searching within files.
 
 [rg-user-guide]: https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md
 
-Although documenting workflows is listed here under the documentation
-principle, it's also closely related to the workflow automation principle.
-Documenting workflows is important because it enables you and other people to
-repeat commands you used to get a particular output. Workflow automation
-practices take this a step further by bundling all of the commands in a
-workflow into a single command.
+Documenting workflows is important for reproducibility because it enables you
+and other people to repeat commands you used to get a particular output.
+Workflow automation practices (see {ref}`sec-use-a-task-runner`) take this a
+step further by bundling all of the commands in a workflow into a single
+command.
+
+
+### Make Workflow Diagrams
+
+Workflows with multiple interdependent tasks can be confusing, especially for
+people new to a project. Diagrams that lay out the sequence of and
+relationships between inputs, tasks, and outputs (as a graph, network, or flow
+chart) make understanding and using these workflows easier and faster. For
+instance, if you can't remember what the inputs are for a particular task, you
+can simply glance at the diagram.
+
+It's usually a good idea to make more than one workflow diagram. Use separate
+diagrams for independent workflows, and make multiple diagrams at different
+levels of abstraction. Diagrams at different levels are especially helpful for
+explaining workflows where some of the steps are relatively complex in their
+own right.
+
+There many different ways to make workflow diagrams, including:
+
+* Sketching the diagram freehand. This is a fast, easy way to make a diagram
+  that doesn't require learning new tools. Depending on your sketching skills,
+  the resulting diagrams might look rough or be difficult to read. You might
+  sketch:
+    * On paper or a whiteboard (and take photos), which is wonderfully easy,
+      but can make editing later difficult.
+    * On a tablet (or with a mouse), which requires drawing software, but makes
+      it possible to collaborate from different locations and makes editing
+      later easier.
+* Designing the diagram in vector graphics software (such as [Lucidchart][] and
+  [Inkscape][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. The drawbacks are that it requires everyone to
+  have a license for and learn the software, and is generally more
+  time-consuming than sketching.
+    * Presentation software (such as [Google Slides][slides] and [LibreOffice
+      Impress][impress]) are widely known and usually provide some support for
+      designing diagrams.
+* Describing the diagram in a graph language (such as [Mermaid][] and
+  [Graphviz][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. It's more time-consuming than sketching but
+  can be less time-consuming than vector graphics software. GitHub and other
+  Git hosts often have built-in support for Mermaid. The drawbacks are that you
+  have to (learn and) use yet another language, and you have less control over
+  how the diagram is drawn and laid out.
+
+[Lucidchart]: https://www.lucidchart.com/
+[Inkscape]: https://inkscape.org/
+[slides]: https://workspace.google.com/products/slides/
+[impress]: https://www.libreoffice.org/discover/impress/
+[Mermaid]: https://mermaid.js.org/
+[Graphviz]: https://graphviz.org/
+
+DataLab uses a mix of sketching, Lucidchart, Inkscape, and Mermaid, depending
+on the complexity of the diagram, who will see it, and other needs of the
+project. In general, you should choose whatever diagramming method works best
+for you (and your team)---making the diagrams is more important than how you
+make them.
+
+:::{seealso}
+See DataLab's [README, Write Me! workshop reader][datalab-readme] for
+suggestions about how to create workflow diagrams.
+:::
+
+
+### Document the Code
+
+Provide documentation for your project's code. Think about how people
+(including you) will typically use the code. Will they:
+
+* Run entire scripts?
+* Call individual functions?
+* Import your code as a package?
+* Do something else?
+* Do some combination of these?
+
+The point of the documentation is to help other people reproduce the typical
+workflows. Even if you {ref}`sec-use-a-task-runner`, documentation is important
+to help people understand what each workflow does and how it works.
+
+Use READMEs to summarize the code's purpose, intended use cases, and
+organization across files. See {ref}`write-readmes` for more about how to write
+READMEs.
+
+Most programming languages support comments as a way to intersperse
+documentation with code. Use comments to explain, in natural language, what
+your code is meant to do. This is especially important for parts of the code
+that are terse, complicated, or potentially counter-intuitive. An excellent
+programming strategy is to first write comments outlining the steps you want to
+complete, and then fill in the code between the comments; this strategy is a
+form of **[literate programming][lit]**.
+
+[lit]: https://en.wikipedia.org/wiki/Literate_programming
+
+Place comments at the beginning of each code file to explain the file's
+purpose, inputs, assumptions, outputs, and any pitfalls. If the code is
+organized into functions, do the same for each function. Some programming
+languages have syntax or packages specifically for writing this kind of
+documentation. These tools typically enforce some kind of organization and
+remind you about important details to include. They can also make it easier for
+others to find your documentation by making it available through the language's
+built-in help system. Python's [docstrings][] and R's [roxygen2][] package are
+examples of such tools. This kind of documentation is essential if you plan to
+package your code and/or release it to a wider audience.
+
+[docstrings]: https://peps.python.org/pep-0257/#what-is-a-docstring
+[roxygen2]: https://roxygen2.r-lib.org/
 
 
 Artifact Preservation
@@ -709,124 +1111,128 @@ point functions across all of your scripts.
 See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
 -->
 
+## Publishing
 
-Workflow Automation
--------------------
+(sec-open-access)=
+### Open Access 
 
-(use-a-programming-language)=
-### Compute with Code
+Not having access to a piece of research or its underlying data and materials can be the main roadblock to reproducibility. Open access not only allows anyone to access and read the papers, but it also permits reproducibility, replicability, and the opportunity to build on or reuse all or part of your work in a future project to advance science and knowledge. Many grant providers and institutions may also require your work to be published open access.
+
+:::{important}
+**Open Licenses**
+
+Applying an open license to your materials is key to making them openly available. Open licenses allow anyone to view, share, and reuse materials. See more in the {ref}`open-licenses` section below.
+:::
+
+#### Publish Open Data
+
+Study data are often stored privately, but sharing your data is an integral part of reproducibility. Research simply cannot be reproduced without access to the data underlying the results, figures, tables, and conclusions.
+
+**Open data** refers to data shared publicly and licensed under an open license so that it can be freely accessed, reused, and shared by anyone. Many grant providers, institutions, and publishers now require underlying data to be shared openly.
+
+You can deposit your data in open data repositories to make them freely available. Whether you want a generalist or specialist repository, look for a reliable repository that meets the following requirements:
+* Uses open licenses
+* Assigns Persistent Identifiers (PID), such as digital object identifiers (DOI), to the dataset(s)
+* Plans for long-term maintenance, continued access, and preservation of the datasets.
+* Financially stable
+* No burdensome access requirements for readers, such as registration fees, membership requirements, etc.
+* Contact information, documentation, and staff or representatives are available to address issues and offer user support.
+
+Learn more about trustworthy data repository requirements from [CoreTrustSeal][cts-repositories-requirements].
+
+[cts-repositories-requirements]: https://www.coretrustseal.org/why-certification/requirements/
 
 :::{note}
-This practice is recommended for projects that involve computations. If your
-project doesn't, or if all computations are handled by specialized software,
-then you might not need a programming language.
-
-Nevertheless, we've included writing code as a primary practice to emphasize
-that it's uniquely important for reproducibility if your project does involve
-computations.
+Some data may be personal or sensitive. Do not share your data openly if they are protected, nationally or commercially sensitive, contain identifying information, or you have not obtained proper consent. You can learn more about considerations for these types of data…(maybe Turing Way?)
 :::
 
-Code is an explicit, unambiguous record of every step in a computation. This is
-a major benefit for reproducible research. You can share your code with someone
-else, and if they run it with all of the same inputs, they'll get the same
-outputs. The same is difficult or impossible to achieve using software that has
-a graphical user interface.
+You should also ensure your data follow FAIR principles using the following practices:
 
-Another benefit of programming is that code is reusable and often scalable. If
-you write code to solve a general problem, you can then apply it to any number
-of specific instances of that problem. The only constraints are time and the
-computing resources available to you. Most popular programming languages have
-supportive, active communities that create and distribute thousands of
-user-contributed packages, so often it's not even necessary to solve a problem
-yourself---you can reuse someone else's code.
+**Findable:**
+* Publish or deposit in an open access repository.
+* Assign a persistent identifier to your dataset, such as a Digital Object Identifier (DOI). (This can usually be done by depositing in a repository.)
+* Properly cite the data in any related published materials.
 
-::::{grid}
-:::{grid-item}
-```{image} /images/logo_r.png
-:alt:
-:width: 50%
-:align: center
-```
-:::
+**Accessible:**
+* Publish or deposit in an open access repository.
+* Include proper metadata describing access, authentication, and authorization.
 
-:::{grid-item}
-```{image} /images/logo_python_device.svg
-:alt:
-:width: 40%
-:align: center
-```
-:::
+**Interoperable:**
+* Publish data and metadata in standard, non-proprietary formats.
+* {ref}`use-file-formats-effectively`
 
-:::{grid-item}
-```{image} /images/logo_julia.svg
-:alt:
-:width: 50%
-:align: center
-```
-:::
-::::
-
-:::{margin}
-```{note}
-A **high-level** programming language is one which uses abstractions to hide
-most of the details of the hardware.
-```
-:::
-
-Choosing a programming language doesn't just mean choosing a particular syntax,
-it also means choosing a community and ecosystem. Different languages have
-different strengths, weaknesses, community cultures, and packages. We recommend
-choosing an open-source, high-level language designed for research computing
-and data analysis, such as:
-
-* [R][]: a "software environment for statistical computing and graphics," R is
-  especially well-suited to cleaning and analyzing tabular data, training
-  statistical models, and creating data visualizations. R has support for
-  missing values built-in, a friendly and active community, and tens of
-  thousands of user-contributed packages, mostly related to statistics and data
-  science.
-
-* [Python][]: a general-purpose programming language that "lets you work
-  quickly and integrate systems more effectively." The Python community
-  supports research computing through its user-contributed NumPy, SciPy, and
-  Pandas packages, as well as others. Python's syntax encourages well-organized
-  code, and its community is enormous and spans many different disciplines.
-  It's also one of the primary languages for deep learning. Python's facilities
-  for data analysis are not as mature as R's, with equivalent features and
-  stability but some rough edges.
-
-* [Julia][]: a relatively new programming language "appropriate for scientific
-  and numerical computing, with performance comparable to [languages like C]."
-  Julia is designed from the ground up for research computing and uses modern
-  optimizations to run substantially faster than R or Python for many tasks.
-  Julia's community is small but growing. Julia's facilities for data analysis
-  are not as mature as R's or Python's, with many still in early development.
-  Expect to occasionally have to develop things yourself when you wouldn't in
-  more mature languages.
-
-[R]: https://www.r-project.org/
-[Python]: https://www.python.org/
-[Julia]: https://julialang.org/
-
-When choosing a language, always make sure to consider the specific needs of
-your project. Projects with specific requirements for performance or other
-features (for example, developing web applications) may benefit from using
-other languages or a mix of languages.
+**Reusable:**
+* Provide metadata and adequate documentation for reuse.
+* **Other links to other sections???**
+* Publish under an open license.
+* Properly cite your source data.
 
 :::{seealso}
-If you want to learn R, see DataLab's [R Basics workshop reader][r-basics] and
-consider joining the [Davis R Users Group][drug].
+See UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing] to learn more about how to share your data openly.
 
-If you want to learn Python, see DataLab's [Python Basics workshop
-reader][py-basics] and consider joining the [Davis Python Users Group][dpug].
-
-If you want to learn Julia, see the [official Julia documentation][julia-docs]
-and consider joining the [UC Julia Users Group][ucjug].
+Review the {ref}`open-licenses` section below to learn more about publishing your data under an open license.
 :::
 
-[r-basics]: https://ucdavisdatalab.github.io/workshop_r_basics/
-[drug]: https://d-rug.github.io/
-[py-basics]: https://ucdavisdatalab.github.io/workshop_python_basics/
-[dpug]: https://datalab.ucdavis.edu/davis-python-users-group/
-[julia-docs]: https://docs.julialang.org/
-[ucjug]: https://datalab.ucdavis.edu/julia-users-group/
+[RDM-guide-data-sharing]: https://guides.library.ucdavis.edu/data-management/data-sharing
+
+#### Publish Open Access Articles
+
+Publishing an open access article reduces barriers for readers and researchers by making it freely accessible.
+
+Publishing your work in an open access journal or as an open access monograph is known as Gold Open Access. It generally goes through the same review process that any submission would, but is then published openly, usually through an open license, so that anyone can read it without having to pay a subscription or access fee.
+
+Learn more about open access publishing, including finding reputable journals and avoiding predatory publishers, and open access funding support at UC Davis on our [Open Access Publishing Library Guide][open-access-guide].
+
+##### Pre-Prints and Post-Prints
+
+Publishing research Open Access can be expensive and therefore may not always be feasible. University of California authors may have [Open Access fee assistance][open-access-guide] available to them. However, authors with no fee assistance have other options for making their work openly available and, therefore, reproducible.
+
+Authors can make their work openly available by self-archiving it somewhere accessible, such as an institutional repository or preprint server. This is also known as Green Open Access. Note that the archived version may be different than a peer-reviewed and formally published version.
+
+**Preprints** are publicly available papers that have not (yet) been peer reviewed. Usually, authors will post a paper to a preprint server under an [open license](#open-licenses) after the paper has been written and before submitting to a journal for peer review and publication. Some preprints are never submitted or accepted to a journal for formal publication.
+
+:::{important}
+Articles are often revised, sometimes significantly, during the peer-review process. A published version of an article in a journal may differ greatly from a preprint version.
+:::
+
+**Post-prints,** or author-accepted manuscripts, have been peer-reviewed and accepted for publication, then made publicly available somewhere accessible, such as an institutional repository. These versions are usually the same as or very similar to the published versions.
+
+:::{important}
+Different publishers have different policies about sharing author-accepted manuscripts, including potential embargo periods. Refer to your publisher’s policies or [Jisc’s Open Policy Finder][open-policy-finder] to understand your sharing permissions.
+:::
+
+
+:::{seealso}
+To learn more about Open Access options, the [Open Access Network][open-access-network] is a great educational resource that discusses Diamond, Gold, and Green Open Access.
+:::
+
+[open-policy-finder]: https://openpolicyfinder.jisc.ac.uk/
+[open-licenses]: {ref}`open-licenses`
+[open-access-guide]: https://guides.library.ucdavis.edu/open-access-publishing
+[open-access-network]: https://open-access.network/en/information/open-access-primers/green-and-gold
+
+(open-licenses)=
+#### Open Licenses
+
+A **license** grants others permission to possess, copy, and/or use a piece of work in a variety of ways. An **open license** makes a work freely available for others to read, copy, distribute, and use without obtaining permission from the author or creator. Open licenses also provide free, immediate, and perpetual access to the content. 
+
+For code, an open-source license ensures that software can continue to be maintained and extended even if the original developers cease development. They also promote transparency and collaboration, since anyone with the software can inspect and modify the code.
+
+When an open license is applied to a work, the author or creator retains the rights to/ownership of the original work, and most open licenses require that proper credit be given to the creator.
+
+[Creative Commons][creative-commons] licenses are the most common open licenses for articles and datasets. MIT licenses are common for open code, but many more are available, as discussed by the [Open Source Initiative][open-source-licenses].
+
+Many open licenses allow for any type of use and reuse, including modifications, distribution, etc., but authors have options for open licenses with certain restrictions such as no commercial use or no derivatives, or a requirement that any copies or adaptations be licensed under a similar open license.
+
+[creative-commons]: https://creativecommons.org/
+[open-source-licenses]: https://opensource.org/licenses
+
+:::{seealso}
+For licensing data, writing, art, or other materials, see Creative Commons' [Choose a License page][cc-cal] for help deciding on a Creative Commons license.
+
+For licensing software, see [choosealicense.com][gh-cal] to help you choose an open license (maintained by GitHub)or the Open Source Initiative's [FAQ answer about which license to choose][osi-cal].
+:::
+
+[gh-cal]: https://choosealicense.com/
+[osi-cal]: https://opensource.org/faq/#which-license
+[cc-cal]: https://creativecommons.org/choose/

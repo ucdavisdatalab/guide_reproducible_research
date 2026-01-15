@@ -12,31 +12,6 @@ relevant, and we recommend you do too.
 Documentation
 -------------
 
-### Document the Data
-
-In a perfect world, every data set would come with detailed documentation or
-**metadata** about how the data were collected, what assumptions were made,
-what biases might be present, any ethical concerns, the overall structure, what
-each observation means, what each feature means, and more. Good data
-documentation guides researchers towards appropriate, responsible use of the
-data.
-
-Collecting data as part of a project gives you and your collaborators control
-over how the data are documented, so you can ensure there are no gaps. If your
-project uses data collected earlier or by someone else, it's a good practice to
-fill gaps in the existing documentation with your own. Thorough documentation
-isn't just beneficial to other researchers, it's also beneficial to future
-you---small details you notice and document about features could be important
-later in the project.
-
-:::{seealso}
-See DataLab's [README, Write Me! workshop reader][datalab-readme] for more
-about how to document data.
-:::
-
-[datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
-
-
 (document-every-experiment)=
 ### Document Every Experiment
 
@@ -174,8 +149,10 @@ for free to publish their data.
 [Dryad]: https://datadryad.org/stash
 
 To satisfy the "I" standard, {ref}`use-file-formats-effectively`. To satisfy
-the "R" standard, a good start is to {ref}`keep-running-notes`,
-{ref}`write-readmes` and {ref}`choose-a-license`.
+the "R" standard, a good start is to {ref}`keep-running-notes` and
+{ref}`write-readmes`.
+
+<!-- FIXME: this used to refer to choose-a-license too -->
 
 :::{seealso}
 See UC Davis Library's [Publish, Share, and Preserve Your Data
@@ -324,25 +301,66 @@ on the [Sustainability of Digital Formats][sdf].
 (databases)=
 #### Databases
 
-A **database** is a data set together with specialized software to help you
-organize, query, and update that data set. Databases are usually more
-computationally efficient than languages like R and Python. Most databases also
-support querying large data sets (hundreds of gigabytes) without any extra
-setup. Some databases support multiple users, which can be convenient for
-collaborative work (this is also one reason why databases are widely used for
-data storage in web applications).
+A **database** is an organized collection of data stored with specialized software that helps you
+do things like query and update the data. Databases can:
+
+
+* create a definitive version of your data that multiple people can access
+without creating conflicts.
+
+* provide quality control measures to reduce input errors and make sure typos don't get introduced into
+your data.
+
+* query millions of observations in seconds (which you can't do in Excel or Google Sheets!).
+
+* store data more efficiently than regular files.
+
+* control who has access to your data, and what they can do with it, on a very
+granular level.
+
+Databases are a specialized tool. They are optimized for querying and
+transforming data. As such, they are generally faster at those tasks than R or
+Python. However, they don't do everything. You can't create a data visualization
+using a database, or run a statistical analysis. A database is a perfect data
+source for those tasks to ensure that your results are reproducible across
+collaborators and over time. Databases also make an excellent platform for
+sharing or publishing your data. Their permissions functionality means you can
+easily give the public read only access to your finalized data products, while
+keeping the raw or unprocessed data only accessible to your collaborators.
+
+Historically, databases were restricted to primarily tabular data (rows and
+columns), in what are called **relational databases**. In recent years though, new
+types of databases have come on the scene that can efficiently store all sorts
+of different data, including nested or tree based data, graph data, and
+unstructured text. The type of data you have will inform what kind of
+database would be best for you, which you can find out more about in the
+[Overview of Databases and Data Storage reader][datalab-db]
+
+Many, if not most, database systems have graphical user interface software to
+make it easier to interace with the database. But, to get the most out of a
+database, it is helpful to the query langauge associated with your database of
+choice. For relational databases this is SQL, which stands for Structured Query Language. To get get started with SQL, see
+[Introduction to SQL for Querying Databases workshop reader][datalab-sql].
+Non-relational (SQL-based) databases use a variety of langauges to write
+queries. MongoDB, a document based database, uses MQL, which you can learn in
+W3School's [MongoDB Tutorial][mongo]. Like other computer languages, query
+languages like SQL and MQL make your data cleaning and transformation processes
+reproducible. However, they are much easier to learn because the set of tasks
+they are designed to do is much smaller. 
 
 
 :::{seealso}
-See DataLab's [An Overview of Databases and Data Storage workshop
-reader][datalab-db] for an introduction to the topic. Then see DataLab's
-[Introduction to SQL for Querying Databases workshop reader][datalab-sql] to
-learn how to query data in databases.
+DataLab's [An Overview of Databases and Data Storage workshop
+reader][datalab-db] provides an introduction to databases. DataLab's
+[Introduction to SQL for Querying Databases workshop reader][datalab-sql]
+teaches you how to query data in relational databases. W3School's [MongoDB
+tutorial][mongo] shows you how to query data in a document or text based
+database using MQL.
 :::
 
 [datalab-db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
 [datalab-sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-
+[mongo]: https://www.w3schools.com/mongodb/index.php
 
 
 Workflow Automation
@@ -388,3 +406,182 @@ scripts.
 
 [datalab-shell]: https://ucdavisdatalab.github.io/workshop_introduction_to_the_command_line/
 [datalab-shell-scripts]: https://ngs-docs.github.io/2021-august-remote-computing/automating-your-analyses-and-executing-long-running-analyses-on-remote-computers.html
+
+
+## Prefer Open-Source Software
+
+> You're excited to start working on a project about how a particular virus
+> spreads among domesticated poultry populations. The project seems promising,
+> because your collaborator has been collecting data for over 10 years. When
+> they send you the data, you notice that the first 3 years of data are
+> anomalous compared to the rest. You ask your collaborator about it, and they
+> mention that they used to calibrate the data with software from Big Money
+> Corporation. After 3 years, they switched to an open-source calibration
+> software, because Big Money Corp. went out of business. You'd like to confirm
+> that the calibration software from Big Money Corp. used the same algorithm as
+> the open-source calibration software, but the documentation is vague, the
+> source code is not available, and no one online seems to know. You're glad
+> your collaborator still has copies of the raw, uncalibrated data, but it
+> looks like you'll have to spend a few days running all of it through the
+> open-source calibration software.
+
+Software is **open-source** if its source code is freely available. Most
+commercial software is closed-source: only the developers have access to the
+source code. Using open-source software makes your research more reproducible
+in at least three ways:
+
+* Transparency: When you use closed-source software, you have limited insight
+  into how it actually works. The algorithms the software uses might not be the
+  ones the distributor claims, and there might be bugs in their
+  implementations. When you use open-source software, if you have these
+  concerns, you can inspect the source code yourself to determine how the
+  software works.
+
+* Longevity: The lifespan of closed-source software is entirely up to its
+  developers and distributor. In contrast, for open-source software, even if
+  the original developers retire from or abandon development, someone else can
+  step in and continue to develop the software. Many open-source software have
+  continued to receive updates for 20-30 years or more, and run well on modern
+  computers---an achievement few closed-source software can claim.
+
+* Extensibility: Whether a new feature is added to closed-source software is up
+  to the whims of its developers. With open-source software, you can add the
+  feature yourself (or hire someone else to do it). 
+
+We recommend using open-source software whenever possible because of these
+benefits. That said, make sure to take into account the norms and expectations
+of your collaborators and your discipline, and whether the available
+open-source software meets your needs. In some disciplines, closed-source
+software is widely-used, and using anything else can make it difficult to
+collaborate or to convince peers of the soundness of your work. For specialized
+tasks, closed-source software is sometimes the only software available. It's
+wonderful if you want to be an open-source trailblazer (or even developer) in
+your discipline, but make sure it's an informed decision. 
+
+:::{seealso}
+Many universities, including UC Davis, have an Open Source Program Office
+(OSPO) to train and support contributors and maintainers of open-source
+software. You can learn more about UC OSPOs at the [UC OSPO Network][ospo]
+website.
+
+[ospo]: https://ucospo.net/
+:::
+
+
+(use-a-programming-language)=
+### Compute with Code
+
+:::{note}
+This practice is recommended for projects that involve computations. If your
+project doesn't, or if all computations are handled by specialized software,
+then you might not need a programming language.
+
+Nevertheless, we've included writing code as a primary practice to emphasize
+that it's uniquely important for reproducibility if your project does involve
+computations.
+:::
+
+Code is an explicit, unambiguous record of every step in a computation. This is
+a major benefit for reproducible research. You can share your code with someone
+else, and if they run it with all of the same inputs, they'll get the same
+outputs. The same is difficult or impossible to achieve using software that has
+a graphical user interface.
+
+Another benefit of programming is that code is reusable and often scalable. If
+you write code to solve a general problem, you can then apply it to any number
+of specific instances of that problem. The only constraints are time and the
+computing resources available to you. Most popular programming languages have
+supportive, active communities that create and distribute thousands of
+user-contributed packages, so often it's not even necessary to solve a problem
+yourself---you can reuse someone else's code.
+
+::::{grid}
+:::{grid-item}
+```{image} /images/logo_r.png
+:alt:
+:width: 50%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_python_device.svg
+:alt:
+:width: 40%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_julia.svg
+:alt:
+:width: 50%
+:align: center
+```
+:::
+::::
+
+:::{margin}
+```{note}
+A **high-level** programming language is one which uses abstractions to hide
+most of the details of the hardware.
+```
+:::
+
+Choosing a programming language doesn't just mean choosing a particular syntax,
+it also means choosing a community and ecosystem. Different languages have
+different strengths, weaknesses, community cultures, and packages. We recommend
+choosing an open-source, high-level language designed for research computing
+and data analysis, such as:
+
+* [R][]: a "software environment for statistical computing and graphics," R is
+  especially well-suited to cleaning and analyzing tabular data, training
+  statistical models, and creating data visualizations. R has support for
+  missing values built-in, a friendly and active community, and tens of
+  thousands of user-contributed packages, mostly related to statistics and data
+  science.
+
+* [Python][]: a general-purpose programming language that "lets you work
+  quickly and integrate systems more effectively." The Python community
+  supports research computing through its user-contributed NumPy, SciPy, and
+  Pandas packages, as well as others. Python's syntax encourages well-organized
+  code, and its community is enormous and spans many different disciplines.
+  It's also one of the primary languages for deep learning. Python's facilities
+  for data analysis are not as mature as R's, with equivalent features and
+  stability but some rough edges.
+
+* [Julia][]: a relatively new programming language "appropriate for scientific
+  and numerical computing, with performance comparable to [languages like C]."
+  Julia is designed from the ground up for research computing and uses modern
+  optimizations to run substantially faster than R or Python for many tasks.
+  Julia's community is small but growing. Julia's facilities for data analysis
+  are not as mature as R's or Python's, with many still in early development.
+  Expect to occasionally have to develop things yourself when you wouldn't in
+  more mature languages.
+
+[R]: https://www.r-project.org/
+[Python]: https://www.python.org/
+[Julia]: https://julialang.org/
+
+When choosing a language, always make sure to consider the specific needs of
+your project. Projects with specific requirements for performance or other
+features (for example, developing web applications) may benefit from using
+other languages or a mix of languages.
+
+:::{seealso}
+If you want to learn R, see DataLab's [R Basics workshop reader][r-basics] and
+consider joining the [Davis R Users Group][drug].
+
+If you want to learn Python, see DataLab's [Python Basics workshop
+reader][py-basics] and consider joining the [Davis Python Users Group][dpug].
+
+If you want to learn Julia, see the [official Julia documentation][julia-docs]
+and consider joining the [UC Julia Users Group][ucjug].
+:::
+
+[r-basics]: https://ucdavisdatalab.github.io/workshop_r_basics/
+[drug]: https://d-rug.github.io/
+[py-basics]: https://ucdavisdatalab.github.io/workshop_python_basics/
+[dpug]: https://datalab.ucdavis.edu/davis-python-users-group/
+[julia-docs]: https://docs.julialang.org/
+[ucjug]: https://datalab.ucdavis.edu/julia-users-group/
