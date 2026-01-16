@@ -712,42 +712,28 @@ See the UC Davis Library's [Research Data Management Guide][library-rdm-backups]
 (use-version-control)=
 ### Use Version Control
 
-A **version control system** is a system for tracking changes to documents,
-code, or other data. You may already use copies of files with different names
-as a kind of ad-hoc version control: `essay.doc`, `essay_edited.doc`,
-`essay_final.doc`, `essay_final_for_real.doc`, and so on. A more consistent and
-less error-prone approach is to use software specifically designed for version
-control. In computing contexts, when people say "version control," it's often
-implied that they mean version control software. In addition to helping you
-keep track of different versions of files, most modern version control software
-can also help you share and collaborate on files with others.
+**Version control** is the act of tracking changes to your files. By capturing and timestamping all changes to the project files, version control allows for a complete audit and reconstruction of the project and is thus a cornerstone of reproducibility practices. Projects that use version control allow you to follow the exact course of the research from original data to analysis, interpretation, and final product as well as identify exactly when and why a specific file or result changed. There are a few common **version control systems** that you can use to track changes to your research files, including your documentation, code, and data. 
 
+### Manual Version Control
 
-#### For Documents
+You may already be saving copies of files with different names
+as a kind of ad-hoc version control system. This could look like using a standardized file name convention that includes a keyword denoting the topic of the file combined with a date or project milestone indicating when the file was last modified. For example, the names of the copies could look like `essay_2025_12_01.doc` and `essay_2025_12_31.doc` if using calendar dates to denote changes, or `essay_edited.doc`, `essay_final.doc`, `essay_final_for_real.doc`, and so on if using project milestones. However, making multiple copies of a file and applying standardized naming conventions to track changes is error prone and can make it challenging to identify what exactly is different across the copies. It also requires more space as you are saving multiple full copies every file you modify. Thus, using cloud-based tools with or software that automate version control for your files is preferred whenever possible.
 
-Cloud-based office suites such as Microsoft 365 and Google Office have version
-control built-in. Consult the documentation for your preferred office suite to
-learn more. A disadvantage of these services is that they typically save
+### Cloud-Based Version Control
+
+Cloud-based office suites such as Microsoft 365 OneDrive, Google Office and Box include built-in version history features that allow you to revert to older versions of a file. This version control system can work effectively, assuming you have access to the platform and are able to store all your work there. It also requires you, and anyone else working on the file, to have reliable internet access. A disadvantage of these services is that they typically save
 documents in proprietary formats that may not be accessible to some people, and
 they do not necessarily preserve version information when you download a
-document from the cloud. For an open-source, desktop-based alternative,
+document from the cloud to work with it locally on your machine. These cloud services also facilitate collaboration, assuming all members of the team have access to the tools. For an open-source, desktop-based alternative,
 consider using [LibreOffice][], which also has version control built-in.
 
 [LibreOffice]: https://www.libreoffice.org/
 
-[Markdown][] provides basic formatting options, is supported by a wide variety
-of editors and platforms, and can be used to produce publication-quality
-documents with open-source tools like [Pandoc][]. Because Markdown is a
-plain-text format, anyone with a text editor can read a Markdown document, and
-you can manage versions with the same version control systems available for
-code. For a more richer markup language that produces publication-quality
-documents out-of-the-box, but has many of the same advantages as Markdown,
-consider [LaTeX][].
+#### Version Control Software
 
-[Pandoc]: https://pandoc.org/
-[LaTeX]: https://www.latex-project.org/
-
-#### For Code
+The most consistent and precise approach is to use software specifically designed for version control. In computing contexts, when people say "version control," it's often
+implied that they mean a version control system that uses software designed for that purpose. In addition to helping you keep track of different versions of files, most modern version control software
+can also help you share and collaborate on files with others. The most common version control software and cloud sharing platform are Git and GitHub.
 
 Version control systems for code first appeared in the 1960s and are now widely
 considered an essential part of every programmer's toolkit. One reason for this
@@ -767,7 +753,7 @@ of investigation.
 Many different version control systems exist, but a [recent StackOverflow
 survey][so-vcs-survey] found that about 93% of developers use [Git][], an
 open-source distributed version control system. "Distributed" means that Git is
-flexible about where you store your code: there can be copies of the code on
+flexible about where you store your code; there can be copies of the code on
 your laptop, on a private server, on a hosting service like [GitHub][], and on
 your collaborators' laptops, and Git will help you keep all of them in
 sync---if that's what you want. DataLab uses Git for all of our projects, and
@@ -776,12 +762,30 @@ recommends that you do too.
 [so-vcs-survey]: https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/
 [Git]: https://git-scm.com/
 
+:::{note}
+Git and other version control software can manage versions of all file types. While this software also facilitates direct comparisons across different versions of your documentation and code files so you can quickly and reliably identify exactly what changed, it generally does not track specific changes within spreadsheet, image, and video files.
+:::
 
 :::{seealso}
-See DataLab's [Introduction to Version Control workshop reader][intro-vcs] for
+See the UC Davis Library's [Research Data Management Guide][rdm-version-control] for an overview of  version control systems, and DataLab's [Introduction to Version Control workshop reader][intro-vcs] for
 a technical introduction to version control with Git.
 
+[rdm-version-control]: https://guides.library.ucdavis.edu/data-management/version-control
 [intro-vcs]: https://ucdavisdatalab.github.io/workshop_reproducible_research/chapters/version-control/01_version-control-systems.html
+:::
+
+:::{note}
+[Markdown][] is a lightweight markup language that provides basic formatting options, is supported by a wide variety
+of editors and platforms, and can be used to produce publication-quality
+documents with open-source tools like [Pandoc][]. Because Markdown is a
+plain-text format, anyone with a text editor can read a Markdown document, and
+you can manage versions with the same version control systems available for
+code. For a more richer markup language that produces publication-quality
+documents out-of-the-box, but has many of the same advantages as Markdown,
+consider [LaTeX][].
+
+[Pandoc]: https://pandoc.org/
+[LaTeX]: https://www.latex-project.org/
 :::
 
 
