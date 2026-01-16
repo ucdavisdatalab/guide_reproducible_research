@@ -391,6 +391,10 @@ Some general considerations when starting a data management plan would be to ask
 	* Units? Logical structure? Metadata and Documentation?
 * Who will be responsible for the data?
 	* Consider both in the short-term and the long-term.
+ * How will you backup the data during the project?
+    * Frequency? Responsible Party? Location? Risk Tolerance?
+ * Will you need/want to share the data?
+    * With who? Are there restrictions? How will it be found? 
 
 :::{seealso}
 See the [Research Data Managment Guide][libguide-dmp] for instructions
