@@ -25,9 +25,6 @@ learn and use. However, they provide benefits for reproducibility,
 collaboration, and distribution that we consider well worth the cost.
 
 
-Documentation
--------------
-
 <!--
 Documentation explains how a project works, the assumptions the project makes,
 and how to actually use the included artifacts (data, code, figures, etc.). 
@@ -41,7 +38,7 @@ and how to actually use the included artifacts (data, code, figures, etc.).
 [peyton-jones]: https://simon.peytonjones.org/
 
 
-### Start with the Scope
+## Start with the Scope
 
 At the beginning of a project, write a **scoping document** or research proposal describing your research question and the goals. The process of writing this document is an excellent way to
 clarify what you're trying to achieve, ensure alignment among your collaborators, and identify potential problems or gaps early when they can be more easily addressed. Depending on your specific funding mechanism and discipline, a scoping document may also be required before you begin collecting data. Later, once you have your data, this document can help you and your
@@ -121,7 +118,7 @@ tables, or your datasheet is really wide with numerous columns containing repeat
 
 
 (keep-running-notes)=
-### Keep a Research Log
+## Keep a Research Log
 
 > You're part of a lab working on a research project that began three years
 > ago. When you were introducing a new graduate student to the project this
@@ -201,7 +198,7 @@ workshop reader to learn more about issue tracking.
 
 
 (document-every-experiment)=
-#### Document Every Experiment
+### Document Every Experiment
 
 :::{note}
 An "experiment" doesn't necessarily have to be an experiment done in a lab.
@@ -235,7 +232,7 @@ ELNs or spreadsheets are often a good format for this kind of documentation,
 since they're convenient for data entry.
 :::
 
-### Citation Managers
+## Citation Managers
 You will likely find a great deal of literature (journal articles, reports, etc.)
 that you will need to keep organized. Citation managers (like Zotero, EndNote,
 Lean Library, and many others) can help with this. Modern citation managers have
@@ -262,7 +259,7 @@ more information about why open source tools are preferred for reproducibility.
 
 
 (write-readmes)=
-### Write READMEs
+## Write READMEs
 
 :::{margin}
 ```{note}
@@ -325,7 +322,7 @@ about how to write READMEs.
 
 
 (file-manifests)=
-#### File Manifests
+### File Manifests
 
 It's good practice to include a file manifest in your project README, and whenever you share files. A **file manifest** is a description of the files and directories in a project.
 This list is analogous to the shipping manifest on a box your receive in the mail. Just as the shipping manifest lists all the items in the box, the file manifest lists all files in a project directory. A
@@ -352,7 +349,7 @@ toy_data/       Very (very!) small pieces of data for dev testing
 
 If a directory contains many files or subdirectories, you might consider writing a separate file manifest specifically for that directory.
 
-### Document the Data
+## Document the Data
 
 **Metadata**, or data that describes data, is critical to the research process.
 It delineates how the data were collected, what assumptions were made, what
@@ -463,7 +460,7 @@ of them:
 [ucd-doc]: https://libguides.ucd.ie/data/documentation
 
 (create-data-dictionary)=
-#### Create a Data Dictionary
+### Create a Data Dictionary
 
 A **data dictionary**, part of your metadata, is a document that explains what
 every field or element in your dataset means as well as any restrictions on
@@ -589,7 +586,7 @@ step further by bundling all of the commands in a workflow into a single
 command.
 
 
-### Make Workflow Diagrams
+## Make Workflow Diagrams
 
 Workflows with multiple interdependent tasks can be confusing, especially for
 people new to a project. Diagrams that lay out the sequence of and
@@ -649,7 +646,7 @@ See DataLab's [README, Write Me! workshop reader][datalab-readme] for
 suggestions about how to create workflow diagrams.
 :::
 
-### Make a Data Management Plan
+## Make a Data Management Plan
 Increasingly, funders are requiring Data Managment and Sharing Plans (DMSPs) as a condition 
 of funding. Beyond being a necessity for grants, these are also an excellent reproducibility 
 practice and should be implemented regardless of funder requirements. Ideally, you should make your plan as early in your research process as possible. 
@@ -707,7 +704,7 @@ You may also find these external guides useful:
 [rdm_email]: dataservices@ucdavis.edu
 [libguide-dmp]: https://guides.library.ucdavis.edu/data-management/planning
 
-### Document the Code
+## Document the Code
 
 Provide documentation for your project's code. Think about how people
 (including you) will typically use the code. Will they:
@@ -751,10 +748,7 @@ package your code and/or release it to a wider audience.
 [roxygen2]: https://roxygen2.r-lib.org/
 
 
-Artifact Preservation
----------------------
-
-### Make Backups
+## Make Backups
 
 Hard drives can and do fail. Store at least one backup copy of each project on
 a different computer, on an external hard drive, or in the cloud. This way, if
@@ -792,7 +786,7 @@ See the UC Davis Library's [Research Data Management Guide][library-rdm-backups]
 
 
 (use-version-control)=
-### Use Version Control
+## Use Version Control
 
 **Version control** is the act of tracking changes to your files. By capturing and timestamping all changes to the project files, version control allows for a complete audit and reconstruction of the project and is thus a cornerstone of reproducibility practices. Projects that use version control allow you to follow the exact course of the research from original data to analysis, interpretation, and final product as well as identify exactly when and why a specific file or result changed. There are a few common **version control systems** that you can use to track changes to your research files, including your documentation, code, and data. 
 
@@ -811,7 +805,7 @@ consider using [LibreOffice][], which also has version control built-in.
 
 [LibreOffice]: https://www.libreoffice.org/
 
-#### Version Control Software
+### Version Control Software
 
 The most consistent and precise approach is to use software specifically designed for version control. In computing contexts, when people say "version control," it's often
 implied that they mean a version control system that uses software designed for that purpose. In addition to helping you keep track of different versions of files, most modern version control software
@@ -871,10 +865,7 @@ consider [LaTeX][].
 :::
 
 
-Project Organization
---------------------
-
-### Use Naming Conventions
+## Use Naming Conventions
 
 > There are only two hard things in Computer Science: cache invalidation and
 > naming things.
@@ -897,7 +888,7 @@ instance, it's usually a helpful to have separate naming conventions for files
 and for code.
 
 
-#### File and Directory Names
+### File and Directory Names
 
 *Choose filenames that are human-readable, machine-readable, and have a meaningful order when sorted alphabetically.* 
 
@@ -1007,7 +998,7 @@ Things][on-naming-things].
 [on-naming-things]: https://www.douganddata.com/2022/07/on-naming-things/
 
 
-#### Names in Code
+### Names in Code
 
 Most programming languages have a **style guide** with standards for how to
 format code, either officially or by community consensus. Following a style
@@ -1087,7 +1078,7 @@ for Felienne Hermans' perspective as a computer science education researcher.
 
 
 (establish-directory-structure)=
-### Establish a Directory Structure
+## Establish a Directory Structure
 
 Create a separate, dedicated directory, often called a **repository**, for each
 of your projects. Store everything related to the project there. This will make
@@ -1136,7 +1127,7 @@ For more examples of directory structures, see:
 [turing-repo]: https://the-turing-way.netlify.app/project-design/project-repo/project-repo-advanced
 
 (organize-the-code)=
-### Organize the Code
+## Organize the Code
 
 ```{figure} /images/xkcd_goto.png
 ---
@@ -1201,7 +1192,7 @@ problems and develop code. Don't feel locked in to one or the other, and
 remember that generally notebooks can load functions and other code from
 scripts.
 
-#### Write Functions
+### Write Functions
 
 To solve problems efficiently and better organize your code, try to break
 programming tasks into small, manageable steps. Use writing (for instance, in
@@ -1234,7 +1225,7 @@ filling in the details (the code). As you write, you may occasionally need to
 stop and adjust the outline as you uncover gaps in your reasoning.
 :::
 
-#### Make It Modular
+### Make It Modular
 
 Create separate scripts for separate parts of your project. For example, you
 might have a script to clean the data, a script to train a model, a script to
@@ -1261,10 +1252,8 @@ point functions across all of your scripts.
 See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
 -->
 
-## Publishing
-
 (sec-open-access)=
-### Open Access 
+## Open Access 
 
 Not having access to a piece of research or its underlying data and materials can be the main roadblock to reproducibility. Open access not only allows anyone to access and read the papers, but it also permits reproducibility, replicability, and the opportunity to build on or reuse all or part of your work in a future project to advance science and knowledge. Many grant providers and institutions may also require your work to be published open access.
 
@@ -1325,7 +1314,7 @@ Review the {ref}`open-licenses` section below to learn more about publishing you
 
 [RDM-guide-data-sharing]: https://guides.library.ucdavis.edu/data-management/data-sharing
 
-#### Publish Open Access Articles
+### Publish Open Access Articles
 
 Publishing an open access article reduces barriers for readers and researchers by making it freely accessible.
 
@@ -1333,7 +1322,7 @@ Publishing your work in an open access journal or as an open access monograph is
 
 Learn more about open access publishing, including finding reputable journals and avoiding predatory publishers, and open access funding support at UC Davis on our [Open Access Publishing Library Guide][open-access-guide].
 
-##### Pre-Prints and Post-Prints
+#### Pre-Prints and Post-Prints
 
 Publishing research Open Access can be expensive and therefore may not always be feasible. University of California authors may have [Open Access fee assistance][open-access-guide] available to them. However, authors with no fee assistance have other options for making their work openly available and, therefore, reproducible.
 
@@ -1362,7 +1351,7 @@ To learn more about Open Access options, the [Open Access Network][open-access-n
 [open-access-network]: https://open-access.network/en/information/open-access-primers/green-and-gold
 
 (open-licenses)=
-#### Open Licenses
+### Open Licenses
 
 A **license** grants others permission to possess, copy, and/or use a piece of work in a variety of ways. An **open license** makes a work freely available for others to read, copy, distribute, and use without obtaining permission from the author or creator. Open licenses also provide free, immediate, and perpetual access to the content. 
 

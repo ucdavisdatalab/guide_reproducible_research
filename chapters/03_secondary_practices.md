@@ -9,10 +9,7 @@ here. DataLab adopts these practices for all projects for which they are
 relevant, and we recommend you do too.
 
 
-Documentation
--------------
-
-### Document Methods
+## Document Methods
 
 You can think of your methods like a recipe you might use for cooking or baking. A good
 recipe clearly documents the steps so that you can
@@ -47,7 +44,7 @@ Consider {ref} 'PREREGISTRATION_SECTION' to make your methods even more reproduc
 :::
 
 (document-every-experiment)=
-### Document Every Experiment
+## Document Every Experiment
 
 :::{note}
 An "experiment" doesn't necessarily have to be an experiment done in a lab.
@@ -83,7 +80,7 @@ they're convenient for data entry.
 
 
 (choose-a-license)=
-### Choose a License
+## Choose a License
 
 A **license** is a legal document that grants others permission to do, use, or
 possess something. If you plan to make your project widely or publicly
@@ -119,10 +116,7 @@ For licensing data, writing, art, or other materials, see Creative Commons'
 [cc-cal]: https://creativecommons.org/choose/
 
 
-Artifact Preservation
----------------------
-
-### Use Configuration Files
+## Use Configuration Files
 
 A **configuration file** is a file that stores accessory parameters for a
 computation. Configuration files are distinct from data sets in that the data
@@ -159,7 +153,7 @@ them in R, Python, and Julia.
 [YAML]: https://yaml.org/
 
 
-### Release the Data
+## Release the Data
 
 Publish or share your research data, so that other researchers can use it to
 reproduce your work and possibly even do new work. In 2016, [Wilkinson et
@@ -196,11 +190,7 @@ guide][library-publish-data] to learn more about how to release your data.
 [library-publish-data]: https://library.ucdavis.edu/data-analysis-and-management/publish-share-and-preserve-your-data/
 
 
-
-Project Organization
---------------------
-
-### Save Clean Data
+## Save Clean Data
 
 Treat data cleaning and data analysis as distinct and equally important steps
 in the research process. Write code to clean the data, and document *why* each
@@ -240,7 +230,7 @@ reader][datalab-r-clean] to learn how to clean data in R.
 [datalab-r-clean]: https://ucdavisdatalab.github.io/workshop_intermediate_r/string-date-processing.html
 
 (use-file-formats-effectively)=
-### Use File Formats Effectively
+## Use File Formats Effectively
 
 For any dataset, there are many different ways to store that data. For tabular
 data (rows and columns) alone, there are at least seven different file formats.
@@ -279,7 +269,7 @@ stable.
 [parquet]: https://parquet.apache.org/
 
 (prefer-open-standard-file-formats)=
-#### Prefer Open Standard File Formats
+### Prefer Open Standard File Formats
 
 For any file format, there is a defined standard for how any file of that format
 should be structured on a computer. Open standard file formats have these
@@ -333,7 +323,7 @@ on the [Sustainability of Digital Formats][sdf].
 
 
 (databases)=
-#### Databases
+### Databases
 
 A **database** is an organized collection of data stored with specialized software that helps you
 do things like query and update the data. Databases can:
@@ -397,10 +387,7 @@ database using MQL.
 [mongo]: https://www.w3schools.com/mongodb/index.php
 
 
-Workflow Automation
--------------------
-
-### Orchestrate with Shell Scripts
+## Orchestrate with Shell Scripts
 
 Even if you {ref}`organize-the-code` carefully, it's likely you'll end up with
 workflows that consist of running several commands in a specific order and with
@@ -503,7 +490,7 @@ website.
 
 
 (use-a-programming-language)=
-### Compute with Code
+## Compute with Code
 
 :::{note}
 This practice is recommended for projects that involve computations. If your

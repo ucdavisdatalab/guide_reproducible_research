@@ -16,16 +16,10 @@ chapters and want to learn even more.
 
 
 
-Documentation
--------------
-
-### Use Issue Tracking
+## Use Issue Tracking
 
 
-Artifact Preservation
----------------------
-
-### Log Output
+## Log Output
 
 :::{seealso}
 If you're using R, see DataLab's [Intermediate R: Outputs, Errors, and Bugs
@@ -41,13 +35,9 @@ overview of how to manage log files in Python.
 [datalab-py-output]: https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/04_debugging.html#logging
 
 
-### Use Version Control for Data
+## Use Version Control for Data
 
 
-
-
-Workflow Automation
--------------------
 
 ```{figure} /images/xkcd_is_it_worth_the_time.png
 ---
@@ -63,7 +53,7 @@ alt:
 
 
 (sec-use-a-task-runner)=
-### Use a Task Runner
+## Use a Task Runner
 
 > You're working on a project where you receive a new dataset every few weeks.
 > Before you analyzing a dataset, you must process it with the `moo_calibrate`
@@ -123,11 +113,11 @@ Snakemake.
 
 
 
-### Use Continuous Integration
+## Use Continuous Integration
 
-#### Lint the Code
+### Lint the Code
 
-#### GitHub Actions
+### GitHub Actions
 
 
 ## Document the Computing Environment
@@ -379,8 +369,6 @@ the hardware by hand, and using an environment manager or containerization to
 manage the software for your project.
 
 
-Publishing
--------------
 ## Publish Your Code
 
 > Ten years ago, your lab devised a new method to preprocess and calibrate data
@@ -464,7 +452,7 @@ choose][osi-cal] for even more about licensing software.
 :::
 
 
-#### Package the Code
+### Package the Code
 
 Many programming languages provide standards and tools for creating libraries
 or packages of code that can be shared with others. For example, R and Python
@@ -498,7 +486,7 @@ Guide][py-pkg] or the [Python Packaging User Guide][pypa].
 :::
 
 
-#### Create Automated Tests for the Code
+### Create Automated Tests for the Code
 
 If you develop reusable software as part of your research, it's a good idea to
 create automated tests that verify the software works as intended. Automated
@@ -530,6 +518,7 @@ with the [pytest][] package.
 [testthat]: https://testthat.r-lib.org/
 [pytest]: https://docs.pytest.org/
 :::
+
 
 ## Open Methods
 
