@@ -12,30 +12,6 @@ relevant, and we recommend you do too.
 Documentation
 -------------
 
-### Document the Data
-
-In a perfect world, every data set would come with detailed documentation or
-**metadata** about how the data were collected, what assumptions were made,
-what biases might be present, any ethical concerns, the overall structure, what
-each observation means, what each feature means, and more. Good data
-documentation guides researchers towards appropriate, responsible use of the
-data.
-
-Collecting data as part of a project gives you and your collaborators control
-over how the data are documented, so you can ensure there are no gaps. If your
-project uses data collected earlier or by someone else, it's a good practice to
-fill gaps in the existing documentation with your own. Thorough documentation
-isn't just beneficial to other researchers, it's also beneficial to future
-you---small details you notice and document about features could be important
-later in the project.
-
-:::{seealso}
-See DataLab's [README, Write Me! workshop reader][datalab-readme] for more
-about how to document data.
-:::
-
-[datalab-readme]: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
-
 ### Document Methods
 
 You can think of your methods like a recipe you might use for cooking or baking. A good
@@ -207,8 +183,10 @@ for free to publish their data.
 [Dryad]: https://datadryad.org/stash
 
 To satisfy the "I" standard, {ref}`use-file-formats-effectively`. To satisfy
-the "R" standard, a good start is to {ref}`keep-running-notes`,
-{ref}`write-readmes` and {ref}`choose-a-license`.
+the "R" standard, a good start is to {ref}`keep-running-notes` and
+{ref}`write-readmes`.
+
+<!-- FIXME: this used to refer to choose-a-license too -->
 
 :::{seealso}
 See UC Davis Library's [Publish, Share, and Preserve Your Data
@@ -357,25 +335,66 @@ on the [Sustainability of Digital Formats][sdf].
 (databases)=
 #### Databases
 
-A **database** is a data set together with specialized software to help you
-organize, query, and update that data set. Databases are usually more
-computationally efficient than languages like R and Python. Most databases also
-support querying large data sets (hundreds of gigabytes) without any extra
-setup. Some databases support multiple users, which can be convenient for
-collaborative work (this is also one reason why databases are widely used for
-data storage in web applications).
+A **database** is an organized collection of data stored with specialized software that helps you
+do things like query and update the data. Databases can:
+
+
+* create a definitive version of your data that multiple people can access
+without creating conflicts.
+
+* provide quality control measures to reduce input errors and make sure typos don't get introduced into
+your data.
+
+* query millions of observations in seconds (which you can't do in Excel or Google Sheets!).
+
+* store data more efficiently than regular files.
+
+* control who has access to your data, and what they can do with it, on a very
+granular level.
+
+Databases are a specialized tool. They are optimized for querying and
+transforming data. As such, they are generally faster at those tasks than R or
+Python. However, they don't do everything. You can't create a data visualization
+using a database, or run a statistical analysis. A database is a perfect data
+source for those tasks to ensure that your results are reproducible across
+collaborators and over time. Databases also make an excellent platform for
+sharing or publishing your data. Their permissions functionality means you can
+easily give the public read only access to your finalized data products, while
+keeping the raw or unprocessed data only accessible to your collaborators.
+
+Historically, databases were restricted to primarily tabular data (rows and
+columns), in what are called **relational databases**. In recent years though, new
+types of databases have come on the scene that can efficiently store all sorts
+of different data, including nested or tree based data, graph data, and
+unstructured text. The type of data you have will inform what kind of
+database would be best for you, which you can find out more about in the
+[Overview of Databases and Data Storage reader][datalab-db]
+
+Many, if not most, database systems have graphical user interface software to
+make it easier to interace with the database. But, to get the most out of a
+database, it is helpful to the query langauge associated with your database of
+choice. For relational databases this is SQL, which stands for Structured Query Language. To get get started with SQL, see
+[Introduction to SQL for Querying Databases workshop reader][datalab-sql].
+Non-relational (SQL-based) databases use a variety of langauges to write
+queries. MongoDB, a document based database, uses MQL, which you can learn in
+W3School's [MongoDB Tutorial][mongo]. Like other computer languages, query
+languages like SQL and MQL make your data cleaning and transformation processes
+reproducible. However, they are much easier to learn because the set of tasks
+they are designed to do is much smaller. 
 
 
 :::{seealso}
-See DataLab's [An Overview of Databases and Data Storage workshop
-reader][datalab-db] for an introduction to the topic. Then see DataLab's
-[Introduction to SQL for Querying Databases workshop reader][datalab-sql] to
-learn how to query data in databases.
+DataLab's [An Overview of Databases and Data Storage workshop
+reader][datalab-db] provides an introduction to databases. DataLab's
+[Introduction to SQL for Querying Databases workshop reader][datalab-sql]
+teaches you how to query data in relational databases. W3School's [MongoDB
+tutorial][mongo] shows you how to query data in a document or text based
+database using MQL.
 :::
 
 [datalab-db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
 [datalab-sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-
+[mongo]: https://www.w3schools.com/mongodb/index.php
 
 
 Workflow Automation
