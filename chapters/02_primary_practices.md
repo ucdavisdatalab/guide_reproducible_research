@@ -242,7 +242,7 @@ collection folders to tagging systems. Most also integrate with Microsoft Word, 
 or LibreOffice to help manage your bibliography while writing. They aren't perfect and 
 you need to check their work but they can save you a lot of time. They also assist with 
 collaborations because you can have a shared library with collaborators
-that you can all add papers too.
+that you can all add papers to.
 
 You can learn more about the citation managers available at UCD [here][citation_managers]. They all have pros and cons.
  And if you need support choosing or working with one you can [consult with a librarian][research_consultation] anytime!
@@ -358,11 +358,11 @@ observation means, what each feature means, and more. Good data
 documentation guides researchers towards appropriate, responsible use of the
 data for both the current and future studies.
 
-Good metadata should answer the questions the who, what, when, where, why, and
-how questions about your data. How your metadata answers these questions will
+Good metadata should answer the questions who, what, when, where, why, and
+how about your data. How your metadata answers these questions will
 depend on conventions in your field of research. If you are submitting your data
 to a particular data repository, it will likely have a required metadata scheme
-to you will need to follow. Otherwise, pick a metadata scheme that aligns with
+you will need to follow. Otherwise, pick a metadata scheme that aligns with
 other researchers in your field. If you have to submit a Data Management Plan,
 it will specifically ask how you will apply and adhere to field specific data
 standards. For more information about Data Management Plans, see the UC Davis
@@ -483,7 +483,7 @@ including future you! A very basic one could look like this:
 If you aren't sure where to start with creating a data dictionary, DataLab has a
 [template][datalab_dd_template] you can use as a jumping off point. If you
 prefer step by step instructions, Kristin Briney's [Create a Data Dictionary
-exercise][create_dd] minght be for you. [Open Science Framework (OSF)][osf_dd] has
+exercise][create_dd] might be for you. [Open Science Framework (OSF)][osf_dd] has
 resources on what details to add to your data dictionary, and the
 [USGS][usgs_dd] provides many examples of data dictionaries and how they are
 used in different contexts. If you are working with multiple data sets, make
@@ -670,7 +670,7 @@ Some general considerations when starting a data management plan would be to ask
 * How much data will be generated?
 	* A handful of spreadsheets? Hundreds of csv files? Millions of rows?
 * How much space will the data take?
-	* Megabytes? Gigabytes? Terrabytes?
+	* Megabytes? Gigabytes? Terabytes?
 * What is the cost/ability of replace lost data?
 	* Can you rerun the experiment or reinterview a subject? Or is it a one time chance?
 * What do people (or future you) need to understand about your data to work with it?
@@ -1369,7 +1369,7 @@ Many open licenses allow for any type of use and reuse, including modifications,
 :::{seealso}
 For licensing data, writing, art, or other materials, see Creative Commons' [Choose a License page][cc-cal] for help deciding on a Creative Commons license.
 
-For licensing software, see [choosealicense.com][gh-cal] to help you choose an open license (maintained by GitHub)or the Open Source Initiative's [FAQ answer about which license to choose][osi-cal].
+For licensing software, see [choosealicense.com][gh-cal] to help you choose an open license (maintained by GitHub) or the Open Source Initiative's [FAQ answer about which license to choose][osi-cal].
 :::
 
 [gh-cal]: https://choosealicense.com/
