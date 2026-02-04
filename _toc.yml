@@ -9,7 +9,8 @@ parts:
     numbered: true
     chapters:
       - file: chapters/01_principles
-      - file: chapters/02_primary_practices
-      - file: chapters/03_secondary_practices
-      - file: chapters/04_case_by_case_practices
+      - file: chapters/02_planning-foundational-principles
+      - file: chapters/03_daily-habits-for-everyone
+      - file: chapters/04_computational-reproducibility
+      - file: chapters/05_recommendations-for-dissemination-sharing
       - file: chapters/references
