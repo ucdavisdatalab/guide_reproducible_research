@@ -1,5 +1,4 @@
-Secondary Practices
-===================
+# Secondary Practices
 
 This chapter covers secondary practices for reproducibility. These are
 practices which don't apply to every project, but are beneficial or even
