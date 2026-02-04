@@ -1,10 +1,4 @@
-Case-by-case Practices
-======================
-
-:::{attention}
-This chapter is still a work-in-progress. Check back when you've got some
-experience with research computing and are ready to learn more.
-:::
+# Case-by-case Practices
 
 This chapter covers case-by-case practices for reproducibility. Many of these
 practices require substantial effort to adopt or require specific technical
@@ -13,10 +7,6 @@ projects, but we feel they aren't broadly applicable in the ways that primary
 and secondary practices are. DataLab occasionally adopts these practices. Read
 this chapter when you feel like you've mastered the practices in the previous
 chapters and want to learn even more.
-
-
-
-## Use Issue Tracking
 
 
 ## Log Output
@@ -35,9 +25,16 @@ overview of how to manage log files in Python.
 [datalab-py-output]: https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/04_debugging.html#logging
 
 
-## Use Version Control for Data
+(sec-use-a-task-runner)=
+## Use a Task Runner
 
-
+> You're working on a project where you receive a new dataset every few weeks.
+> Before you analyzing a dataset, you must process it with the `moo_calibrate`
+> command line software. You don't use `moo_calibrate` outside of this project,
+> so every time you have to run it, you struggle to remember the parameters.
+> Last time you ran `moo_calibrate`, you wrote down the parameters, but it
+> would be nice if you could automate the workflow so that you don't have to
+> type as much and you can't accidentally run the command twice.
 
 ```{figure} /images/xkcd_is_it_worth_the_time.png
 ---
@@ -50,18 +47,6 @@ alt:
 
 [xkcd]: https://xkcd.com/
 [xkcd-license]: https://xkcd.com/license.html
-
-
-(sec-use-a-task-runner)=
-## Use a Task Runner
-
-> You're working on a project where you receive a new dataset every few weeks.
-> Before you analyzing a dataset, you must process it with the `moo_calibrate`
-> command line software. You don't use `moo_calibrate` outside of this project,
-> so every time you have to run it, you struggle to remember the parameters.
-> Last time you ran `moo_calibrate`, you wrote down the parameters, but it
-> would be nice if you could automate the workflow so that you don't have to
-> type as much and you can't accidentally run the command twice.
 
 A **task runner** is a piece of software to organize and run tasks that use
 other (command line) software. With a task runner, you can create named tasks
@@ -110,14 +95,6 @@ Snakemake.
 
 [datalab-snakemake]: https://ngs-docs.github.io/2021-august-remote-computing/automating-your-analyses-with-the-snakemake-workflow-system.html
 :::
-
-
-
-## Use Continuous Integration
-
-### Lint the Code
-
-### GitHub Actions
 
 
 ## Document the Computing Environment

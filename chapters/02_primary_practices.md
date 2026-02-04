@@ -1,5 +1,4 @@
-﻿Primary Practices
-=================
+﻿# Primary Practices
 
 This chapter covers primary practices for reproducibility. At DataLab, we adopt
 these practices for every project, and we recommend that you do too.  They'll
