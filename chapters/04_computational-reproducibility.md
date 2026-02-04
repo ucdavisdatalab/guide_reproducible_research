@@ -344,6 +344,86 @@ problems and develop code. Don't feel locked in to one or the other, and
 remember that generally notebooks can load functions and other code from
 scripts.
 
+
+### Names in Code
+
+Most programming languages have a **style guide** with standards for how to
+format code, either officially or by community consensus. Following a style
+guide helps make your code intelligible to other programmers. Style guides
+usually include naming conventions, which tend to focus on how to capitalize
+and delimit words in multi-word names. Three common formats for names are:
+
+* `camelCase` delimits words by capitalizing the first letter of each word
+* `snake_case` delimits words with underscores
+* `kebab-case` delimits words with dashes
+
+Some style guides use several different formats to distinguish between
+different kinds of objects.
+
+Among the languages widely used for data science:
+
+* R doesn't have an official style guide, but the [Tidyverse style
+  guide][tidy-style] is popular. It recommends `snake_case` for all names. In
+  the past, `camelCase` and R's unique `dot.case` were also popular.
+* Python has an [official style guide called PEP 8][pep-8]. It recommends
+  `UpperCamelCase` for class names, `UPPER_SNAKE_CASE` for constants, and
+  `snake_case` for all other names.
+* Julia has an [official style guide][julia-style]. It recommends
+  `UpperCamelCase` for module and type names, and `snake_case` for all other
+  names.
+
+[pep-8]: https://peps.python.org/pep-0008/
+[tidy-style]: https://style.tidyverse.org/
+[julia-style]: https://docs.julialang.org/en/v1/manual/style-guide/
+
+:::{seealso}
+Wikipedia's [naming conventions page][wiki-naming] describes the styles and
+naming conventions for a wide variety of programming languages.
+:::
+
+[wiki-naming]: https://en.wikipedia.org/wiki/Naming_convention_(programming)
+
+Besides how to format names in code, another detail to consider is how long
+names should be. Longer names allow for richer descriptions, but can also make
+code harder to read. Here's one code organization expert's recommendation:
+
+> The length of variable names should be proportional to their scope. Big
+> scopes imply long names.
+>
+> The length of function and class names should be inversely proportional to
+> their scope. Small scopes imply long names.
+>
+> -- [Robert "Uncle Bob" Martin][bob-martin], software engineer and author
+
+[bob-martin]: https://en.wikipedia.org/wiki/Robert_C._Martin
+
+In other words, the longer a variable is in use, the longer its name should be.
+The rationale is that if a variable is in use for a long time, expressions that
+use the variable may be far away from its definition, making it harder to infer
+the meaning from context. So don't hesitate to name a variable `x` if it will
+only be used in a couple of expressions and there's not an obviously better
+name, but avoid naming a variable `x` if it's going to be used repeatedly
+throughout all of your code; choose a longer, more descriptive name.
+
+:::{tip}
+Some other naming conventions include:
+
+* Use `i`, `j`, and `k` for indexes in loops.
+* Use verbs (action words) in function names, because functions do things. For
+  example: `read_data`, `add_offset`, `run_simulation`.
+* Use `get_` and `set_` as prefixes for functions that get and set components
+  of a data structure.
+* Use `is_` or `has_` as prefixes for functions that return a Boolean value.
+:::
+
+:::{seealso}
+See [How Patterns in Variable Names Can Make Code Easier to Read][how-patterns]
+for Felienne Hermans' perspective as a computer science education researcher.
+:::
+
+[how-patterns]: https://youtu.be/z7w2lKG8zWM
+
+
 ### Write Functions
 
 To solve problems efficiently and better organize your code, try to break
