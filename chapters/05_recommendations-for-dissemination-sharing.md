@@ -140,8 +140,8 @@ the following practices:
 :::{seealso}
 Learn more about licensing in the {ref}`open-licenses` section.
 
-Visit the {ref}`FIXME` section for more information on Open Source code and
-software.
+Visit the {ref}`sec-prefer-open-source-software` section for more information
+on open-source code and software.
 :::
 
 

@@ -136,7 +136,7 @@ privasy considerations. Learn more on the Library [Research Data Management
 Guide][rdmguide_privacy] or [consult with a librarian][rdm_email]!
 
 [rdmguide_privacy]: https://guides.library.ucdavis.edu/data-management/confidentiality
-[rdm_email]: dataservices@ucdavis.edu
+[rdm_email]: mailto:dataservices@ucdavis.edu
 :::
 
 Some general considerations when starting a data management plan would be to
@@ -175,11 +175,11 @@ You may also find these external guides useful:
 * [DMPTool Guidance][dmp_guide]
 * [Digital Curation Centre DMSP Guide][dcc_guide]
 
-[harvard_guide]:[https://datamanagement.hms.harvard.edu/plan-design/data-management-and-sharing-plan]
-[nlm_rdm]:https://www.nnlm.gov/guides/data-glossary/data-management-plan
-[mit_dmp]:https://libraries.mit.edu/data-management/plan/write/
+[harvard_guide]: https://datamanagement.hms.harvard.edu/plan-design/data-management-and-sharing-plan
+[nlm_rdm]: https://www.nnlm.gov/guides/data-glossary/data-management-plan
+[mit_dmp]: https://libraries.mit.edu/data-management/plan/write/
 [dmp_guide]: https://dmptool.org/general_guidance
-[dcc_guide]:https://www.dcc.ac.uk/dmps
+[dcc_guide]: https://www.dcc.ac.uk/dmps
 :::
 
 
@@ -511,6 +511,7 @@ reproducibility.
 
 
 <!-- TODO: Think "Open" -->
+(sec-prefer-open-source-software)=
 ## Prefer Open-Source Software
 
 > You're excited to start working on a project about how a particular virus
