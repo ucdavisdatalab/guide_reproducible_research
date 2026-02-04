@@ -771,7 +771,7 @@ them in R, Python, and Julia.
 [YAML]: https://yaml.org/
 
 
-## Orchestrate with Shell Scripts
+## Automate the Workflows
 
 Even if you {ref}`organize-the-code` carefully, it's likely you'll end up with
 workflows that consist of running several commands in a specific order and with
@@ -814,7 +814,7 @@ scripts.
 
 
 (sec-use-a-task-runner)=
-## Use a Task Runner
+### Use a Task Runner
 
 > You're working on a project where you receive a new dataset every few weeks.
 > Before you analyzing a dataset, you must process it with the `moo_calibrate`
