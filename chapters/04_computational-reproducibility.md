@@ -173,7 +173,68 @@ step further by bundling all of the commands in a workflow into a single
 command.
 
 
-## Document the Code
+### Make Workflow Diagrams
+
+Workflows with multiple interdependent tasks can be confusing, especially for
+people new to a project. Diagrams that lay out the sequence of and
+relationships between inputs, tasks, and outputs (as a graph, network, or flow
+chart) make understanding and using these workflows easier and faster. For
+instance, if you can't remember what the inputs are for a particular task, you
+can simply glance at the diagram.
+
+It's usually a good idea to make more than one workflow diagram. Use separate
+diagrams for independent workflows, and make multiple diagrams at different
+levels of abstraction. Diagrams at different levels are especially helpful for
+explaining workflows where some of the steps are relatively complex in their
+own right.
+
+There many different ways to make workflow diagrams, including:
+
+* Sketching the diagram freehand. This is a fast, easy way to make a diagram
+  that doesn't require learning new tools. Depending on your sketching skills,
+  the resulting diagrams might look rough or be difficult to read. You might
+  sketch:
+    * On paper or a whiteboard (and take photos), which is wonderfully easy,
+      but can make editing later difficult.
+    * On a tablet (or with a mouse), which requires drawing software, but makes
+      it possible to collaborate from different locations and makes editing
+      later easier.
+* Designing the diagram in vector graphics software (such as [Lucidchart][] and
+  [Inkscape][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. The drawbacks are that it requires everyone to
+  have a license for and learn the software, and is generally more
+  time-consuming than sketching.
+    * Presentation software (such as [Google Slides][slides] and [LibreOffice
+      Impress][impress]) are widely known and usually provide some support for
+      designing diagrams.
+* Describing the diagram in a graph language (such as [Mermaid][] and
+  [Graphviz][]). This works well for editing and collaborating and can produce
+  presentation-quality diagrams. It's more time-consuming than sketching but
+  can be less time-consuming than vector graphics software. GitHub and other
+  Git hosts often have built-in support for Mermaid. The drawbacks are that you
+  have to (learn and) use yet another language, and you have less control over
+  how the diagram is drawn and laid out.
+
+[Lucidchart]: https://www.lucidchart.com/
+[Inkscape]: https://inkscape.org/
+[slides]: https://workspace.google.com/products/slides/
+[impress]: https://www.libreoffice.org/discover/impress/
+[Mermaid]: https://mermaid.js.org/
+[Graphviz]: https://graphviz.org/
+
+DataLab uses a mix of sketching, Lucidchart, Inkscape, and Mermaid, depending
+on the complexity of the diagram, who will see it, and other needs of the
+project. In general, you should choose whatever diagramming method works best
+for you (and your team)---making the diagrams is more important than how you
+make them.
+
+:::{seealso}
+See DataLab's [README, Write Me! workshop reader][datalab-readme] for
+suggestions about how to create workflow diagrams.
+:::
+
+
+### Document the Code
 
 Provide documentation for your project's code. Think about how people
 (including you) will typically use the code. Will they:
