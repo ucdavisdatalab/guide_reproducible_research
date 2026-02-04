@@ -430,7 +430,7 @@ templates, and [USGS][usgs_dd] for examples.
 :::
 
 
-## Document Methods
+## Document the Methods
 
 You can think of your methods like a recipe you might use for cooking or
 baking. A good recipe clearly documents the steps so that you can reliably
