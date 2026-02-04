@@ -714,7 +714,6 @@ MQL make your data cleaning and transformation processes reproducible. However,
 they are much easier to learn because the set of tasks they are designed to do
 is much smaller. 
 
-[datalab-sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
 [mongo]: https://www.w3schools.com/mongodb/index.php
 
 :::{seealso}

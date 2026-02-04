@@ -349,10 +349,6 @@ license.
 For licensing software, see [choosealicense.com][gh-cal] to help you choose an
 open license (maintained by GitHub) or the Open Source Initiative's [FAQ answer
 about which license to choose][osi-cal].
-
-[gh-cal]: https://choosealicense.com/
-[osi-cal]: https://opensource.org/faq/#which-license
-[cc-cal]: https://creativecommons.org/choose/
 :::
 
 
@@ -428,14 +424,9 @@ particularly popular. For data, writing, art, and other content, [Creative
 Commons licenses][cc-cal] are popular; section {ref}`sec-open-access` provides
 more details about licensing non-software content.
 
-[gh-cal]: https://choosealicense.com/
-[cc-cal]: https://creativecommons.org/choose/
-
 :::{seealso}
 See also the Open Source Initiative's [FAQ answer about which license to
 choose][osi-cal] for even more about licensing software.
-
-[osi-cal]: https://opensource.org/faq/#which-license
 :::
 
 
