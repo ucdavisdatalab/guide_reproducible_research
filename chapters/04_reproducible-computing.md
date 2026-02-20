@@ -120,6 +120,213 @@ and consider joining the [UC Julia Users Group][ucjug].
 [ucjug]: https://datalab.ucdavis.edu/julia-users-group/
 
 
+(organize-the-code)=
+## Organize the Code
+
+```{figure} /images/xkcd_goto.png
+---
+name: xkcd-goto
+alt:
+---
+"goto" from ["xkcd"][xkcd] by Randall Munroe ([license][xkcd-license]).
+```
+
+Whenever you're about to write code, take time to think about what its purpose
+is and how it will be used in the future. Clarity on these points can make it
+easier to decide where to put the code, break down the programming problem, and
+choose appropriate programming abstractions.
+
+Is your code for a one-shot exploration, a prototype, or something highly
+visual? Then it's probably a good idea to write and save your code in a
+notebook format, such as [RMarkdown][], [Jupyter][], or [Quarto][]. Notebooks
+display writing and results inline with code, so that you can try snippets of
+code out, get immediate feedback, and take notes. Notebooks can also display
+images, so you can inspect plots and other figures without opening another
+window or file.
+
+[RMarkdown]: https://rmarkdown.rstudio.com/
+[Jupyter]: https://jupyter.org/
+[Quarto]: https://quarto.org/
+
+
+::::{grid}
+:::{grid-item}
+```{image} /images/logo_rmarkdown.png
+:alt:
+:width: 50%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_jupyter.svg
+:alt:
+:width: 50%
+:align: center
+```
+:::
+
+:::{grid-item}
+```{image} /images/logo_quarto.svg
+:alt:
+:width: 50%
+:align: center
+```
+:::
+::::
+
+On the other hand, if your code is likely to be reused many times over the
+course of the project---and possibly in other projects or by other
+people---then it's usually preferable to write and save your code in a script
+format. Script formats are usually plain-text files with an extension like
+`.R`, `.py`, or `.jl` to indicate the kind of code.
+
+A mix of notebooks and scripts can be an effective way to solve programming
+problems and develop code. Don't feel locked in to one or the other, and
+remember that generally notebooks can load functions and other code from
+scripts.
+
+
+### Names in Code
+
+Most programming languages have a **style guide** with standards for how to
+format code, either officially or by community consensus. Following a style
+guide helps make your code intelligible to other programmers. Style guides
+usually include naming conventions, which tend to focus on how to capitalize
+and delimit words in multi-word names. Three common formats for names are:
+
+* `camelCase` delimits words by capitalizing the first letter of each word
+* `snake_case` delimits words with underscores
+* `kebab-case` delimits words with dashes
+
+Some style guides use several different formats to distinguish between
+different kinds of objects.
+
+Among the languages widely used for data science:
+
+* R doesn't have an official style guide, but the [Tidyverse style
+  guide][tidy-style] is popular. It recommends `snake_case` for all names. In
+  the past, `camelCase` and R's unique `dot.case` were also popular.
+* Python has an [official style guide called PEP 8][pep-8]. It recommends
+  `UpperCamelCase` for class names, `UPPER_SNAKE_CASE` for constants, and
+  `snake_case` for all other names.
+* Julia has an [official style guide][julia-style]. It recommends
+  `UpperCamelCase` for module and type names, and `snake_case` for all other
+  names.
+
+[pep-8]: https://peps.python.org/pep-0008/
+[tidy-style]: https://style.tidyverse.org/
+[julia-style]: https://docs.julialang.org/en/v1/manual/style-guide/
+
+:::{seealso}
+Wikipedia's [naming conventions page][wiki-naming] describes the styles and
+naming conventions for a wide variety of programming languages.
+:::
+
+[wiki-naming]: https://en.wikipedia.org/wiki/Naming_convention_(programming)
+
+Besides how to format names in code, another detail to consider is how long
+names should be. Longer names allow for richer descriptions, but can also make
+code harder to read. Here's one code organization expert's recommendation:
+
+> The length of variable names should be proportional to their scope. Big
+> scopes imply long names.
+>
+> The length of function and class names should be inversely proportional to
+> their scope. Small scopes imply long names.
+>
+> -- [Robert "Uncle Bob" Martin][bob-martin], software engineer and author
+
+[bob-martin]: https://en.wikipedia.org/wiki/Robert_C._Martin
+
+In other words, the longer a variable is in use, the longer its name should be.
+The rationale is that if a variable is in use for a long time, expressions that
+use the variable may be far away from its definition, making it harder to infer
+the meaning from context. So don't hesitate to name a variable `x` if it will
+only be used in a couple of expressions and there's not an obviously better
+name, but avoid naming a variable `x` if it's going to be used repeatedly
+throughout all of your code; choose a longer, more descriptive name.
+
+:::{tip}
+Some other naming conventions include:
+
+* Use `i`, `j`, and `k` for indexes in loops.
+* Use verbs (action words) in function names, because functions do things. For
+  example: `read_data`, `add_offset`, `run_simulation`.
+* Use `get_` and `set_` as prefixes for functions that get and set components
+  of a data structure.
+* Use `is_` or `has_` as prefixes for functions that return a Boolean value.
+:::
+
+:::{seealso}
+See [How Patterns in Variable Names Can Make Code Easier to Read][how-patterns]
+for Felienne Hermans' perspective as a computer science education researcher.
+:::
+
+[how-patterns]: https://youtu.be/z7w2lKG8zWM
+
+
+### Write Functions
+
+To solve problems efficiently and better organize your code, try to break
+programming tasks into small, manageable steps. Use writing (for instance, in
+comments) to clarify and plan the steps. For each step, write the code to solve
+a few small, simple cases. Once the code for a step seems to work correctly,
+turn it into a function. Start by identifying the inputs and outputs. These
+become the parameters and return value, respectively. Test the function still
+works on the small, simple cases. Then scale up to larger, more complex cases.
+Edit the function and add parameters as necessary to make it work correctly for
+the new test cases, making sure that it also continues to work correctly for
+the old ones. When you have functions for all of the small steps, combine them
+(usually in sequence) to handle the larger task.
+
+:::{important}
+How small is a "small step"? Small steps and functions should generally be
+longer than a single expression---because in that case you might as well just
+write the expression---and generally be shorter than one screen in your
+editor---so that you can reason about what they do easily. Be flexible and
+judicious with these guidelines; there are exceptions.
+
+When you write small steps, you can try to break them down into smaller
+sub-steps as well. The sub-steps are usually individual expressions.
+:::
+
+:::{tip}
+It may be helpful to think of writing code or functions like writing an essay.
+Start with an outline (describe the steps in comments). Sometimes the outline
+will have multiple levels (sub-steps). Once you've written the outline, start
+filling in the details (the code). As you write, you may occasionally need to
+stop and adjust the outline as you uncover gaps in your reasoning.
+:::
+
+### Make It Modular
+
+Create separate scripts for separate parts of your project. For example, you
+might have a script to clean the data, a script to train a model, a script to
+generate predictions from the trained model, and a script to generate figures
+summarizing the results. Dividing up responsibilities across multiple scripts
+is helpful for isolating bugs and staying focused while you're working. Using
+multiple scripts will also make it easier for you and your collaborators to
+find things, provided the scripts have descriptive, unambiguous names.
+
+Structure your scripts so that they're **modules**: collections of functions
+that can be imported and used by other code. Avoid writing code outside of
+functions, with one exception: to define a constants (named values that do not
+change, such as pi). Doing this ensures that importing a script won't cause
+hard-to-predict side effects.
+
+If you want to be able to run a script from the command line, include a
+function that serves as the entry point---the code that runs first. For many
+programming languages, it's required or recommended to call this function
+`main`. Regardless of what name you choose, use it consistently for the entry
+point functions across all of your scripts.
+
+
+<!--
+See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
+-->
+
+
 (workflows)=
 ## Document the Workflows & Code
 
@@ -525,213 +732,6 @@ change the hardware they offer.
 If you decide to use cloud computing, we recommend documenting the details of
 the hardware by hand, and using an environment manager or containerization to
 manage the software for your project.
-
-
-(organize-the-code)=
-## Organize the Code
-
-```{figure} /images/xkcd_goto.png
----
-name: xkcd-goto
-alt:
----
-"goto" from ["xkcd"][xkcd] by Randall Munroe ([license][xkcd-license]).
-```
-
-Whenever you're about to write code, take time to think about what its purpose
-is and how it will be used in the future. Clarity on these points can make it
-easier to decide where to put the code, break down the programming problem, and
-choose appropriate programming abstractions.
-
-Is your code for a one-shot exploration, a prototype, or something highly
-visual? Then it's probably a good idea to write and save your code in a
-notebook format, such as [RMarkdown][], [Jupyter][], or [Quarto][]. Notebooks
-display writing and results inline with code, so that you can try snippets of
-code out, get immediate feedback, and take notes. Notebooks can also display
-images, so you can inspect plots and other figures without opening another
-window or file.
-
-[RMarkdown]: https://rmarkdown.rstudio.com/
-[Jupyter]: https://jupyter.org/
-[Quarto]: https://quarto.org/
-
-
-::::{grid}
-:::{grid-item}
-```{image} /images/logo_rmarkdown.png
-:alt:
-:width: 50%
-:align: center
-```
-:::
-
-:::{grid-item}
-```{image} /images/logo_jupyter.svg
-:alt:
-:width: 50%
-:align: center
-```
-:::
-
-:::{grid-item}
-```{image} /images/logo_quarto.svg
-:alt:
-:width: 50%
-:align: center
-```
-:::
-::::
-
-On the other hand, if your code is likely to be reused many times over the
-course of the project---and possibly in other projects or by other
-people---then it's usually preferable to write and save your code in a script
-format. Script formats are usually plain-text files with an extension like
-`.R`, `.py`, or `.jl` to indicate the kind of code.
-
-A mix of notebooks and scripts can be an effective way to solve programming
-problems and develop code. Don't feel locked in to one or the other, and
-remember that generally notebooks can load functions and other code from
-scripts.
-
-
-### Names in Code
-
-Most programming languages have a **style guide** with standards for how to
-format code, either officially or by community consensus. Following a style
-guide helps make your code intelligible to other programmers. Style guides
-usually include naming conventions, which tend to focus on how to capitalize
-and delimit words in multi-word names. Three common formats for names are:
-
-* `camelCase` delimits words by capitalizing the first letter of each word
-* `snake_case` delimits words with underscores
-* `kebab-case` delimits words with dashes
-
-Some style guides use several different formats to distinguish between
-different kinds of objects.
-
-Among the languages widely used for data science:
-
-* R doesn't have an official style guide, but the [Tidyverse style
-  guide][tidy-style] is popular. It recommends `snake_case` for all names. In
-  the past, `camelCase` and R's unique `dot.case` were also popular.
-* Python has an [official style guide called PEP 8][pep-8]. It recommends
-  `UpperCamelCase` for class names, `UPPER_SNAKE_CASE` for constants, and
-  `snake_case` for all other names.
-* Julia has an [official style guide][julia-style]. It recommends
-  `UpperCamelCase` for module and type names, and `snake_case` for all other
-  names.
-
-[pep-8]: https://peps.python.org/pep-0008/
-[tidy-style]: https://style.tidyverse.org/
-[julia-style]: https://docs.julialang.org/en/v1/manual/style-guide/
-
-:::{seealso}
-Wikipedia's [naming conventions page][wiki-naming] describes the styles and
-naming conventions for a wide variety of programming languages.
-:::
-
-[wiki-naming]: https://en.wikipedia.org/wiki/Naming_convention_(programming)
-
-Besides how to format names in code, another detail to consider is how long
-names should be. Longer names allow for richer descriptions, but can also make
-code harder to read. Here's one code organization expert's recommendation:
-
-> The length of variable names should be proportional to their scope. Big
-> scopes imply long names.
->
-> The length of function and class names should be inversely proportional to
-> their scope. Small scopes imply long names.
->
-> -- [Robert "Uncle Bob" Martin][bob-martin], software engineer and author
-
-[bob-martin]: https://en.wikipedia.org/wiki/Robert_C._Martin
-
-In other words, the longer a variable is in use, the longer its name should be.
-The rationale is that if a variable is in use for a long time, expressions that
-use the variable may be far away from its definition, making it harder to infer
-the meaning from context. So don't hesitate to name a variable `x` if it will
-only be used in a couple of expressions and there's not an obviously better
-name, but avoid naming a variable `x` if it's going to be used repeatedly
-throughout all of your code; choose a longer, more descriptive name.
-
-:::{tip}
-Some other naming conventions include:
-
-* Use `i`, `j`, and `k` for indexes in loops.
-* Use verbs (action words) in function names, because functions do things. For
-  example: `read_data`, `add_offset`, `run_simulation`.
-* Use `get_` and `set_` as prefixes for functions that get and set components
-  of a data structure.
-* Use `is_` or `has_` as prefixes for functions that return a Boolean value.
-:::
-
-:::{seealso}
-See [How Patterns in Variable Names Can Make Code Easier to Read][how-patterns]
-for Felienne Hermans' perspective as a computer science education researcher.
-:::
-
-[how-patterns]: https://youtu.be/z7w2lKG8zWM
-
-
-### Write Functions
-
-To solve problems efficiently and better organize your code, try to break
-programming tasks into small, manageable steps. Use writing (for instance, in
-comments) to clarify and plan the steps. For each step, write the code to solve
-a few small, simple cases. Once the code for a step seems to work correctly,
-turn it into a function. Start by identifying the inputs and outputs. These
-become the parameters and return value, respectively. Test the function still
-works on the small, simple cases. Then scale up to larger, more complex cases.
-Edit the function and add parameters as necessary to make it work correctly for
-the new test cases, making sure that it also continues to work correctly for
-the old ones. When you have functions for all of the small steps, combine them
-(usually in sequence) to handle the larger task.
-
-:::{important}
-How small is a "small step"? Small steps and functions should generally be
-longer than a single expression---because in that case you might as well just
-write the expression---and generally be shorter than one screen in your
-editor---so that you can reason about what they do easily. Be flexible and
-judicious with these guidelines; there are exceptions.
-
-When you write small steps, you can try to break them down into smaller
-sub-steps as well. The sub-steps are usually individual expressions.
-:::
-
-:::{tip}
-It may be helpful to think of writing code or functions like writing an essay.
-Start with an outline (describe the steps in comments). Sometimes the outline
-will have multiple levels (sub-steps). Once you've written the outline, start
-filling in the details (the code). As you write, you may occasionally need to
-stop and adjust the outline as you uncover gaps in your reasoning.
-:::
-
-### Make It Modular
-
-Create separate scripts for separate parts of your project. For example, you
-might have a script to clean the data, a script to train a model, a script to
-generate predictions from the trained model, and a script to generate figures
-summarizing the results. Dividing up responsibilities across multiple scripts
-is helpful for isolating bugs and staying focused while you're working. Using
-multiple scripts will also make it easier for you and your collaborators to
-find things, provided the scripts have descriptive, unambiguous names.
-
-Structure your scripts so that they're **modules**: collections of functions
-that can be imported and used by other code. Avoid writing code outside of
-functions, with one exception: to define a constants (named values that do not
-change, such as pi). Doing this ensures that importing a script won't cause
-hard-to-predict side effects.
-
-If you want to be able to run a script from the command line, include a
-function that serves as the entry point---the code that runs first. For many
-programming languages, it's required or recommended to call this function
-`main`. Regardless of what name you choose, use it consistently for the entry
-point functions across all of your scripts.
-
-
-<!--
-See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
--->
 
 
 ## Use Configuration Files
