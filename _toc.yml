@@ -9,7 +9,8 @@ parts:
     numbered: true
     chapters:
       - file: chapters/01_principles
-      - file: chapters/02_primary_practices
-      - file: chapters/03_secondary_practices
-      - file: chapters/04_case_by_case_practices
+      - file: chapters/02_planning-for-success
+      - file: chapters/03_daily-habits-for-everyone
+      - file: chapters/04_reproducible-computing
+      - file: chapters/05_dissemination-sharing
       - file: chapters/references
