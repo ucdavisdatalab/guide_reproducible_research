@@ -1,4 +1,4 @@
-# Additional Considerations: Computational Reproducibility
+# Reproducible Computing
 
 
 (use-a-programming-language)=
