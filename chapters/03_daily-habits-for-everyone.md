@@ -468,6 +468,12 @@ Consider {ref} 'PREREGISTRATION_SECTION' to make your methods even more reproduc
 :::
 
 
+## Make Backups
+
+You've made a plan to backup your work ({numref}`plan-for-backups`), now make
+sure you do it early and often!
+
+
 ## Save Clean Data
 
 Treat data cleaning and data analysis as distinct and equally important steps
@@ -506,6 +512,38 @@ reader][datalab-r-clean] to learn how to clean data in R.
 :::
 
 [datalab-r-clean]: https://ucdavisdatalab.github.io/workshop_intermediate_r/string-date-processing.html
+
+
+## Use a Citation Manager
+
+You will likely find a great deal of literature (journal articles, reports,
+etc.) that you will need to keep organized. Citation managers (like Zotero,
+EndNote, Lean Library, and many others) can help with this. Modern citation
+managers have browser extensions that can pull articles right from your web
+browser into your citation manager in a single click. They also offer a variety
+of oraganizational techniques ranging from collection folders to tagging
+systems. Most also integrate with Microsoft Word, Google Docs, or LibreOffice
+to help manage your bibliography while writing. They aren't perfect and you
+need to check their work but they can save you a lot of time. They also assist
+with collaborations because you can have a shared library with collaborators
+that you can all add papers to.
+
+You can learn more about the citation managers available at UCD
+[here][citation_managers]. They all have pros and cons. And if you need support
+choosing or working with one you can [consult with a
+librarian][research_consultation] anytime!
+
+[citation_managers]: https://library.ucdavis.edu/citations/citation-management-tools/
+[research_consultation]: https://library.ucdavis.edu/schedule-a-research-consultation/ 
+
+<!-- FIXME: missing link -->
+:::{tip}
+While there are several free options listed on the Library guide, note that
+Zotero is an open source tool. That means that Zotero will travel with you
+if/when you leave UC Davis. Also see the <INSERT LINK TO OPEN SOURCE SECTION>
+for more information about why open source tools are preferred for
+reproducibility.
+:::
 
 
 (use-version-control)=
