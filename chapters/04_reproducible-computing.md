@@ -328,7 +328,7 @@ See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slid
 
 
 (workflows)=
-## Document the Workflows & Code
+## Document the Workflows
 
 > Suppose you're working on a study of passenger rail systems in the United
 > States. You use 3 scripts to produce plots that summarize how often trains
@@ -485,7 +485,7 @@ package your code and/or release it to a wider audience.
 [roxygen2]: https://roxygen2.r-lib.org/
 
 
-## Document the Computing Environment
+## Document the Environment
 
 > A few years ago, you developed an R script to read an obscure file format,
 > MOO, for one of your research projects. The script was a huge help at the
