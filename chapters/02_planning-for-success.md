@@ -210,7 +210,7 @@ These recommendations are not necessarily appropriate for every project. When
 choosing a directory structure, consider the specific needs of your project,
 your collaborators, and your audience. Make sure to document whatever directory
 structure you decide to use in your project's README (see
-{numref}`file-manifests`).
+{ref}`file-manifests`).
 
 If your research is more qualitative in nature than quantitive, the same basic
 principles of organization apply. However the overall goal may be to show

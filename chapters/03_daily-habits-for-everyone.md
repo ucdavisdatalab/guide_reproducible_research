@@ -162,7 +162,7 @@ this **project directory** to store all files related to the project. This
 directory is sometimes also called the **top-level** directory for the project,
 since all other directories and files for the project exist beneath it.
 
-{numref}`establish-directory-structure` elaborates on this idea.
+{ref}`establish-directory-structure` elaborates on this idea.
 :::
 
 A project should always have a README in the top-level directory that serves as
@@ -180,7 +180,7 @@ top-level README should contain:
 
 For projects with data or code, the top-level README should also contain
 instructions for relevant software installation and code use. To learn more
-about this see {numref}`workflows`).
+about this see {ref}`workflows`).
 
 :::{margin}
 ::::{note}
@@ -470,7 +470,7 @@ Consider {ref} 'PREREGISTRATION_SECTION' to make your methods even more reproduc
 
 ## Make Backups
 
-You've made a plan to backup your work ({numref}`plan-for-backups`), now make
+You've made a plan to backup your work ({ref}`plan-for-backups`), now make
 sure you do it early and often!
 
 
