@@ -1,4 +1,4 @@
-# Recommendations for Dissemination & Sharing
+# Dissemination & Sharing
 
 
 (choose-a-license)=
