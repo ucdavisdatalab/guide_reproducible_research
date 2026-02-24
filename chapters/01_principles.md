@@ -134,18 +134,14 @@ reproducible by adopting various practices that each address one or more of
 these principles. The principles are often symbiotic: a good practice for one
 may also be a good practice for others.
 
-Many different practices and tools exist, so it can be difficult to determine
-which ones are the most important. In this reader, they're divided into three
-groups:
+Many different practices and tools exist, so it can be difficult to determine where to begin or how to best apply them. In this reader, they're divided into four thematic groups that align with different stages and aspects of the research lifecycle:
 
-1. **Primary practices** are the ones you should always adopt for every
-   project. For example, you should always keep notes (documentation).
-2. **Secondary practices** are generally a good idea, but may require more technical skills and/or time to implement. You should consider the details of your project carefully before adopting them. 
-3. **Case-by-case practices** are the ones that are generally a good idea, but aren't relevant to every project. For example, if your project includes a lot of Python code it is very important for you to use an environment manager, but if your project doesn't include any code, you might not need one. Some of these recommendations may also require more technical skills and/or time to implement. For example, turning your code into a redistributable package is a great way to share it with others, but there's a cost in additional effort and technical complexity. In this case it might not be worth making a package unless you expect to have many users.
+1. **Planning For Success** covers foundational practices you should adopt before you dive into the work. For example, writing a scoping document and setting up a data management plan are crucial early steps to keep your project on track.
+2. **Daily Habits For Everyone** includes ongoing, universal practices that will benefit your work day-to-day. You should always keep a detailed research log, maintain clear READMEs, and keep your directories organized.
+3. **Reproducible Computing** focuses on practices specific to projects that involve code and data analysis. For example, if your project involves writing Python or R scripts, it is very important to carefully organize your code and use an environment manager. However, if your project doesn't involve any computation, some of these tools might not be necessary.
+4. **Dissemination Sharing** addresses how to responsibly make your work available to others. These practices include choosing open-source licenses, publishing open methods, and releasing your data using FAIR principles so that your research is verifiable and reusable.
 
-Each of the next three chapters addresses one of these groups. The practices
-were sorted into these groups based on the author's and DataLab's research
-projects and experiences.
+Each of the next four chapters addresses one of these groups. The practices were sorted into these categories based on the authors' and DataLab's research projects and experiences.
 
 :::{note}
 Most of the practices related to managing code are also software engineering
