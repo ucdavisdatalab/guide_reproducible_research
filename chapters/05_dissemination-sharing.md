@@ -383,12 +383,11 @@ about which license to choose][osi-cal].
 (open-source-license)=
 ### Choose an Open-Source License for Code
 
-A **license** is a legal document that grants others permission to do, use, or
-possess something. If you plan to make your code or other research materials
+A license grants others permission to use, or possess something. If you plan to make your code or other research materials
 widely/publicly available, it's a good idea to select a license so that you can
 retain some control over how they're used and ensure you receive proper credit.
 
-An **open-source** license is one which guarantees that people can freely
+An **open-source license** is one which guarantees that people can freely
 access, distribute, and create derivatives of a project and its source
 materials. For software, the source material is code. By making the code
 available, open-source licenses provide complete transparency about how the
@@ -407,7 +406,7 @@ licenses for other media. Different licenses also put different conditions on
 use and redistribution. For instance, some licenses restrict commercial use and
 redistribution.
 
-Choosing a license might seem daunting because so many different licenses
+Choosing a license for your software and code might seem daunting because so many different licenses
 exist, but there are lots of resources available to help. A good starting point
 is [choosealicense.com][gh-cal] (maintained by GitHub). Popular licenses tend
 to be a good choice because they've withstood the test of time and are familiar
