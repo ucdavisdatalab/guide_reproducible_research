@@ -10,6 +10,33 @@ replicability, and the opportunity to build on or reuse all or part of your
 work in a future project to advance science and knowledge. Many grant providers
 and institutions may also require your work to be published open access.
 
+You should also ensure any of your research outputs follow FAIR principles using the following
+practices:
+
+**Findable:**
+
+* Publish or deposit with an open access publisher or repository.
+* Assign a persistent identifier to your materials, such as a Digital Object
+  Identifier (DOI). (This can usually be done by depositing in a stable repository.)
+* Properly cite the data, methods, and other materials in any related published materials.
+
+**Accessible:**
+
+* Publish or deposit in an open access repository.
+* Include proper metadata describing access, authentication, and authorization.
+
+**Interoperable:**
+
+* Publish data, materials, and metadata in standard, non-proprietary formats.
+* {ref}`use-file-formats-effectively`
+
+**Reusable:**
+
+<!-- FIXME: Other links to other sections??? -->
+* Provide metadata and adequate documentation for reuse.
+* Publish under an open license.
+* Properly cite your source data.
+
 :::{important} Open Licenses
 
 Applying an open license to your materials is key to making them openly
@@ -55,33 +82,6 @@ are protected, nationally or commercially sensitive, contain identifying
 information, or you have not obtained proper consent. You can learn more about
 considerations for sensitive data in [The Turing Way][turing-way-sdp], limiting sharing for certain types of data [from the NIH Data Management and Sharing Policy][NIH-policy-FAQ], and a list of resources for de-identifying data on the UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing].
 :::
-
-You should also ensure your data follow FAIR principles using the following
-practices:
-
-**Findable:**
-
-* Publish or deposit in an open access repository.
-* Assign a persistent identifier to your dataset, such as a Digital Object
-  Identifier (DOI). (This can usually be done by depositing in a stable repository.)
-* Properly cite the data in any related published materials.
-
-**Accessible:**
-
-* Publish or deposit in an open access repository.
-* Include proper metadata describing access, authentication, and authorization.
-
-**Interoperable:**
-
-* Publish data and metadata in standard, non-proprietary formats.
-* {ref}`use-file-formats-effectively`
-
-**Reusable:**
-
-<!-- FIXME: Other links to other sections??? -->
-* Provide metadata and adequate documentation for reuse.
-* Publish under an open license.
-* Properly cite your source data.
 
 :::{seealso}
 See UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing]
@@ -134,29 +134,6 @@ Some materials and procedures may be not be appropriate to share due to
 privacy, confidentiality, security, intellectual property, or other rights or
 requirements. 
 :::
-
-You should also ensure your methods and materials follow FAIR principles using
-the following practices:
-
-**Findable:**
-* Publish or deposit with an open access publisher or repository.
-* Assign a persistent identifier to your materials, such as a Digital Object
-  Identifier (DOI). (This can usually be done by depositing in a repository.)
-* Properly cite the methods and materials in any other related published
-  materials.
-
-**Accessible:**
-* Publish or deposit in an open access repository.
-* Include proper metadata describing access, authentication, and authorization.
-
-**Interoperable:**
-* Publish the materials in standard, non-proprietary formats.
-* {ref}`use-file-formats-effectively`
-
-<!-- FIXME: Other links to other sections??? -->
-**Reusable:**
-* Provide metadata and adequate documentation for reuse.
-* Publish under an open license.
 
 :::{seealso}
 Learn more about licensing in the {ref}`open-licenses` section.
