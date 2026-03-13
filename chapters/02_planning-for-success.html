@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en-us" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Planning for Success &#8212; Reproducible Research Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=dddfd265"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02_planning-for-success';</script>
+    <link rel="icon" href="../_static/cropped-site-icon-135x135.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Daily Habits for Everyone" href="03_daily-habits-for-everyone.html" />
+    <link rel="prev" title="1. Principles of Reproducibility" href="01_principles.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en-us"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/ucd_lib-logo-signature-rgb-96ppi.png" class="logo__image only-light" alt="Reproducible Research Guide - Home"/>
+    <script>document.write(`<img src="../_static/ucd_lib-logo-signature-reverse-96ppi.png" class="logo__image only-dark" alt="Reproducible Research Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reproducible Research Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_principles.html">1. Principles of Reproducibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Planning for Success</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_daily-habits-for-everyone.html">3. Daily Habits for Everyone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_reproducible-computing.html">4. Reproducible Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dissemination-sharing.html">5. Dissemination &amp; Sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">6. Appendix: References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/02_planning-for-success.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Planning for Success</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-with-the-scope">2.1. Start with the Scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-data-management-plan">2.2. Make a Data Management Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establish-a-directory-structure">2.3. Establish a Directory Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-naming-conventions">2.4. Use Naming Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-and-directory-names">2.4.1. File and Directory Names</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefer-open-source-software">2.5. Prefer Open-Source Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-file-formats-effectively">2.6. Use File Formats Effectively</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prefer-open-standard-file-formats">2.6.1. Prefer Open Standard File Formats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#databases">2.6.2. Databases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-for-backups">2.7. Plan for Backups</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="planning-for-success">
+<h1><span class="section-number">2. </span>Planning for Success<a class="headerlink" href="#planning-for-success" title="Link to this heading">#</a></h1>
+<section id="start-with-the-scope">
+<h2><span class="section-number">2.1. </span>Start with the Scope<a class="headerlink" href="#start-with-the-scope" title="Link to this heading">#</a></h2>
+<p>At the beginning of a project, write a <strong>scoping document</strong> or research
+proposal describing your research question and the goals. The process of
+writing this document is an excellent way to clarify what you’re trying to
+achieve, ensure alignment among your collaborators, and identify potential
+problems or gaps early when they can be more easily addressed. Depending on
+your specific funding mechanism and discipline, a scoping document may also be
+required before you begin collecting data. Later, once you have your data, this
+document can help you and your collaborators explain the history of the project
+and the original reasoning for how you collected the data, your overall
+research design, and specific project goals.</p>
+<p>Your scoping document can also be a powerful project management tool, helping
+you stay focused and organized as you work. It’s a good idea to establish a
+timeline in your document that includes the milestones you’d like to
+accomplish. The milestones should be specific, measurable, and concrete, so
+that you can easily tell when you’ve completed one. Be generous with yourself
+and your collaborators; it can be hard to predict the directions research will
+take you, and tasks that seem short (especially programming tasks) can end up
+taking longer than expected. It’s almost always better to finish a deliverable
+earlier rather than having to pivot to accommodate delays.</p>
+<p>For projects that involve data analysis, incorporate into your scoping process
+necessary time to investigate your planned data sources. Sometimes a data set
+that seems promising can lack the exact features you need, have too few
+observations, have too much missing data, or otherwise be untenable for your
+planned research. If you are collecting the data yourself, make a plan for how
+you will collect the data. Describe what data sets will be available at the
+analysis stage, and how they will be recorded and need to be structured for
+analysis. Failure to do this may result in the need for extensive data
+restructuring or, in the worst case, unusable data.</p>
+<p>During the process of writing your scoping document, consider whether there are
+any biases, ethical concerns, privacy concerns, licensing fees, or other issues
+that may influence your research. Include these, and how you will address them,
+in your research plan.</p>
+<p>If you are submitting your scoping document as a grant or other formal research
+proposal, the organization you submit to may have specific structure
+requirements. If they don’t, or if you aren’t submitting your research proposal
+anywhere, consider the following as a potential outline for a scoping document:</p>
+<ul class="simple">
+<li><p><strong>Collaborators:</strong> Who is working on the project? Include where they work and
+how to get in touch with them. Typically this will include their email
+address.</p></li>
+<li><p><strong>Background Information:</strong> What does someone need to know to understand the
+goals of the project?</p></li>
+<li><p><strong>Project Duration:</strong> How long will the project take?</p></li>
+<li><p><strong>Data:</strong> What data sources will be used in the project? If there are ethical
+or privacy concerns about the data, outline them here and describe mitigation
+strategies. If you will be collecting data, what data will you collect and
+how?</p></li>
+<li><p><strong>Statement of Work and Milestones:</strong> Who will do what by when? This is a
+good place to describe key deliverables and associated milestones you expect
+to accomplish, with approximately when they will be achieved.</p></li>
+<li><p><strong>Collaborator Responsibilities:</strong> Additional responsibilities outside the
+statement of work can go here, like who will complete periodic stakeholder
+updates and funder reports, or who brings the donuts to the team meetings. :)</p></li>
+<li><p><strong>Project Deliverables:</strong> What is the final product of the project? This could
+be a publication, website, piece of software, infographic, or something else
+entirely.</p></li>
+<li><p><strong>Ownership and Licensing of Work Products:</strong> Many universities, publishers,
+and funders have requirements as to who owns research and how its products
+should be licensed. For more information about licensing at UC Davis, check
+out the <a class="reference external" href="https://ucospo.net/oss-resources/#understanding-licensing--compliance">Open Source Program Office resources</a>.</p></li>
+<li><p><strong>Funding Sources and Pay Schedule:</strong> If money is changing hands, it is a good
+idea to lay out the specifics of how that will happen.</p></li>
+</ul>
+<p>Not every project will require every section. However, including more
+information early on in a project will make your life easier down the line. In
+general, reproducibility requires you to know what you did and when. While a
+project proposal or scoping document will inevitably differ from what actually
+happens, having a starting point will make reconstructing your research process
+much easier. Additionally, don’t hesitate to update your project prosposal as
+things change. Updating your plan as you figure out what works and what doesn’t
+isn’t a failing – it’s good research practice. And your project proposal can
+help you keep track of those changes as you make them.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When deciding how you will structure your data, it’s helpful to review “tidy
+data” principles, especially if you are recording your data in spreadsheet
+software like Microsoft Excel or Google Sheets. Check out DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/">Excelling
+with Excel workshop reader</a> to learn how to keep your data neat
+and tidy.</p>
+<p>To level-up your reproducibility, consider using an open source programming
+language like R or Python to analyze your data. Analyses you carry out in a
+spreadsheet or graphical user interface (GUI) based program that involes a lot
+of pointing and clicking to set options for the analysis can be difficult for
+others to reproduce even when you meticulously document every step. The
+advantage of programming is that anyone you share your analysis code with
+should be able to exactly repeat the steps of your analysis.</p>
+<p>If you need to store a lot of data, consider using a
+<a class="reference internal" href="#databases"><span class="std std-ref">database</span></a>. This is especially helpful when your data is stored
+in many different closely related tables, or your datasheet is really wide with
+numerous columns containing repeated information. You can learn more about
+databases and data storage technologies in DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_databases/">Overview of Databases and
+Data Storage workshop reader</a>, and how to work with databases
+using a Structured Query Language (SQL) in DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Introduction to SQL for
+Querying Databases workshop reader</a>.</p>
+</div>
+</section>
+<section id="make-a-data-management-plan">
+<h2><span class="section-number">2.2. </span>Make a Data Management Plan<a class="headerlink" href="#make-a-data-management-plan" title="Link to this heading">#</a></h2>
+<p>Increasingly, funders are requiring Data Managment and Sharing Plans (DMSPs) as
+a condition of funding. Beyond being a necessity for grants, these are also an
+excellent reproducibility practice and should be implemented regardless of
+funder requirements. Ideally, you should make your plan as early in your
+research process as possible. If you haven’t collected any data yet, you can
+create “dummy” or “hypothetical” data for your project to help you think
+through the data management process. We often think of “data” as numbers in a
+spreadsheet, but you should take a broad view of “data”. Field notebooks,
+conceptual sketches, interview transcripts, photographs, and many other items
+often can and should be considered “data” as well.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Many projects (such as those with personal health data or other sensitive
+information) require extra consideration when developing your DMSP. You must
+consider things like deidentification of data, secure storage, and other
+privasy considerations. Learn more on the Library <a class="reference external" href="https://guides.library.ucdavis.edu/data-management/confidentiality">Research Data Management
+Guide</a> or <a class="reference external" href="mailto:dataservices&#37;&#52;&#48;ucdavis&#46;edu">consult with a librarian</a>!</p>
+</div>
+<p>Some general considerations when starting a data management plan would be to
+ask yourself questions about the data:</p>
+<ul class="simple">
+<li><p>What sort of data will be generated?</p>
+<ul>
+<li><p>Numbers in spreadsheets, images, recordings, etc.</p></li>
+</ul>
+</li>
+<li><p>How much data will be generated?</p>
+<ul>
+<li><p>A handful of spreadsheets? Hundreds of csv files? Millions of rows?</p></li>
+</ul>
+</li>
+<li><p>How much space will the data take?</p>
+<ul>
+<li><p>Megabytes? Gigabytes? Terabytes?</p></li>
+</ul>
+</li>
+<li><p>What is the cost/ability of replace lost data?</p>
+<ul>
+<li><p>Can you rerun the experiment or reinterview a subject? Or is it a one
+time chance?</p></li>
+</ul>
+</li>
+<li><p>What do people (or future you) need to understand about your data to work
+with it?</p>
+<ul>
+<li><p>Units? Logical structure? Metadata and Documentation?</p></li>
+</ul>
+</li>
+<li><p>Who will be responsible for the data?</p>
+<ul>
+<li><p>Consider both in the short-term and the long-term.</p></li>
+</ul>
+</li>
+<li><p>How will you backup the data during the project?</p>
+<ul>
+<li><p>Frequency? Responsible Party? Location? Risk Tolerance?</p></li>
+</ul>
+</li>
+<li><p>Will you need/want to share the data?</p>
+<ul>
+<li><p>With who? Are there restrictions? How will it be found?</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the <a class="reference external" href="https://guides.library.ucdavis.edu/data-management/planning">Research Data Managment Guide</a> for instructions about
+how to make a data management plan or the Library. Ask the Library’s <a class="reference external" href="mailto:dataservices&#37;&#52;&#48;ucdavis&#46;edu">Research
+Data Managment Team</a> for questions or conusltations.</p>
+<p>You may also find these external guides useful:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://datamanagement.hms.harvard.edu/plan-design/data-management-and-sharing-plan">Harvard DMSP Guide</a></p></li>
+<li><p><a class="reference external" href="https://www.nnlm.gov/guides/data-glossary/data-management-plan">National Library of Medicine DMSP Guide</a></p></li>
+<li><p><a class="reference external" href="https://libraries.mit.edu/data-management/plan/write/">MIT Libraries Data Managment Guide</a></p></li>
+<li><p><a class="reference external" href="https://dmptool.org/general_guidance">DMPTool Guidance</a></p></li>
+<li><p><a class="reference external" href="https://www.dcc.ac.uk/dmps">Digital Curation Centre DMSP Guide</a></p></li>
+</ul>
+</div>
+<!-- TODO: Get Organized -->
+</section>
+<section id="establish-a-directory-structure">
+<span id="establish-directory-structure"></span><h2><span class="section-number">2.3. </span>Establish a Directory Structure<a class="headerlink" href="#establish-a-directory-structure" title="Link to this heading">#</a></h2>
+<p>Create a separate, dedicated directory, often called a <strong>repository</strong>, for each
+of your projects. Store everything related to the project there. This will make
+it easier to find files and also to share specific projects with others. Use
+directories within each repository to further organize your files. At a
+minimum, we recommend these directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code> for data sets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs/</span></code> for documents</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src/</span></code> for code in scripts (such as <code class="docutils literal notranslate"><span class="pre">.R</span></code> or <code class="docutils literal notranslate"><span class="pre">.py</span></code> files). The abbreviation
+<code class="docutils literal notranslate"><span class="pre">src</span></code> is short for “source code”. R scripts conventionally belong in <code class="docutils literal notranslate"><span class="pre">R/</span></code>
+instead, because of how R’s packaging mechanisms work</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notebooks/</span></code> for code in notebooks (such as RMarkdown or Jupyter notebooks)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs/</span></code> for results (data, models, figures, etc.)</p></li>
+</ul>
+<p>Of course, if your project doesn’t include any code then the <code class="docutils literal notranslate"><span class="pre">src/</span></code> and
+<code class="docutils literal notranslate"><span class="pre">notebooks/</span></code> directories aren’t necessary. If your project has lots of outputs,
+it can also be helpful to replace or supplement the <code class="docutils literal notranslate"><span class="pre">outputs/</span></code> directory with
+more specific directories such as <code class="docutils literal notranslate"><span class="pre">figures/</span></code> and <code class="docutils literal notranslate"><span class="pre">models/</span></code>.</p>
+<p>These recommendations are not necessarily appropriate for every project. When
+choosing a directory structure, consider the specific needs of your project,
+your collaborators, and your audience. Make sure to document whatever directory
+structure you decide to use in your project’s README (see
+<a class="reference internal" href="03_daily-habits-for-everyone.html#file-manifests"><span class="std std-ref">File Manifests</span></a>).</p>
+<p>If your research is more qualitative in nature than quantitive, the same basic
+principles of organization apply. However the overall goal may be to show
+iterative analysis, reflection, and ethical managment of sensitive materials
+rather than rigid data pipeline processng. For instance, your directory
+structure might include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code> which includes <code class="docutils literal notranslate"><span class="pre">interviews/</span></code>, <code class="docutils literal notranslate"><span class="pre">fieldnotes/</span></code>, and <code class="docutils literal notranslate"><span class="pre">documents/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coding/</span></code> which includes <code class="docutils literal notranslate"><span class="pre">themes/</span></code> and <code class="docutils literal notranslate"><span class="pre">memos/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs/</span></code> which includes <code class="docutils literal notranslate"><span class="pre">analysis_summaries/</span></code> and <code class="docutils literal notranslate"><span class="pre">reports/</span></code></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more examples of directory structures, see:</p>
+<ul class="simple">
+<li><p>DataLab’s <a class="reference external" href="https://github.com/datalab-dev/template_project">Project Template</a></p></li>
+<li><p><a class="reference external" href="https://github.com/drivendata/cookiecutter-data-science">Cookiecutter Data Science</a></p></li>
+<li><p>The Turing Way’s <a class="reference external" href="https://the-turing-way.netlify.app/project-design/project-repo/project-repo-advanced">Creating Project Repositories guide</a></p></li>
+</ul>
+</div>
+</section>
+<section id="use-naming-conventions">
+<h2><span class="section-number">2.4. </span>Use Naming Conventions<a class="headerlink" href="#use-naming-conventions" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>There are only two hard things in Computer Science: cache invalidation and
+naming things.</p>
+<p>– <a class="reference external" href="https://www.karlton.org/">Phil Karlton</a>, software engineer at Netscape</p>
+</div></blockquote>
+<p>Names are the first thing you see when you skim through the files in a
+directory or the expressions in a snippet of code. Well-chosen names serve as a
+form of documentation, making it easier to guess the purpose of each file or
+expression. With that in mind, naming things amounts to summarizing (often
+complex) concepts in one or two words—so it’s no surprise that it can be
+challenging and easy to neglect.</p>
+<p>Adopting a naming convention and following it consistently can ease some of the
+burden of naming things by reducing the number of decisions you have to make.
+Different contexts often benefit from different naming conventions. For
+instance, it’s usually a helpful to have separate naming conventions for files
+and for code.</p>
+<section id="file-and-directory-names">
+<h3><span class="section-number">2.4.1. </span>File and Directory Names<a class="headerlink" href="#file-and-directory-names" title="Link to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Choose filenames that are human-readable, machine-readable, and have a
+meaningful order when sorted alphabetically.</p>
+</div>
+<p>The UC Davis Library <a class="reference external" href="https://guides.library.ucdavis.edu/data-management/file-naming">Research Data Managment Guide</a>
+provides an overview of these basic principles and how to apply them when
+naming your files and directories.</p>
+<p>For example, consider this project:</p>
+<a class="reference internal image-reference" href="../_images/AmandaUnorganizedProject.jpg"><img alt="A diagram showing an unorganized directory structure for Amanda's Research Project." class="align-center" src="../_images/AmandaUnorganizedProject.jpg" style="width: 600px;" />
+</a>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Text version of directory structure</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Amanda’s Research Project/</strong></p>
+<ul>
+<li><p class="sd-card-text"><strong>observations/</strong></p>
+<ul>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_g.fits</p></li>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_r.fits</p></li>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_spec.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_g.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_r.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_spec.fits</p></li>
+<li><p class="sd-card-text">galaxy1_g_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy1_r_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy1_spec_restframe.fits</p></li>
+<li><p class="sd-card-text">galaxy2_g_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy2_r_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy2_spec_restframe.fits</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">1303.7762.pdf</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://2dfft.py">2dfft.py</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://BHmass.py">BHmass.py</a></p></li>
+<li><p class="sd-card-text">E&amp;M class notes</p></li>
+<li><p class="sd-card-text">mass &amp; pitch angle scatter.png</p></li>
+<li><p class="sd-card-text">paper on mass estimates.pdf</p></li>
+<li><p class="sd-card-text">redshift(z)histogram</p></li>
+<li><p class="sd-card-text">results</p></li>
+<li><p class="sd-card-text">spiral paper.pdf</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><!-- FIXME: backticks around file names -->
+<p>This directory appears to have grown organically–there is no consistent file
+organization or naming convention. Because of that, it’s not obvious what this
+project is about and what it contains. Many of the file names are unclear and
+would require additional context to understand their purpose (e.g., “spiral
+paper.pdf”). This makes it difficult for anyone interacting with the project to
+be able to find a file and know why and how to use it. The directory structure
+is shallow, meaning that files serving different purposes are interspersed
+together. Additionally, several file names include spaces and special
+characters, which can cause problems for those using the files with analysis
+and other software.</p>
+<p>Here is a cleaned up version of this same project:</p>
+<a class="reference internal image-reference" href="../_images/AmandaCorrectedStructure.jpg"><img alt="A diagram showing the directory structure for the BlackHoleMass project." class="align-center" src="../_images/AmandaCorrectedStructure.jpg" style="width: 600px;" />
+</a>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Text version of directory structure</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>BlackHoleMass_SpiralGalaxy/</strong></p>
+<ul>
+<li><p class="sd-card-text"><strong>analysis/</strong></p>
+<ul>
+<li><p class="sd-card-text"><strong>plots/</strong></p>
+<ul>
+<li><p class="sd-card-text">mass_pitchangle_scatter.png</p></li>
+<li><p class="sd-card-text">redshift_histogram.png</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><a class="reference external" href="http://2dfft.py">2dfft.py</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://BHmass.py">BHmass.py</a></p></li>
+<li><p class="sd-card-text">results.csv</p></li>
+<li><p class="sd-card-text">README.txt</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>data/</strong></p>
+<ul>
+<li><p class="sd-card-text"><strong>processed/</strong></p>
+<ul>
+<li><p class="sd-card-text">galaxy1_g_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy1_r_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy1_spec_restframe.fits</p></li>
+<li><p class="sd-card-text">galaxy2_g_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy2_r_crop.fits</p></li>
+<li><p class="sd-card-text">galaxy2_spec_restframe.fits</p></li>
+<li><p class="sd-card-text">README.txt</p></li>
+<li><p class="sd-card-text">README_methods.txt</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>raw/</strong></p>
+<ul>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_g.fits</p></li>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_r.fits</p></li>
+<li><p class="sd-card-text">20121103_ra179.7dec12.1_spec.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_g.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_r.fits</p></li>
+<li><p class="sd-card-text">20121104_ra180.0dec12.1_spec.fits</p></li>
+<li><p class="sd-card-text">README.txt</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>literature/</strong></p>
+<ul>
+<li><p class="sd-card-text">BHmass_pitch.bib</p></li>
+<li><p class="sd-card-text">KormandyHo2013.pdf</p></li>
+<li><p class="sd-card-text">Lusso2010.pdf</p></li>
+<li><p class="sd-card-text">Vertergaard2006.pdf</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">README.txt</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><p>We can see a number of changes and choices the project author made to the
+project to make it more human and machine readable. This new folder structure
+helps us better navigate and understand how files relate to one another. The
+the inclusion of README.txt files is also important, as they contain additional
+context regarding the contents, origin and purpose of the associated files. The
+author also changed the file names to be more machine readable (“mass &amp; pitch
+angle scatter.png” to “mass_pitchangle_scatter.png”) and added names that
+explain more about the contents of the file (“spiral paper.pdf” to
+“KormandyHo2013.pdf”). Even without a background in astronomical physics, it is
+much easier to understand the purpose of the files for the project.</p>
+<p>Adapted from <a class="reference external" href="https://osf.io/ukq6b/overview">Schilling, Amanda, et al. “Managing Research Files.” OSF, 7 Feb. 2025. Web.</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before starting your project, it’s a good idea to check if there are any
+additional domain-specific file convenions. Data repositories often also
+require specific naming conventions, so if you know you will be depositing your
+data there it can save you time and headache to apply those conventions at the
+beginning of your project. Regardless, your file names should always be easy
+for you, your collaborators, and your computer to read.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The rules in this section are based on Jenny Bryan’s <a class="reference external" href="https://github.com/jennybc/how-to-name-files">How to Name Files
+presentation</a>.</p>
+<p>Prefer an essay over a presentation? See Douglas MacDonald’s <a class="reference external" href="https://www.douganddata.com/2022/07/on-naming-things/">On Naming
+Things</a>.</p>
+</div>
+<!-- TODO: Think "Open" -->
+</section>
+</section>
+<section id="prefer-open-source-software">
+<span id="sec-prefer-open-source-software"></span><h2><span class="section-number">2.5. </span>Prefer Open-Source Software<a class="headerlink" href="#prefer-open-source-software" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>You’re excited to start working on a project about how a particular virus
+spreads among domesticated poultry populations. The project seems promising,
+because your collaborator has been collecting data for over 10 years. When
+they send you the data, you notice that the first 3 years of data are
+anomalous compared to the rest. You ask your collaborator about it, and they
+mention that they used to calibrate the data with software from Big Money
+Corporation. After 3 years, they switched to an open-source calibration
+software, because Big Money Corp. went out of business. You’d like to confirm
+that the calibration software from Big Money Corp. used the same algorithm as
+the open-source calibration software, but the documentation is vague, the
+source code is not available, and no one online seems to know. You’re glad
+your collaborator still has copies of the raw, uncalibrated data, but it
+looks like you’ll have to spend a few days running all of it through the
+open-source calibration software.</p>
+</div></blockquote>
+<p>Software is <strong>open-source</strong> if its source code is freely available. Most
+commercial software is closed-source: only the developers have access to the
+source code. Using open-source software makes your research more reproducible
+in at least three ways:</p>
+<ul class="simple">
+<li><p>Transparency: When you use closed-source software, you have limited insight
+into how it actually works. The algorithms the software uses might not be the
+ones the distributor claims, and there might be bugs in their
+implementations. When you use open-source software, if you have these
+concerns, you can inspect the source code yourself to determine how the
+software works.</p></li>
+<li><p>Longevity: The lifespan of closed-source software is entirely up to its
+developers and distributor. In contrast, for open-source software, even if
+the original developers retire from or abandon development, someone else can
+step in and continue to develop the software. Many open-source software have
+continued to receive updates for 20-30 years or more, and run well on modern
+computers—an achievement few closed-source software can claim.</p></li>
+<li><p>Extensibility: Whether a new feature is added to closed-source software is up
+to the whims of its developers. With open-source software, you can add the
+feature yourself (or hire someone else to do it).</p></li>
+</ul>
+<p>We recommend using open-source software whenever possible because of these
+benefits. That said, make sure to take into account the norms and expectations
+of your collaborators and your discipline, and whether the available
+open-source software meets your needs. In some disciplines, closed-source
+software is widely-used, and using anything else can make it difficult to
+collaborate or to convince peers of the soundness of your work. For specialized
+tasks, closed-source software is sometimes the only software available. It’s
+wonderful if you want to be an open-source trailblazer (or even developer) in
+your discipline, but make sure it’s an informed decision.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Many universities, including UC Davis, have an Open Source Program Office
+(OSPO) to train and support contributors and maintainers of open-source
+software. You can learn more about UC OSPOs at the <a class="reference external" href="https://ucospo.net/">UC OSPO Network</a>
+website.</p>
+</div>
+</section>
+<section id="use-file-formats-effectively">
+<span id="id1"></span><h2><span class="section-number">2.6. </span>Use File Formats Effectively<a class="headerlink" href="#use-file-formats-effectively" title="Link to this heading">#</a></h2>
+<p>For any dataset, there are many different ways to store that data. For tabular
+data (rows and columns) alone, there are at least seven different file formats.
+So how do you choose?</p>
+<p>It is best to store data sets in file formats that:</p>
+<ul class="simple">
+<li><p>Are accessible to you, your collaborators, and other researchers across a
+variety of software</p></li>
+<li><p>Preserve the data set’s structure and types (including categories, dates, and
+times)</p></li>
+<li><p>Can be read and written efficiently</p></li>
+</ul>
+<p>Plain-text formats—such as comma-separated values (CSV)—satisfy the
+accessibility requirement, and also have the advantage of being human-readable,
+but usually fail on preservation and efficiency. Binary formats usually fare
+better for preserving data set structure and types, as well as for fast read
+and write times.</p>
+<p>For tabular data sets, both <a class="reference external" href="https://arrow.apache.org/">Apache Arrow</a> (also known as
+<a class="reference external" href="https://arrow.apache.org/docs/python/feather.html">Feather</a>) and <a class="reference external" href="https://parquet.apache.org/">Apache Parquet</a> satisfy all three
+requirements. Arrow and Parquet are binary formats, so they aren’t
+human-readable, but they are open standards, so support for them can be
+implemented in any software. R, Python, and Julia all already support both
+through various packages. The Arrow standard is simpler but changes more
+frequently than the Parquet standard. As a result, Arrow is faster to read and
+write and a good choice for short-term storage. Parquet is a better choice for
+long-term storage because the standard is more stable.</p>
+<section id="prefer-open-standard-file-formats">
+<span id="id2"></span><h3><span class="section-number">2.6.1. </span>Prefer Open Standard File Formats<a class="headerlink" href="#prefer-open-standard-file-formats" title="Link to this heading">#</a></h3>
+<p>For any file format, there is a defined standard for how any file of that
+format should be structured on a computer. Open standard file formats have
+these standards openly published and updated when they changed. They can be
+implementented by anyone in any application or software without paying
+licensing fees. Additionally, they are not encumbered by copyrights, patents or
+other legal restrictions to their use.</p>
+<p>Standards for proprietary file formats are not publicly available and can be
+changed unilaterally by the file format owner at any time. They may require
+expensive software to read or write files of those formats, and if the company
+stops maintaining the software, data in a proprietary file format may become
+completely inaccessible.</p>
+<p>Using open file formats means your data will be accessible to the largest
+number of people, for the longest period of time. The following are a list of
+open standard file formats by data type. It is not exhaustive but is a place to
+start.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Structure</p></th>
+<th class="head"><p>File Formats</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Tabular Data</strong></p></td>
+<td><p>Plain-text (.csv, .tsv, .txt), Apache Arrow (.feather), Apache Parquet (.parquet), OpenOffice Calc (.ods)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Nested/Tree Data</strong></p></td>
+<td><p>JSON, XML</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Geospatial Data</strong></p></td>
+<td><p>GeoJSON (vector), GeoTIFF (raster), NetCDF (raster), Hierarchical Data Format (HDF, raster), OGC GeoPackge (both)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Network or Graph</strong></p></td>
+<td><p>GraphML, Graph Exchange XML Format (GEXF), Graph Modeling Language (GML), Turtle/RDF</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Still Images</strong></p></td>
+<td><p>PNG (raster), TIFF (raster), SVG (vector)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Audio</strong></p></td>
+<td><p>WAVE, AIFF, MP3, MXF</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Moving Images</strong></p></td>
+<td><p>MOV, MP4, AVI</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Databases</strong></p></td>
+<td><p>Postgres, SQLite, DuckDB, MongoDB, Neo4j, Apache CouchDB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">A Word on Industry Standards</p>
+<p>There are some fields that are so heavily dominated by a particular proprietary
+software that the file format associated with that software becomes the de
+facto file format for the entire field. In this case, using the proprietary
+format will make data more accessible than using a niche open standard format.
+However, you should back up your data in a non-proprietary format in case you
+lose access to the proprietary software.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about file formats for long term data storage formats, see
+the Library of Congress’s <a class="reference external" href="https://www.loc.gov/preservation/resources/rfs/TOC.html">Recommended Formats Statement</a> and their
+webpage on the <a class="reference external" href="https://www.loc.gov/preservation/digital/formats/index.shtml">Sustainability of Digital Formats</a>.</p>
+</div>
+</section>
+<section id="databases">
+<span id="id3"></span><h3><span class="section-number">2.6.2. </span>Databases<a class="headerlink" href="#databases" title="Link to this heading">#</a></h3>
+<p>A <strong>database</strong> is an organized collection of data stored with specialized
+software that helps you do things like query and update the data. Databases
+can:</p>
+<ul class="simple">
+<li><p>Create a definitive version of your data that multiple people can access
+without creating conflicts.</p></li>
+<li><p>Provide quality control measures to reduce input errors and make sure typos
+don’t get introduced into your data.</p></li>
+<li><p>Query millions of observations in seconds (which you can’t do in Excel or
+Google Sheets!).</p></li>
+<li><p>Store data more efficiently than regular files.</p></li>
+<li><p>Control who has access to your data, and what they can do with it, on a very
+granular level.</p></li>
+</ul>
+<p>Databases are a specialized tool. They are optimized for querying and
+transforming data. As such, they are generally faster at those tasks than R or
+Python. However, they don’t do everything. You can’t create a data
+visualization using a database, or run a statistical analysis. A database is a
+perfect data source for those tasks to ensure that your results are
+reproducible across collaborators and over time. Databases also make an
+excellent platform for sharing or publishing your data. Their permissions
+functionality means you can easily give the public read only access to your
+finalized data products, while keeping the raw or unprocessed data only
+accessible to your collaborators.</p>
+<p>Historically, databases were restricted to primarily tabular data (rows and
+columns), in what are called <strong>relational databases</strong>. In recent years though,
+new types of databases have come on the scene that can efficiently store all
+sorts of different data, including nested or tree based data, graph data, and
+unstructured text. The type of data you have will inform what kind of database
+would be best for you, which you can find out more about in the <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_databases/">Overview of
+Databases and Data Storage reader</a></p>
+<p>Many, if not most, database systems have graphical user interface software to
+make it easier to interace with the database. But, to get the most out of a
+database, it is helpful to the query langauge associated with your database of
+choice. For relational databases this is SQL, which stands for Structured Query
+Language. To get get started with SQL, see <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Introduction to SQL for Querying
+Databases workshop reader</a>. Non-relational (SQL-based) databases
+use a variety of langauges to write queries. MongoDB, a document based
+database, uses MQL, which you can learn in W3School’s <a class="reference external" href="https://www.w3schools.com/mongodb/index.php">MongoDB
+Tutorial</a>. Like other computer languages, query languages like SQL and
+MQL make your data cleaning and transformation processes reproducible. However,
+they are much easier to learn because the set of tasks they are designed to do
+is much smaller.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_databases/">An Overview of Databases and Data Storage workshop
+reader</a> provides an introduction to databases. DataLab’s
+<a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Introduction to SQL for Querying Databases workshop reader</a>
+teaches you how to query data in relational databases. W3School’s <a class="reference external" href="https://www.w3schools.com/mongodb/index.php">MongoDB
+tutorial</a> shows you how to query data in a document or text based
+database using MQL.</p>
+</div>
+</section>
+</section>
+<section id="plan-for-backups">
+<span id="id4"></span><h2><span class="section-number">2.7. </span>Plan for Backups<a class="headerlink" href="#plan-for-backups" title="Link to this heading">#</a></h2>
+<p>Hard drives can and do fail. Store at least one backup copy of each project on
+a different computer, on an external hard drive, or in the cloud. This way, if
+your hard drive stops working, you won’t lose everything. Make a schedule for
+when you’ll update the backups, either daily or weekly, and stick to it.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For projects which involve data, it’s especially important to keep backup
+copies of the original or source data sets. This way you can experiment with
+multiple approaches to data processing and can recover if you accidentally
+corrupt or delete a data set.</p>
+</div>
+<p>Cloud services such as <a class="reference external" href="https://drive.google.com/">Google Drive</a>, <a class="reference external" href="https://www.dropbox.com/">Dropbox</a>, <a class="reference external" href="https://www.box.com/">Box</a>, and
+<a class="reference external" href="https://onedrive.com/">OneDrive</a> are convenient for backups because you can also easily share the
+files with collaborators. If you <a class="reference internal" href="03_daily-habits-for-everyone.html#use-version-control"><span class="std std-ref">Use Version Control</span></a>, then <a class="reference external" href="https://github.com/">GitHub</a>,
+<a class="reference external" href="https://bitbucket.org/">BitBucket</a>, or <a class="reference external" href="https://about.gitlab.com/">GitLab</a> are similarly convenient. If your project has
+specific privacy requirements, be careful to make sure they’re satisfied when
+choosing a cloud service.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the UC Davis Library’s <a class="reference external" href="https://guides.library.ucdavis.edu/data-management/storage">Research Data Management
+Guide</a> section on backups for more comprehensive guidance
+on the topic.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_principles.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Principles of Reproducibility</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_daily-habits-for-everyone.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Daily Habits for Everyone</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-with-the-scope">2.1. Start with the Scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-data-management-plan">2.2. Make a Data Management Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establish-a-directory-structure">2.3. Establish a Directory Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-naming-conventions">2.4. Use Naming Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-and-directory-names">2.4.1. File and Directory Names</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefer-open-source-software">2.5. Prefer Open-Source Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-file-formats-effectively">2.6. Use File Formats Effectively</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prefer-open-standard-file-formats">2.6.1. Prefer Open Standard File Formats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#databases">2.6.2. Databases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-for-backups">2.7. Plan for Backups</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Elise Hellwig, Pamela Reynolds, Beth Tweedy, Nick Ulle, Rebeccah Yterdal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

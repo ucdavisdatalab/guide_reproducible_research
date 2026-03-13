@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en-us" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Reproducible Computing &#8212; Reproducible Research Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=dddfd265"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04_reproducible-computing';</script>
+    <link rel="icon" href="../_static/cropped-site-icon-135x135.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Dissemination &amp; Sharing" href="05_dissemination-sharing.html" />
+    <link rel="prev" title="3. Daily Habits for Everyone" href="03_daily-habits-for-everyone.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en-us"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/ucd_lib-logo-signature-rgb-96ppi.png" class="logo__image only-light" alt="Reproducible Research Guide - Home"/>
+    <script>document.write(`<img src="../_static/ucd_lib-logo-signature-reverse-96ppi.png" class="logo__image only-dark" alt="Reproducible Research Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reproducible Research Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_principles.html">1. Principles of Reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_planning-for-success.html">2. Planning for Success</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_daily-habits-for-everyone.html">3. Daily Habits for Everyone</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Reproducible Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dissemination-sharing.html">5. Dissemination &amp; Sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">6. Appendix: References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/04_reproducible-computing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Reproducible Computing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-with-code">4.1. Compute with Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-the-code">4.2. Organize the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names-in-code">4.2.1. Names in Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-functions">4.2.2. Write Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-it-modular">4.2.3. Make It Modular</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-workflows">4.3. Document the Workflows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-workflow-diagrams">4.3.1. Make Workflow Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-code">4.3.2. Document the Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-environment">4.4. Document the Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-managers">4.4.1. Environment Managers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#containerization">4.4.2. Containerization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-computing">4.4.3. Cloud Computing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-configuration-files">4.5. Use Configuration Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-workflows">4.6. Automate the Workflows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-task-runner">4.6.1. Use a Task Runner</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-output">4.7. Log Output</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="reproducible-computing">
+<h1><span class="section-number">4. </span>Reproducible Computing<a class="headerlink" href="#reproducible-computing" title="Link to this heading">#</a></h1>
+<section id="compute-with-code">
+<span id="use-a-programming-language"></span><h2><span class="section-number">4.1. </span>Compute with Code<a class="headerlink" href="#compute-with-code" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This practice is recommended for projects that involve computations. If your
+project doesn’t, or if all computations are handled by specialized software,
+then you might not need a programming language.</p>
+<p>Nevertheless, we’ve included writing code as a primary practice to emphasize
+that it’s uniquely important for reproducibility if your project does involve
+computations.</p>
+</div>
+<p>Code is an explicit, unambiguous record of every step in a computation. This is
+a major benefit for reproducible research. You can share your code with someone
+else, and if they run it with all of the same inputs, they’ll get the same
+outputs. The same is difficult or impossible to achieve using software that has
+a graphical user interface.</p>
+<p>Another benefit of programming is that code is reusable and often scalable. If
+you write code to solve a general problem, you can then apply it to any number
+of specific instances of that problem. The only constraints are time and the
+computing resources available to you. Most popular programming languages have
+supportive, active communities that create and distribute thousands of
+user-contributed packages, so often it’s not even necessary to solve a problem
+yourself—you can reuse someone else’s code.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_r.png"><img alt="" class="align-center" src="../_images/logo_r.png" style="width: 50%;" />
+</a>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_python_device.svg"><img alt="" class="align-center" src="../_images/logo_python_device.svg" style="width: 40%;" />
+</a>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_julia.svg"><img alt="" class="align-center" src="../_images/logo_julia.svg" style="width: 50%;" />
+</a>
+</div>
+</div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <strong>high-level</strong> programming language is one which uses abstractions to hide
+most of the details of the hardware.</p>
+</div>
+</aside>
+<p>Choosing a programming language doesn’t just mean choosing a particular syntax,
+it also means choosing a community and ecosystem. Different languages have
+different strengths, weaknesses, community cultures, and packages. We recommend
+choosing an open-source, high-level language designed for research computing
+and data analysis, such as:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.r-project.org/">R</a>: a “software environment for statistical computing and graphics,” R is
+especially well-suited to cleaning and analyzing tabular data, training
+statistical models, and creating data visualizations. R has support for
+missing values built-in, a friendly and active community, and tens of
+thousands of user-contributed packages, mostly related to statistics and data
+science.</p></li>
+<li><p><a class="reference external" href="https://www.python.org/">Python</a>: a general-purpose programming language that “lets you work
+quickly and integrate systems more effectively.” The Python community
+supports research computing through its user-contributed NumPy, SciPy, and
+Pandas packages, as well as others. Python’s syntax encourages well-organized
+code, and its community is enormous and spans many different disciplines.
+It’s also one of the primary languages for deep learning. Python’s facilities
+for data analysis are not as mature as R’s, with equivalent features and
+stability but some rough edges.</p></li>
+<li><p><a class="reference external" href="https://julialang.org/">Julia</a>: a relatively new programming language “appropriate for scientific
+and numerical computing, with performance comparable to [languages like C].”
+Julia is designed from the ground up for research computing and uses modern
+optimizations to run substantially faster than R or Python for many tasks.
+Julia’s community is small but growing. Julia’s facilities for data analysis
+are not as mature as R’s or Python’s, with many still in early development.
+Expect to occasionally have to develop things yourself when you wouldn’t in
+more mature languages.</p></li>
+</ul>
+<p>When choosing a language, always make sure to consider the specific needs of
+your project. Projects with specific requirements for performance or other
+features (for example, developing web applications) may benefit from using
+other languages or a mix of languages.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>If you want to learn R, see DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_r_basics/">R Basics workshop reader</a> and
+consider joining the <a class="reference external" href="https://d-rug.github.io/">Davis R Users Group</a>.</p>
+<p>If you want to learn Python, see DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_python_basics/">Python Basics workshop
+reader</a> and consider joining the <a class="reference external" href="https://datalab.ucdavis.edu/davis-python-users-group/">Davis Python Users Group</a>.</p>
+<p>If you want to learn Julia, see the <a class="reference external" href="https://docs.julialang.org/">official Julia documentation</a>
+and consider joining the <a class="reference external" href="https://datalab.ucdavis.edu/julia-users-group/">UC Julia Users Group</a>.</p>
+</div>
+</section>
+<section id="organize-the-code">
+<span id="id1"></span><h2><span class="section-number">4.2. </span>Organize the Code<a class="headerlink" href="#organize-the-code" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="xkcd-goto">
+<img alt="" src="../_images/xkcd_goto.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">“goto” from <a class="reference external" href="https://xkcd.com/">“xkcd”</a> by Randall Munroe (<a class="reference external" href="https://xkcd.com/license.html">license</a>).</span><a class="headerlink" href="#xkcd-goto" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Whenever you’re about to write code, take time to think about what its purpose
+is and how it will be used in the future. Clarity on these points can make it
+easier to decide where to put the code, break down the programming problem, and
+choose appropriate programming abstractions.</p>
+<p>Is your code for a one-shot exploration, a prototype, or something highly
+visual? Then it’s probably a good idea to write and save your code in a
+notebook format, such as <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown</a>, <a class="reference external" href="https://jupyter.org/">Jupyter</a>, or <a class="reference external" href="https://quarto.org/">Quarto</a>. Notebooks
+display writing and results inline with code, so that you can try snippets of
+code out, get immediate feedback, and take notes. Notebooks can also display
+images, so you can inspect plots and other figures without opening another
+window or file.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_rmarkdown.png"><img alt="" class="align-center" src="../_images/logo_rmarkdown.png" style="width: 50%;" />
+</a>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_jupyter.svg"><img alt="" class="align-center" src="../_images/logo_jupyter.svg" style="width: 50%;" />
+</a>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<a class="reference internal image-reference" href="../_images/logo_quarto.svg"><img alt="" class="align-center" src="../_images/logo_quarto.svg" style="width: 50%;" />
+</a>
+</div>
+</div>
+</div>
+<p>On the other hand, if your code is likely to be reused many times over the
+course of the project—and possibly in other projects or by other
+people—then it’s usually preferable to write and save your code in a script
+format. Script formats are usually plain-text files with an extension like
+<code class="docutils literal notranslate"><span class="pre">.R</span></code>, <code class="docutils literal notranslate"><span class="pre">.py</span></code>, or <code class="docutils literal notranslate"><span class="pre">.jl</span></code> to indicate the kind of code.</p>
+<p>A mix of notebooks and scripts can be an effective way to solve programming
+problems and develop code. Don’t feel locked in to one or the other, and
+remember that generally notebooks can load functions and other code from
+scripts.</p>
+<section id="names-in-code">
+<h3><span class="section-number">4.2.1. </span>Names in Code<a class="headerlink" href="#names-in-code" title="Link to this heading">#</a></h3>
+<p>Most programming languages have a <strong>style guide</strong> with standards for how to
+format code, either officially or by community consensus. Following a style
+guide helps make your code intelligible to other programmers. Style guides
+usually include naming conventions, which tend to focus on how to capitalize
+and delimit words in multi-word names. Three common formats for names are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code> delimits words by capitalizing the first letter of each word</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snake_case</span></code> delimits words with underscores</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kebab-case</span></code> delimits words with dashes</p></li>
+</ul>
+<p>Some style guides use several different formats to distinguish between
+different kinds of objects.</p>
+<p>Among the languages widely used for data science:</p>
+<ul class="simple">
+<li><p>R doesn’t have an official style guide, but the <a class="reference external" href="https://style.tidyverse.org/">Tidyverse style
+guide</a> is popular. It recommends <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for all names. In
+the past, <code class="docutils literal notranslate"><span class="pre">camelCase</span></code> and R’s unique <code class="docutils literal notranslate"><span class="pre">dot.case</span></code> were also popular.</p></li>
+<li><p>Python has an <a class="reference external" href="https://peps.python.org/pep-0008/">official style guide called PEP 8</a>. It recommends
+<code class="docutils literal notranslate"><span class="pre">UpperCamelCase</span></code> for class names, <code class="docutils literal notranslate"><span class="pre">UPPER_SNAKE_CASE</span></code> for constants, and
+<code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for all other names.</p></li>
+<li><p>Julia has an <a class="reference external" href="https://docs.julialang.org/en/v1/manual/style-guide/">official style guide</a>. It recommends
+<code class="docutils literal notranslate"><span class="pre">UpperCamelCase</span></code> for module and type names, and <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for all other
+names.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Wikipedia’s <a class="reference external" href="https://en.wikipedia.org/wiki/Naming_convention_(programming)">naming conventions page</a> describes the styles and
+naming conventions for a wide variety of programming languages.</p>
+</div>
+<p>Besides how to format names in code, another detail to consider is how long
+names should be. Longer names allow for richer descriptions, but can also make
+code harder to read. Here’s one code organization expert’s recommendation:</p>
+<blockquote>
+<div><p>The length of variable names should be proportional to their scope. Big
+scopes imply long names.</p>
+<p>The length of function and class names should be inversely proportional to
+their scope. Small scopes imply long names.</p>
+<p>– <a class="reference external" href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert “Uncle Bob” Martin</a>, software engineer and author</p>
+</div></blockquote>
+<p>In other words, the longer a variable is in use, the longer its name should be.
+The rationale is that if a variable is in use for a long time, expressions that
+use the variable may be far away from its definition, making it harder to infer
+the meaning from context. So don’t hesitate to name a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> if it will
+only be used in a couple of expressions and there’s not an obviously better
+name, but avoid naming a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> if it’s going to be used repeatedly
+throughout all of your code; choose a longer, more descriptive name.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some other naming conventions include:</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, and <code class="docutils literal notranslate"><span class="pre">k</span></code> for indexes in loops.</p></li>
+<li><p>Use verbs (action words) in function names, because functions do things. For
+example: <code class="docutils literal notranslate"><span class="pre">read_data</span></code>, <code class="docutils literal notranslate"><span class="pre">add_offset</span></code>, <code class="docutils literal notranslate"><span class="pre">run_simulation</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">get_</span></code> and <code class="docutils literal notranslate"><span class="pre">set_</span></code> as prefixes for functions that get and set components
+of a data structure.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">is_</span></code> or <code class="docutils literal notranslate"><span class="pre">has_</span></code> as prefixes for functions that return a Boolean value.</p></li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See <a class="reference external" href="https://youtu.be/z7w2lKG8zWM">How Patterns in Variable Names Can Make Code Easier to Read</a>
+for Felienne Hermans’ perspective as a computer science education researcher.</p>
+</div>
+</section>
+<section id="write-functions">
+<h3><span class="section-number">4.2.2. </span>Write Functions<a class="headerlink" href="#write-functions" title="Link to this heading">#</a></h3>
+<p>To solve problems efficiently and better organize your code, try to break
+programming tasks into small, manageable steps. Use writing (for instance, in
+comments) to clarify and plan the steps. For each step, write the code to solve
+a few small, simple cases. Once the code for a step seems to work correctly,
+turn it into a function. Start by identifying the inputs and outputs. These
+become the parameters and return value, respectively. Test the function still
+works on the small, simple cases. Then scale up to larger, more complex cases.
+Edit the function and add parameters as necessary to make it work correctly for
+the new test cases, making sure that it also continues to work correctly for
+the old ones. When you have functions for all of the small steps, combine them
+(usually in sequence) to handle the larger task.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>How small is a “small step”? Small steps and functions should generally be
+longer than a single expression—because in that case you might as well just
+write the expression—and generally be shorter than one screen in your
+editor—so that you can reason about what they do easily. Be flexible and
+judicious with these guidelines; there are exceptions.</p>
+<p>When you write small steps, you can try to break them down into smaller
+sub-steps as well. The sub-steps are usually individual expressions.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It may be helpful to think of writing code or functions like writing an essay.
+Start with an outline (describe the steps in comments). Sometimes the outline
+will have multiple levels (sub-steps). Once you’ve written the outline, start
+filling in the details (the code). As you write, you may occasionally need to
+stop and adjust the outline as you uncover gaps in your reasoning.</p>
+</div>
+</section>
+<section id="make-it-modular">
+<h3><span class="section-number">4.2.3. </span>Make It Modular<a class="headerlink" href="#make-it-modular" title="Link to this heading">#</a></h3>
+<p>Create separate scripts for separate parts of your project. For example, you
+might have a script to clean the data, a script to train a model, a script to
+generate predictions from the trained model, and a script to generate figures
+summarizing the results. Dividing up responsibilities across multiple scripts
+is helpful for isolating bugs and staying focused while you’re working. Using
+multiple scripts will also make it easier for you and your collaborators to
+find things, provided the scripts have descriptive, unambiguous names.</p>
+<p>Structure your scripts so that they’re <strong>modules</strong>: collections of functions
+that can be imported and used by other code. Avoid writing code outside of
+functions, with one exception: to define a constants (named values that do not
+change, such as pi). Doing this ensures that importing a script won’t cause
+hard-to-predict side effects.</p>
+<p>If you want to be able to run a script from the command line, include a
+function that serves as the entry point—the code that runs first. For many
+programming languages, it’s required or recommended to call this function
+<code class="docutils literal notranslate"><span class="pre">main</span></code>. Regardless of what name you choose, use it consistently for the entry
+point functions across all of your scripts.</p>
+<!--
+See https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance?slide=56
+-->
+</section>
+</section>
+<section id="document-the-workflows">
+<span id="workflows"></span><h2><span class="section-number">4.3. </span>Document the Workflows<a class="headerlink" href="#document-the-workflows" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Suppose you’re working on a study of passenger rail systems in the United
+States. You use 3 scripts to produce plots that summarize how often trains
+are late and how late they are for various cities. The scripts must be run in
+a specific order and with specific arguments. A new student is about to join
+the project, and you need to make sure they’re able to run the scripts and
+make the plots.</p>
+</div></blockquote>
+<p>A <strong>workflow</strong> is a way of using your project. Often this will be a series of
+commands you can run to produce a specific output. Remembering the order in
+which to run commands and the settings for each one might seem easy while your
+project only has a few workflows and you use them frequently. If your project
+grows or you spend time away from it, you may find it much harder to remember
+what to do. Moreover, your collaborators may have a hard time remembering how
+to run a workflow you set up, and vice-versa. Thus it’s important to document
+your project’s workflows.</p>
+<p>There’s one workflow that’s essential to almost every project: downloading the
+files and installing the necessary software. It’s a good idea to provide
+step-by-step installation instructions in your project’s top-level README, even
+if you’re the only one working on the project. Installation instructions are
+invaluable if you ever have to switch to a different computer or reactivate a
+project you haven’t worked on for a few months.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As an example, see the <a class="reference external" href="https://github.com/sharkdp/fd#installation">installation instructions for fd</a>, a
+popular command-line tool for finding files.</p>
+</div>
+<p>Besides installation, you should also document workflows for using your
+project. Explain the different ways to use your project, the settings
+available, and common patterns of use. If your project contains mostly data
+rather than code, explain how the data were collected, how they can be used,
+built-in assumptions, and limitations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As an example, see the <a class="reference external" href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md">user guide for ripgrep</a>, a popular
+command-line tool for searching within files.</p>
+</div>
+<p>Documenting workflows is important for reproducibility because it enables you
+and other people to repeat commands you used to get a particular output.
+Workflow automation practices (see <a class="reference internal" href="#sec-use-a-task-runner"><span class="std std-ref">Use a Task Runner</span></a>) take this a
+step further by bundling all of the commands in a workflow into a single
+command.</p>
+<section id="make-workflow-diagrams">
+<h3><span class="section-number">4.3.1. </span>Make Workflow Diagrams<a class="headerlink" href="#make-workflow-diagrams" title="Link to this heading">#</a></h3>
+<p>Workflows with multiple interdependent tasks can be confusing, especially for
+people new to a project. Diagrams that lay out the sequence of and
+relationships between inputs, tasks, and outputs (as a graph, network, or flow
+chart) make understanding and using these workflows easier and faster. For
+instance, if you can’t remember what the inputs are for a particular task, you
+can simply glance at the diagram.</p>
+<p>It’s usually a good idea to make more than one workflow diagram. Use separate
+diagrams for independent workflows, and make multiple diagrams at different
+levels of abstraction. Diagrams at different levels are especially helpful for
+explaining workflows where some of the steps are relatively complex in their
+own right.</p>
+<p>There many different ways to make workflow diagrams, including:</p>
+<ul class="simple">
+<li><p>Sketching the diagram freehand. This is a fast, easy way to make a diagram
+that doesn’t require learning new tools. Depending on your sketching skills,
+the resulting diagrams might look rough or be difficult to read. You might
+sketch:</p>
+<ul>
+<li><p>On paper or a whiteboard (and take photos), which is wonderfully easy,
+but can make editing later difficult.</p></li>
+<li><p>On a tablet (or with a mouse), which requires drawing software, but makes
+it possible to collaborate from different locations and makes editing
+later easier.</p></li>
+</ul>
+</li>
+<li><p>Designing the diagram in vector graphics software (such as <a class="reference external" href="https://www.lucidchart.com/">Lucidchart</a> and
+<a class="reference external" href="https://inkscape.org/">Inkscape</a>). This works well for editing and collaborating and can produce
+presentation-quality diagrams. The drawbacks are that it requires everyone to
+have a license for and learn the software, and is generally more
+time-consuming than sketching.</p>
+<ul>
+<li><p>Presentation software (such as <a class="reference external" href="https://workspace.google.com/products/slides/">Google Slides</a> and <a class="reference external" href="https://www.libreoffice.org/discover/impress/">LibreOffice
+Impress</a>) are widely known and usually provide some support for
+designing diagrams.</p></li>
+</ul>
+</li>
+<li><p>Describing the diagram in a graph language (such as <a class="reference external" href="https://mermaid.js.org/">Mermaid</a> and
+<a class="reference external" href="https://graphviz.org/">Graphviz</a>). This works well for editing and collaborating and can produce
+presentation-quality diagrams. It’s more time-consuming than sketching but
+can be less time-consuming than vector graphics software. GitHub and other
+Git hosts often have built-in support for Mermaid. The drawbacks are that you
+have to (learn and) use yet another language, and you have less control over
+how the diagram is drawn and laid out.</p></li>
+</ul>
+<p>DataLab uses a mix of sketching, Lucidchart, Inkscape, and Mermaid, depending
+on the complexity of the diagram, who will see it, and other needs of the
+project. In general, you should choose whatever diagramming method works best
+for you (and your team)—making the diagrams is more important than how you
+make them.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See DataLab’s [README, Write Me! workshop reader][datalab-readme] for
+suggestions about how to create workflow diagrams.</p>
+</div>
+</section>
+<section id="document-the-code">
+<h3><span class="section-number">4.3.2. </span>Document the Code<a class="headerlink" href="#document-the-code" title="Link to this heading">#</a></h3>
+<p>Provide documentation for your project’s code. Think about how people
+(including you) will typically use the code. Will they:</p>
+<ul class="simple">
+<li><p>Run entire scripts?</p></li>
+<li><p>Call individual functions?</p></li>
+<li><p>Import your code as a package?</p></li>
+<li><p>Do something else?</p></li>
+<li><p>Do some combination of these?</p></li>
+</ul>
+<p>The point of the documentation is to help other people reproduce the typical
+workflows. Even if you <a class="reference internal" href="#sec-use-a-task-runner"><span class="std std-ref">Use a Task Runner</span></a>, documentation is important
+to help people understand what each workflow does and how it works.</p>
+<p>Use READMEs to summarize the code’s purpose, intended use cases, and
+organization across files. See <a class="reference internal" href="03_daily-habits-for-everyone.html#write-readmes"><span class="std std-ref">Write &amp; Maintain READMEs</span></a> for more about how to write
+READMEs.</p>
+<p>Most programming languages support comments as a way to intersperse
+documentation with code. Use comments to explain, in natural language, what
+your code is meant to do. This is especially important for parts of the code
+that are terse, complicated, or potentially counter-intuitive. An excellent
+programming strategy is to first write comments outlining the steps you want to
+complete, and then fill in the code between the comments; this strategy is a
+form of <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a></strong>.</p>
+<p>Place comments at the beginning of each code file to explain the file’s
+purpose, inputs, assumptions, outputs, and any pitfalls. If the code is
+organized into functions, do the same for each function. Some programming
+languages have syntax or packages specifically for writing this kind of
+documentation. These tools typically enforce some kind of organization and
+remind you about important details to include. They can also make it easier for
+others to find your documentation by making it available through the language’s
+built-in help system. Python’s <a class="reference external" href="https://peps.python.org/pep-0257/#what-is-a-docstring">docstrings</a> and R’s <a class="reference external" href="https://roxygen2.r-lib.org/">roxygen2</a> package are
+examples of such tools. This kind of documentation is essential if you plan to
+package your code and/or release it to a wider audience.</p>
+</section>
+</section>
+<section id="document-the-environment">
+<h2><span class="section-number">4.4. </span>Document the Environment<a class="headerlink" href="#document-the-environment" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>A few years ago, you developed an R script to read an obscure file format,
+MOO, for one of your research projects. The script was a huge help at the
+time, but you moved on and haven’t used it in a while. You just started an
+exciting new project, and your collaborator sent you some data in a MOO file.
+You find your script and try running it, but alas, it crashes with an error
+message. In the years since you wrote the script, you updated your R packages
+and even uninstalled a few. You’re confident the script would work if only
+you could go back to the packages and versions you had when you wrote it.</p>
+</div></blockquote>
+<p>What your computer can do depends on its hardware and software. For instance, a
+computer with Windows 11 installed will not necessarily be able to run software
+developed for the much older Windows 95. Nor will it be able to run most
+software developed (exclusively) for macOS. The computer’s central processing
+unit (CPU), memory, and other hardware components also limit the kinds of
+software it can run. Together, your computer’s hardware and software make up a
+<strong>computing environment</strong> with specific capabilities and limitations.</p>
+<p>When you use computers in the course of your research, it’s important to
+document the computing environment(s), so that people who want to reproduce
+your work will know what hardware and software they need. Without this
+documentation, an attempt to reproduce your work might yield errors or even
+incorrect results, and thus raise questions about whether your process and
+findings are valid. Good documentation on computing environments also makes it
+easier to:</p>
+<ul class="simple">
+<li><p>Bring new collaborators into a project</p></li>
+<li><p>Switch between or replace computers</p></li>
+<li><p>Revisit old projects, whether to reexamine results or to repurpose methods</p></li>
+<li><p>Reach a wide audience (especially if you want others to use your software)</p></li>
+</ul>
+<p>Modern operating systems are designed to ensure that software runs correctly
+across a wide variety of hardware, so they provide abstraction layers that hide
+hardware differences. As a result, for making research reproducible, software
+is usually the primary concern (with the exception of projects that rely on
+rare or specialized hardware). So at a minimum, for each computer you use in
+your research, you should document the name and version of:</p>
+<ul class="simple">
+<li><p>The computer operating system</p></li>
+<li><p>All other software you use to arrive at your results, including application
+software (such as Microsoft Excel), programming languages, and packages for
+programming languages</p></li>
+</ul>
+<p>If you decide to document the hardware, also include the manufacturer and model
+of:</p>
+<ul class="simple">
+<li><p>Core components:</p>
+<ul>
+<li><p>Central processing unit</p></li>
+<li><p>Graphical processing unit (if not integrated in the CPU)</p></li>
+<li><p>Memory</p></li>
+</ul>
+</li>
+<li><p>All other hardware critical or relevant to your results</p></li>
+</ul>
+<p>There are many strategies and tools you can use to make documenting and
+reproducing computing environments more convenient and reliable. In the
+following sections, we describe three: environment managers, containerization,
+and cloud computing.</p>
+<!--
+Computer hardware is expensive, so changing it isn't easy: the hardware you
+have is the hardware you use. The good news is that modern operating systems
+(like Windows and macOS) and programming languages abstract away many of the
+idiosyncrasies of hardware. As a result, a computer's capabilities and limits
+due to hardware depend more on performance characteristics like CPU speed,
+memory, and storage space than on make and model. That said, for the sake of
+transparency, it's good to make a habit of recording the exact specifications
+of any hardware you use for a research project.
+
+Software is much more mutable than hardware. Major operating systems receive
+updates weekly, and some software applications and libraries receive updates
+monthly. Most software builds on other software, so while updates typically fix
+bugs and add new features, they can also introduce incompatibilities.
+
+In high-level programming languages like R and Python, details of the hardware
+are mostly hidden away. That is, hardware has little to no impact on how you
+write code, with only a few exceptions. Hardware may affect how quickly your
+code runs, but usually not the final result. As a consequence, for many
+research computing projects, the hardware environment is of less concern than
+the software environment.
+
+One of the major advantages of the open-source and open-science ecosystem is
+the trove of packages and other software developed and published by members of
+the community. As these are updated, projects that rely on older versions may
+cease to work correctly unless they are also updated. So for most projects,
+keeping track of the software environment means keeping track of the specific
+versions of packages and other software with which the project was carried out.
+
+A **virtual environment** is a self-contained collection of software with
+specific versions. A key characteristic of virtual environments is that they
+can coexist with other virtual environments.
+
+that can coexist alongside other virtual environments, which may contain
+different software or the same software with different versions. An
+**environment manager** is a software tool that can create virtual
+environments. Environment managers can usually also install, update, and remove
+software.
+-->
+<section id="environment-managers">
+<h3><span class="section-number">4.4.1. </span>Environment Managers<a class="headerlink" href="#environment-managers" title="Link to this heading">#</a></h3>
+<p>An <strong>environment manager</strong> is a software tool to create, keep track of and
+switch between collections of software. These collections of software are
+called <strong>virtual environments</strong>. When you create a virtual environment, it’s
+empty, with minimal or no software installed. As you install software into it,
+the environment manager records the names and versions of the software (and
+sometimes other details). Most environment managers can also save this metadata
+to a file that fully describes the virtual environment. You can then use the
+file and the environment manager to reproduce the virtual environment on other
+computers. In short, using an environment manager directly addresses the need
+to document the software in your computing environment by doing the most
+tedious parts for you.</p>
+<p>Besides making your computing environment easier to reproduce, using an
+environment manager also provides several other benefits:</p>
+<ul class="simple">
+<li><p>Most environment managers can download, install, update, and uninstall
+software, so that you don’t have to track down links and work through
+multi-step installation instructions.</p></li>
+<li><p>New collaborators can quickly set up a virtual environment with the exact
+same software as you. Similarly, you can quickly get set up on other
+computers.</p></li>
+<li><p>You can work on multiple projects with incompatible software requirements
+simultaneously by using a separate virtual environment for each project.
+Virtual environments are generally independent and self-contained. For
+example, you might create one virtual environment with R version 4.5 and
+another with R version 3.2, even though these are incompatible.</p></li>
+<li><p>When you revisit an old project, you can easily “time travel” back to the
+virtual environment and software you had when you were working on it.</p></li>
+</ul>
+<p>Many different open-source environment managers exist. For most research
+computing projects, we recommend and use <a class="reference external" href="https://pixi.sh/">Pixi</a>. Pixi can:</p>
+<ul class="simple">
+<li><p>Install general-purpose software packages (such as Git, R, and Python)</p></li>
+<li><p>Install Python packages from PyPI or Conda-Forge</p></li>
+<li><p>Install R packages</p></li>
+<li><p>Determine dependencies for a given collection of packages you want to use</p></li>
+<li><p>Automatically download and install packages</p></li>
+<li><p>Create and manage virtual environments on a per-project basis</p></li>
+<li><p>Keep track of which packages you installed (and their versions)</p></li>
+<li><p>Reproduce an environment from a description</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pixi downloads packages from <a class="reference external" href="https://conda-forge.org/">conda-forge</a>, a community-maintained repository
+of open-source software. The conda-forge repository was originally created to
+support <a class="reference external" href="https://docs.conda.io/">Conda</a>, the first environment manager designed specifically for
+research computing projects. Thanks to the hard work of its maintainers,
+conda-forge contains more than 25,000 packages.</p>
+<p>We recommend Pixi rather than Conda because Pixi is faster, provides better
+cross-platform support, and provides exact reproductions of virtual
+environments (until recently, Conda did not support exact version matching).
+Pixi also provides several other features that make it pleasant to use.</p>
+</div>
+<figure class="align-default" id="xkcd-python">
+<img alt="" src="../_images/xkcd_python_environment.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">“Python Environment” from <a class="reference external" href="https://xkcd.com/">“xkcd”</a> by Randall Munroe
+(<a class="reference external" href="https://xkcd.com/license.html">license</a>).</span><a class="headerlink" href="#xkcd-python" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We recommend that you create a new virtual environment for each project and
+switch between them as needed. Make sure to save the description of the virtual
+environment with each project (Pixi does this automatically). If you’re also
+using a version control system, we recommend using it to track changes to the
+environment description file.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See DataLab’s [Setting Up Software][datalab-pixi] workshop reader for a
+detailed introduction to Pixi.</p>
+<p>If you exclusively use R and prefer to use an environment manager developed
+specifically for R, check out the <a class="reference external" href="https://rstudio.github.io/renv/">renv</a> package.</p>
+<p>If you prefer to use the original conda, instead see DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/retired/reproducible.html">Making Python
+Projects &amp; Environments Reproducible</a> workshop reader.</p>
+</div>
+</section>
+<section id="containerization">
+<h3><span class="section-number">4.4.2. </span>Containerization<a class="headerlink" href="#containerization" title="Link to this heading">#</a></h3>
+<p>While environment managers provide a way to reproduce most of the software (or
+at least the open-source software) in your computing environment, they usually
+don’t account for your computer’s operating system. They also don’t account for
+differences in hardware. One strategy that addresses both of these points is
+hardware <strong>virtualization</strong>: make your computer simulate another computer,
+complete with its own hardware and operating system, and then do all of your
+computing in this virtual computer. A drawback of this approach is that
+simulating a computer requires CPU time and memory, so there’s less available
+for the things you actually want to compute. Nevertheless, virtualization
+provides strong guarantees for reproducibility, since everyone who interacts
+with your project can use the exact same computing environment you used.</p>
+<p>Operating system virtualization, or <strong>containerization</strong>, takes the same
+approach as hardware virtualization, but only simulates the operating system,
+not the computer hardware. This takes less computing resources away from the
+things you want to compute, while still providing most of the reproducibility
+guarantees. Containerization began to become popular in the 2010s with the
+releases of <a class="reference external" href="https://www.docker.com/">Docker</a> and <a class="reference external" href="https://kubernetes.io/">Kubernetes</a>. It is now widely-used in industry
+and considered a software engineering best practice for ensuring
+business-critical software works correctly.</p>
+<p>For most projects, we recommend using an environment manager rather than
+containerization. Containerization is most useful if your research project
+needs to be reproduced by many people and uses software that isn’t
+well-supported by environment managers, or if containerization is already
+widely-used and accepted in your discipline.</p>
+</section>
+<section id="cloud-computing">
+<h3><span class="section-number">4.4.3. </span>Cloud Computing<a class="headerlink" href="#cloud-computing" title="Link to this heading">#</a></h3>
+<p>Cloud computing services such as <a class="reference external" href="https://cloud.google.com/">Google Cloud</a>, <a class="reference external" href="https://aws.amazon.com/">Amazon Web
+Services</a> (AWS), and <a class="reference external" href="https://azure.microsoft.com/">Microsoft Azure</a> provide hardware and
+software on demand. UC Davis provides its own cloud computing service in the
+form of <a class="reference external" href="https://docs.hpc.ucdavis.edu/software/ondemand/">Open OnDemand</a> and (at UC Davis Health) the Advanced
+Compute Environment (ACE). Cloud computing’s primary benefit is flexibility in
+choosing and changing hardware. Most commercial cloud computing services rely
+on containerization to manage software, while Open OnDemand and ACE mostly
+leave software management to you.</p>
+<p>From a reproducibility perspective, cloud computing can be beneficial in the
+short term, because (especially with commercial services) other researchers can
+easily set up and use the exact same hardware and software you used originally
+to reproduce your results. However, in the long term, the hardware you used may
+stop being available, because cloud computing services periodically update or
+change the hardware they offer.</p>
+<p>If you decide to use cloud computing, we recommend documenting the details of
+the hardware by hand, and using an environment manager or containerization to
+manage the software for your project.</p>
+</section>
+</section>
+<section id="use-configuration-files">
+<h2><span class="section-number">4.5. </span>Use Configuration Files<a class="headerlink" href="#use-configuration-files" title="Link to this heading">#</a></h2>
+<p>A <strong>configuration file</strong> is a file that stores accessory parameters for a
+computation. Configuration files are distinct from data sets in that the data
+they contain is usually under your control and not of primary interest. For
+example, a configuration file for code that trains a statistical model might
+specify where to find training data, where to find test data, which features to
+include in the model, and where to save predictions. All of these could be
+embedded in the code, but using a configuration file makes the code more
+flexible.</p>
+<p>Configuration files also have another benefit: they serve as a record of your
+parameter settings. When parameter settings are embedded in code, then you have
+to edit the code each time you want to run it with different settings. Unless
+you’re meticulous about version control, it may be difficult to determine which
+settings you used for past computations. Configuration files eliminate this
+problem: when you want to use a new settings, create a new configuration file
+(possibly by copying one you already have). Then you can easily find the
+settings for any computation in its respective configuration file.</p>
+<!-- also hard to share with collaborators and may introduce bugs -->
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you also <a class="reference internal" href="03_daily-habits-for-everyone.html#document-every-experiment"><span class="std std-ref">Document Every Experiment</span></a>, include the name of the
+configuration file(s) for each experiment in your documentation.</p>
+</div>
+<p>Plain-text formats are a good choice for configuration files because they can
+be edited by anyone with a text editor. At DataLab, we particularly like to use
+<a class="reference external" href="https://toml.io/">TOML</a> and <a class="reference external" href="https://yaml.org/">YAML</a> formats for configuration files because they’re
+widely-used, human-readable, and there are well-supported functions for reading
+them in R, Python, and Julia.</p>
+</section>
+<section id="automate-the-workflows">
+<h2><span class="section-number">4.6. </span>Automate the Workflows<a class="headerlink" href="#automate-the-workflows" title="Link to this heading">#</a></h2>
+<p>Even if you <a class="reference internal" href="#organize-the-code"><span class="std std-ref">Organize the Code</span></a> carefully, it’s likely you’ll end up with
+workflows that consist of running several commands in a specific order and with
+specific settings. It’s also likely you’ll need to re-run these workflows many
+times as you incrementally improve, extend, and adapt the code. To make this
+more convenient and ensure that you don’t accidentally skip commands or use the
+incorrect settings, it’s a good idea to automate your most frequently used
+workflows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <strong>Unix shell</strong> is a standardized way of interacting with a computer via text
+commands—that is, via a command line. Unix shells are widely-used for
+research computing.</p>
+<p>See the DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_reproducible_research/chapters/command-line/01_interacting-with-computers.html">Introduction to the Command Line workshop reader</a>
+to get started with the command line and Unix shells.</p>
+</div>
+<p>If you run your workflows in a Unix shell, one way you can automate them is by
+writing <strong>shell scripts</strong>. A shell script is a plain-text file with a sequence
+of Unix shell commands (akin to scripts for other languages, such as R or
+Python). You can create separate shell script for each workflow that you run
+frequently. The technical effort is low, since this just amounts to writing
+down the commands that you already run in a text file. Besides making it easier
+to run specific workflows, you can also share shell scripts with your
+collaborators or other researchers. This helps to ensure that they also run the
+workflow correctly.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See DataLab’s and DIB Lab’s <a class="reference external" href="https://ngs-docs.github.io/2021-august-remote-computing/automating-your-analyses-and-executing-long-running-analyses-on-remote-computers.html">Automating Your Analyses and Executing
+Long-running Analyses on Remote Computers workshop
+reader</a> for the technical details of writing shell
+scripts.</p>
+</div>
+<section id="use-a-task-runner">
+<span id="sec-use-a-task-runner"></span><h3><span class="section-number">4.6.1. </span>Use a Task Runner<a class="headerlink" href="#use-a-task-runner" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p>You’re working on a project where you receive a new dataset every few weeks.
+Before you analyzing a dataset, you must process it with the <code class="docutils literal notranslate"><span class="pre">moo_calibrate</span></code>
+command line software. You don’t use <code class="docutils literal notranslate"><span class="pre">moo_calibrate</span></code> outside of this project,
+so every time you have to run it, you struggle to remember the parameters.
+Last time you ran <code class="docutils literal notranslate"><span class="pre">moo_calibrate</span></code>, you wrote down the parameters, but it
+would be nice if you could automate the workflow so that you don’t have to
+type as much and you can’t accidentally run the command twice.</p>
+</div></blockquote>
+<figure class="align-default" id="xkcd-worth">
+<img alt="" src="../_images/xkcd_is_it_worth_the_time.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">“Is It Worth the Time?” from <a class="reference external" href="https://xkcd.com/">“xkcd”</a> by Randall Munroe
+(<a class="reference external" href="https://xkcd.com/license.html">license</a>).</span><a class="headerlink" href="#xkcd-worth" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A <strong>task runner</strong> is a piece of software to organize and run tasks that use
+other (command line) software. With a task runner, you can create named tasks
+and specify the commands to run to complete each task. Later, you can run a
+task by simply referring to it by name. Using a task runner makes your results
+easier to reproduce, because by doing so, you encode the exact commands (in
+order) to carry out tasks related to your project. Others can run a task with
+no risk of accidentally skipping a command, passing the wrong arguments to a
+command, or running a command out of order.</p>
+<p>Some task runners, called <strong>build systems</strong>, can also keep track of dependence
+between tasks. To illustrate the idea, suppose you have a task <code class="docutils literal notranslate"><span class="pre">download</span></code> that
+downloads data and another task <code class="docutils literal notranslate"><span class="pre">analyze</span></code> that runs your analysis on the data.
+You can’t analyze data you don’t have, so the <code class="docutils literal notranslate"><span class="pre">analyze</span></code> task depends on the
+<code class="docutils literal notranslate"><span class="pre">download</span></code> task. If you use a build system to run the <code class="docutils literal notranslate"><span class="pre">analyze</span></code> task, it will
+first make sure that the <code class="docutils literal notranslate"><span class="pre">download</span></code> task is complete (by running it, if
+necessary). Using a build system makes results from projects with
+interdependent tasks easier to reproduce.</p>
+<p>Task runners usually have other features that are also helpful, such as:</p>
+<ul class="simple">
+<li><p>The ability to run tasks only when necessary (saving time)</p></li>
+<li><p>The ability to run tasks in parallel</p></li>
+<li><p>Language-specific features (many, but not all, build systems are designed to
+work best with a specific programming language)</p></li>
+</ul>
+<p>DataLab recommends <a class="reference external" href="https://pixi.sh/">Pixi</a> as a task runner for most projects, since it’s
+relatively easy-to-use and also has other features related to reproducibility
+(see <a class="reference internal" href="#sec-use-a-task-runner"><span class="std std-ref">Use a Task Runner</span></a>). For projects with many interdependent
+tasks, DataLab recommends <a class="reference external" href="https://snakemake.github.io/">Snakemake</a> as a build system. Many other task
+runners and build systems also exist.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_research_computing/chapters/installing-software/">Installing Software with Pixi workshop reader</a> for
+an introduction to Pixi.</p>
+<p>See DataLab’s and DIB Lab’s <a class="reference external" href="https://ngs-docs.github.io/2021-august-remote-computing/automating-your-analyses-with-the-snakemake-workflow-system.html">Automating Your Analyses with the Snakemake
+Workflow System workshop reader</a> for an introduction to
+Snakemake.</p>
+</div>
+</section>
+</section>
+<section id="log-output">
+<h2><span class="section-number">4.7. </span>Log Output<a class="headerlink" href="#log-output" title="Link to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>If you’re using R, see DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intermediate_r/output-errors-and-bugs.html#logging-output">Intermediate R: Outputs, Errors, and Bugs
+workshop reader</a> for a brief overview of a how to manage log
+files in R.</p>
+<p>If you’re using Python, see DataLab’s <a class="reference external" href="https://ucdavisdatalab.github.io/workshop_intermediate_python/chapters/04_debugging.html#logging">Intermediate Python: Squashing Bugs with
+Python’s Debugging Tools workshop reader</a> for a brief
+overview of how to manage log files in Python.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_daily-habits-for-everyone.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Daily Habits for Everyone</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_dissemination-sharing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Dissemination &amp; Sharing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-with-code">4.1. Compute with Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-the-code">4.2. Organize the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names-in-code">4.2.1. Names in Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-functions">4.2.2. Write Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-it-modular">4.2.3. Make It Modular</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-workflows">4.3. Document the Workflows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-workflow-diagrams">4.3.1. Make Workflow Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-code">4.3.2. Document the Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-environment">4.4. Document the Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-managers">4.4.1. Environment Managers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#containerization">4.4.2. Containerization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-computing">4.4.3. Cloud Computing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-configuration-files">4.5. Use Configuration Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-workflows">4.6. Automate the Workflows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-task-runner">4.6.1. Use a Task Runner</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-output">4.7. Log Output</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Elise Hellwig, Pamela Reynolds, Beth Tweedy, Nick Ulle, Rebeccah Yterdal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

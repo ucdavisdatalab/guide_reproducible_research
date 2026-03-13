@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en-us" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. Dissemination &amp; Sharing &#8212; Reproducible Research Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=dddfd265"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05_dissemination-sharing';</script>
+    <link rel="icon" href="../_static/cropped-site-icon-135x135.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Appendix: References" href="references.html" />
+    <link rel="prev" title="4. Reproducible Computing" href="04_reproducible-computing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en-us"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/ucd_lib-logo-signature-rgb-96ppi.png" class="logo__image only-light" alt="Reproducible Research Guide - Home"/>
+    <script>document.write(`<img src="../_static/ucd_lib-logo-signature-reverse-96ppi.png" class="logo__image only-dark" alt="Reproducible Research Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reproducible Research Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_principles.html">1. Principles of Reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_planning-for-success.html">2. Planning for Success</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_daily-habits-for-everyone.html">3. Daily Habits for Everyone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_reproducible-computing.html">4. Reproducible Computing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Dissemination &amp; Sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">6. Appendix: References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/05_dissemination-sharing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dissemination & Sharing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-a-license">5.1. Choose a License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#release-the-data">5.2. Release the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-methods">5.3. Open Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-as-open-access">5.4. Publish as Open Access</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-open-data">5.4.1. Publish Open Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-open-access-articles">5.4.2. Publish Open Access Articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-prints-and-post-prints">5.4.2.1. Pre-Prints and Post-Prints</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-licenses">5.4.3. Open Licenses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-your-code">5.5. Publish Your Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-code">5.5.1. Document the Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-an-open-source-license">5.5.2. Choose an Open-Source License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package-the-code">5.5.3. Package the Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-automated-tests-for-the-code">5.5.4. Create Automated Tests for the Code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dissemination-sharing">
+<h1><span class="section-number">5. </span>Dissemination &amp; Sharing<a class="headerlink" href="#dissemination-sharing" title="Link to this heading">#</a></h1>
+<section id="choose-a-license">
+<span id="id1"></span><h2><span class="section-number">5.1. </span>Choose a License<a class="headerlink" href="#choose-a-license" title="Link to this heading">#</a></h2>
+<p>A <strong>license</strong> is a legal document that grants others permission to do, use, or
+possess something. If you plan to make your project widely or publicly
+available, it’s a good idea to select a license so that you can retain some
+control over how it’s used and protect yourself against certain kinds of legal
+claims.</p>
+<p>Different kinds of licenses are appropriate for different kinds of content.
+There are licenses designed specifically for software and code, as well as
+licenses for other media.</p>
+<p>An <strong>open-source</strong> license is one that mandates access to or distribution of
+original sources for any derivative products. For software, this means that the
+original source code must be accessible. Open-source licenses ensure that
+software can continue to be maintained and extended even if the original
+developers cease development. They also benefit transparency and collaboration,
+since anyone with the software can inspect and modify the code.</p>
+<p>DataLab uses open-source licenses for a majority of our projects, whether they
+consist of software or other materials (like this reader).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For licensing software, see <a class="reference external" href="https://choosealicense.com/">choosealicense.com</a> (maintained by GitHub)
+or the Open Source Initiative’s <a class="reference external" href="https://opensource.org/faq/#which-license">FAQ answer about which license to
+choose</a>.</p>
+<p>For licensing data, writing, art, or other materials, see Creative Commons’
+<a class="reference external" href="https://creativecommons.org/choose/">Choose a License page</a>.</p>
+</div>
+</section>
+<section id="release-the-data">
+<h2><span class="section-number">5.2. </span>Release the Data<a class="headerlink" href="#release-the-data" title="Link to this heading">#</a></h2>
+<p>Publish or share your research data, so that other researchers can use it to
+reproduce your work and possibly even do new work. In 2016, <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">Wilkinson et
+al</a> suggested researchers should make their data <strong>FAIR</strong>:</p>
+<ul class="simple">
+<li><p>Findable: uniquely identifiable and citable, such as with a DOI</p></li>
+<li><p>Accessible: freely and publicly available</p></li>
+<li><p>Interoperable: saved in open, non-proprietary formats</p></li>
+<li><p>Reusable: well-documented and with a clear license</p></li>
+</ul>
+<p>The FAIR standards are now widely recommended as best practices.</p>
+<p>You can satisfy the “F” and “A” standards by publishing your data to an
+<a class="reference external" href="https://en.wikipedia.org/wiki/Open-access_repository">open-access repository</a>. For example, UC Davis is a partner of the
+<a class="reference external" href="https://datadryad.org/stash">Dryad</a> open-access repository, and all UC Davis researchers can use Dryad
+for free to publish their data.</p>
+<p>To satisfy the “I” standard, <a class="reference internal" href="02_planning-for-success.html#use-file-formats-effectively"><span class="std std-ref">Use File Formats Effectively</span></a>. To satisfy
+the “R” standard, a good start is to <a class="reference internal" href="03_daily-habits-for-everyone.html#keep-running-notes"><span class="std std-ref">Keep a Research Log</span></a> and
+<a class="reference internal" href="03_daily-habits-for-everyone.html#write-readmes"><span class="std std-ref">Write &amp; Maintain READMEs</span></a>.</p>
+<!-- FIXME: this used to refer to choose-a-license too -->
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See UC Davis Library’s <a class="reference external" href="https://library.ucdavis.edu/data-analysis-and-management/publish-share-and-preserve-your-data/">Publish, Share, and Preserve Your Data
+guide</a> to learn more about how to release your data.</p>
+</div>
+</section>
+<section id="open-methods">
+<h2><span class="section-number">5.3. </span>Open Methods<a class="headerlink" href="#open-methods" title="Link to this heading">#</a></h2>
+<p>You can also release or publish your methods and materials as additional open
+access research products. This practice helps not only make your research
+process transparent, but it also makes your study reproducible and verifiable,
+and your approach reusable. Your published paper might explain the methods, but
+in order to reproduce your findings, more information on your design, protocol,
+materials, etc. is probably needed.</p>
+<p><strong>Open methods</strong> refers to publishing, either formally or informally, all the
+details of your processes, procedures, and materials openly so that someone
+else could perform your study exactly as you did. Examples may include
+protocols, surveys and questionnaires, lab notebooks, equipment settings,
+video demonstrations, software and code, and more.</p>
+<p>You have many options for sharing these methods and materials. You could add
+them as supplementary information files along with a published article, deposit
+them in a specific repository (e.g. <a class="reference external" href="https://www.protocols.io/">protocols.io</a>,
+<a class="reference external" href="https://www.crd.york.ac.uk/prospero/">PROSPERO</a>), have them peer reviewed and formally published in a
+journal (e.g. registered reports, study protocols, or other methods articles),
+or share them publicly another way (e.g. <a class="reference external" href="https://github.com/">GitHub</a>, <a class="reference external" href="https://osf.io/">Open Science
+Framework</a>, <a class="reference external" href="https://openlabnotebooks.org/">Open Lab Notebooks</a>, <a class="reference external" href="https://www.jove.com/education/science-education">Journal of Visual
+Experiments (JoVE)</a>). You may also need to or want to preregister your
+study plan before conducting the research (e.g. a clinical trials registry,
+registered reports, <a class="reference external" href="https://osf.io/">Open Science Framework</a>).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Some materials and procedures may be not be appropriate to share due to
+privacy, confidentiality, security, intellectual property, or other rights or
+requirements.</p>
+</div>
+<p>You should also ensure your methods and materials follow FAIR principles using
+the following practices:</p>
+<p><strong>Findable:</strong></p>
+<ul class="simple">
+<li><p>Publish or deposit with an open access publisher or repository.</p></li>
+<li><p>Assign a persistent identifier to your materials, such as a Digital Object
+Identifier (DOI). (This can usually be done by depositing in a repository.)</p></li>
+<li><p>Properly cite the methods and materials in any other related published
+materials.</p></li>
+</ul>
+<p><strong>Accessible:</strong></p>
+<ul class="simple">
+<li><p>Publish or deposit in an open access repository.</p></li>
+<li><p>Include proper metadata describing access, authentication, and authorization.</p></li>
+</ul>
+<p><strong>Interoperable:</strong></p>
+<ul class="simple">
+<li><p>Publish the materials in standard, non-proprietary formats.</p></li>
+<li><p><a class="reference internal" href="02_planning-for-success.html#use-file-formats-effectively"><span class="std std-ref">Use File Formats Effectively</span></a></p></li>
+</ul>
+<!-- FIXME: Other links to other sections??? -->
+<p><strong>Reusable:</strong></p>
+<ul class="simple">
+<li><p>Provide metadata and adequate documentation for reuse.</p></li>
+<li><p>Publish under an open license.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Learn more about licensing in the <a class="reference internal" href="#open-licenses"><span class="std std-ref">Open Licenses</span></a> section.</p>
+<p>Visit the <a class="reference internal" href="02_planning-for-success.html#sec-prefer-open-source-software"><span class="std std-ref">Prefer Open-Source Software</span></a> section for more information
+on open-source code and software.</p>
+</div>
+</section>
+<section id="publish-as-open-access">
+<span id="sec-open-access"></span><h2><span class="section-number">5.4. </span>Publish as Open Access<a class="headerlink" href="#publish-as-open-access" title="Link to this heading">#</a></h2>
+<p>Not having access to a piece of research or its underlying data and materials
+can be the main roadblock to reproducibility. Open access not only allows
+anyone to access and read the papers, but it also permits reproducibility,
+replicability, and the opportunity to build on or reuse all or part of your
+work in a future project to advance science and knowledge. Many grant providers
+and institutions may also require your work to be published open access.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Open Licenses</p>
+<p>Applying an open license to your materials is key to making them openly
+available. Open licenses allow anyone to view, share, and reuse materials. See
+more in the <a class="reference internal" href="#open-licenses"><span class="std std-ref">Open Licenses</span></a> section below.</p>
+</div>
+<section id="publish-open-data">
+<h3><span class="section-number">5.4.1. </span>Publish Open Data<a class="headerlink" href="#publish-open-data" title="Link to this heading">#</a></h3>
+<p>Study data are often stored privately, but sharing your data is an integral
+part of reproducibility. Research simply cannot be reproduced without access to
+the data underlying the results, figures, tables, and conclusions.</p>
+<p><strong>Open data</strong> refers to data shared publicly and licensed under an open license
+so that it can be freely accessed, reused, and shared by anyone. Many grant
+providers, institutions, and publishers now require underlying data to be
+shared openly.</p>
+<p>You can deposit your data in open data repositories to make them freely
+available. Whether you want a generalist or specialist repository, look for a
+reliable repository that meets the following requirements:</p>
+<ul class="simple">
+<li><p>Uses open licenses</p></li>
+<li><p>Assigns Persistent Identifiers (PID), such as digital object identifiers
+(DOI), to the dataset(s)</p></li>
+<li><p>Plans for long-term maintenance, continued access, and preservation of the
+datasets.</p></li>
+<li><p>Financially stable</p></li>
+<li><p>No burdensome access requirements for readers, such as registration fees,
+membership requirements, etc.</p></li>
+<li><p>Contact information, documentation, and staff or representatives are
+available to address issues and offer user support.</p></li>
+</ul>
+<p>Learn more about trustworthy data repository requirements from
+<a class="reference external" href="https://www.coretrustseal.org/why-certification/requirements/">CoreTrustSeal</a>.</p>
+<!-- FIXME -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some data may be personal or sensitive. Do not share your data openly if they
+are protected, nationally or commercially sensitive, contain identifying
+information, or you have not obtained proper consent. You can learn more about
+considerations for these types of data (maybe Turing Way?)</p>
+</div>
+<p>You should also ensure your data follow FAIR principles using the following
+practices:</p>
+<p><strong>Findable:</strong></p>
+<ul class="simple">
+<li><p>Publish or deposit in an open access repository.</p></li>
+<li><p>Assign a persistent identifier to your dataset, such as a Digital Object
+Identifier (DOI). (This can usually be done by depositing in a repository.)</p></li>
+<li><p>Properly cite the data in any related published materials.</p></li>
+</ul>
+<p><strong>Accessible:</strong></p>
+<ul class="simple">
+<li><p>Publish or deposit in an open access repository.</p></li>
+<li><p>Include proper metadata describing access, authentication, and authorization.</p></li>
+</ul>
+<p><strong>Interoperable:</strong></p>
+<ul class="simple">
+<li><p>Publish data and metadata in standard, non-proprietary formats.</p></li>
+<li><p><a class="reference internal" href="02_planning-for-success.html#use-file-formats-effectively"><span class="std std-ref">Use File Formats Effectively</span></a></p></li>
+</ul>
+<p><strong>Reusable:</strong></p>
+<!-- FIXME: Other links to other sections??? -->
+<ul class="simple">
+<li><p>Provide metadata and adequate documentation for reuse.</p></li>
+<li><p>Publish under an open license.</p></li>
+<li><p>Properly cite your source data.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See UC Davis Library’s <a class="reference external" href="https://guides.library.ucdavis.edu/data-management/data-sharing">Research Data Management Guide</a>
+to learn more about how to share your data openly.</p>
+<p>Review the <a class="reference internal" href="#open-licenses"><span class="std std-ref">Open Licenses</span></a> section below to learn more about publishing
+your data under an open license.</p>
+</div>
+</section>
+<section id="publish-open-access-articles">
+<h3><span class="section-number">5.4.2. </span>Publish Open Access Articles<a class="headerlink" href="#publish-open-access-articles" title="Link to this heading">#</a></h3>
+<p>Publishing an open access article reduces barriers for readers and researchers
+by making it freely accessible.</p>
+<p>Publishing your work in an open access journal or as an open access monograph
+is known as <strong>Gold Open Access</strong>. It generally goes through the same review
+process that any submission would, but is then published openly, usually
+through an open license, so that anyone can read it without having to pay a
+subscription or access fee.</p>
+<p>Learn more about open access publishing, including finding reputable journals
+and avoiding predatory publishers, and open access funding support at UC Davis
+on our <a class="reference external" href="https://guides.library.ucdavis.edu/open-access-publishing">Open Access Publishing Library Guide</a>.</p>
+<section id="pre-prints-and-post-prints">
+<h4><span class="section-number">5.4.2.1. </span>Pre-Prints and Post-Prints<a class="headerlink" href="#pre-prints-and-post-prints" title="Link to this heading">#</a></h4>
+<p>Publishing research Open Access can be expensive and therefore may not always
+be feasible. University of California authors may have <a class="reference external" href="https://guides.library.ucdavis.edu/open-access-publishing">Open Access fee
+assistance</a> available to them. However, authors with no fee
+assistance have other options for making their work openly available and,
+therefore, reproducible.</p>
+<p>Authors can make their work openly available by self-archiving it somewhere
+accessible, such as an institutional repository or preprint server. This is
+also known as <strong>Green Open Access</strong>. Note that the archived version may be
+different than a peer-reviewed and formally published version.</p>
+<!-- FIXME -->
+<p><strong>Preprints</strong> are publicly available papers that have not (yet) been peer
+reviewed. Usually, authors will post a paper to a preprint server under an
+<a class="reference internal" href="#open-licenses">open license</a> after the paper has been written and before
+submitting to a journal for peer review and publication. Some preprints are
+never submitted or accepted to a journal for formal publication.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Articles are often revised, sometimes significantly, during the peer-review
+process. A published version of an article in a journal may differ greatly from
+a preprint version.</p>
+</div>
+<p><strong>Post-prints</strong>, or author-accepted manuscripts, have been peer-reviewed and
+accepted for publication, then made publicly available somewhere accessible,
+such as an institutional repository. These versions are usually the same as or
+very similar to the published versions.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Different publishers have different policies about sharing author-accepted
+manuscripts, including potential embargo periods. Refer to your publisher’s
+policies or <a class="reference external" href="https://openpolicyfinder.jisc.ac.uk/">Jisc’s Open Policy Finder</a> to understand your
+sharing permissions.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To learn more about Open Access options, the <a class="reference external" href="https://open-access.network/en/information/open-access-primers/green-and-gold">Open Access
+Network</a> is a great educational resource that discusses
+Diamond, Gold, and Green Open Access.</p>
+</div>
+</section>
+</section>
+<section id="open-licenses">
+<span id="id2"></span><h3><span class="section-number">5.4.3. </span>Open Licenses<a class="headerlink" href="#open-licenses" title="Link to this heading">#</a></h3>
+<p>A <strong>license</strong> grants others permission to possess, copy, and/or use a piece of
+work in a variety of ways. An <strong>open license</strong> makes a work freely available
+for others to read, copy, distribute, and use without obtaining permission from
+the author or creator. Open licenses also provide free, immediate, and
+perpetual access to the content.</p>
+<p>For code, an open-source license ensures that software can continue to be
+maintained and extended even if the original developers cease development. They
+also promote transparency and collaboration, since anyone with the software can
+inspect and modify the code.</p>
+<p>When an open license is applied to a work, the author or creator retains the
+rights to/ownership of the original work, and most open licenses require that
+proper credit be given to the creator.</p>
+<p><a class="reference external" href="https://creativecommons.org/">Creative Commons</a> licenses are the most common open licenses
+for articles and datasets. MIT licenses are common for open code, but many more
+are available, as discussed by the <a class="reference external" href="https://opensource.org/licenses">Open Source
+Initiative</a>.</p>
+<p>Many open licenses allow for any type of use and reuse, including
+modifications, distribution, etc., but authors have options for open licenses
+with certain restrictions such as no commercial use or no derivatives, or a
+requirement that any copies or adaptations be licensed under a similar open
+license.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For licensing data, writing, art, or other materials, see Creative Commons’
+<a class="reference external" href="https://creativecommons.org/choose/">Choose a License page</a> for help deciding on a Creative Commons
+license.</p>
+<p>For licensing software, see <a class="reference external" href="https://choosealicense.com/">choosealicense.com</a> to help you choose an
+open license (maintained by GitHub) or the Open Source Initiative’s <a class="reference external" href="https://opensource.org/faq/#which-license">FAQ answer
+about which license to choose</a>.</p>
+</div>
+</section>
+</section>
+<section id="publish-your-code">
+<h2><span class="section-number">5.5. </span>Publish Your Code<a class="headerlink" href="#publish-your-code" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Ten years ago, your lab devised a new method to preprocess and calibrate data
+from an ovisometer, a scientific instrument for non-invasive collection of
+data about sheep. You published a paper with an explanation of the method and
+case studies demonstrating its performance characteristics. To carry out the
+case studies, your co-author implemented the method in the R programming
+language, and ran the code on data you collected. Your co-author did not want
+to publish the code with the paper, insisting that the method is what’s
+important, not the implementation.</p>
+<p>Today you received an email from someone trying to reproduce your case
+studies. They got vastly different results for the third case study, and
+asked if you’d be willing to share the code from the implementation you used
+in the paper. You don’t have a copy of the code, and when you contact your
+co-author, they say they lost track of their copy over the years.</p>
+</div></blockquote>
+<p>When you develop software as part of a research project, your research is not
+completely reproducible unless you make the source code for the software
+available along with the other research results. Sharing the code provides
+transparency about exactly what you did and allows peers to verify that it
+matches what you said you did, which includes examining it for extra steps,
+unstated assumptions, and bugs. It also ensures that others can run the code
+themselves, reproducing your results.</p>
+<p>There are several things to think about when publishing code, which we discuss
+in the following sections.</p>
+<section id="document-the-code">
+<h3><span class="section-number">5.5.1. </span>Document the Code<a class="headerlink" href="#document-the-code" title="Link to this heading">#</a></h3>
+<p>Provide documentation with your code, so that others will know how to use it
+(see <a class="reference internal" href="03_daily-habits-for-everyone.html#write-readmes"><span class="std std-ref">Write &amp; Maintain READMEs</span></a>). For code you plan to share, it’s especially
+important to include set up or installation instructions, instructions for how
+to run the code, and an overview of what’s included with the code.</p>
+</section>
+<section id="choose-an-open-source-license">
+<h3><span class="section-number">5.5.2. </span>Choose an Open-Source License<a class="headerlink" href="#choose-an-open-source-license" title="Link to this heading">#</a></h3>
+<p>A <strong>license</strong> is a legal document that grants others permission to do, use, or
+possess something. If you plan to make your code or other research materials
+widely/publicly available, it’s a good idea to select a license so that you can
+retain some control over how they’re used and ensure you receive proper credit.</p>
+<p>An <strong>open-source</strong> license is one which guarantees that people can freely
+access, distribute, and create derivatives of a project and its source
+materials. For software, the source material is code. By making the code
+available, open-source licenses provide complete transparency about how the
+software works. They also encourage people to collaborate on the development
+and maintenance of the project. With an open-source license, a project can
+remain vibrant and continue to grow even if the original authors stop
+participating. For all of these reasons, choosing an open-source license is a
+best practice for reproducible research.</p>
+<p>DataLab uses open-source licenses for a majority of our projects, whether they
+consist of software or other content (like this reader).</p>
+<p>Different kinds of licenses are appropriate for different kinds of content.
+There are licenses designed specifically for software and code, as well as
+licenses for other media. Different licenses also put different conditions on
+use and redistribution. For instance, some licenses restrict commercial use and
+redistribution.</p>
+<p>Choosing a license might seem daunting because so many different licenses
+exist, but there are lots of resources available to help. A good starting point
+is <a class="reference external" href="https://choosealicense.com/">choosealicense.com</a> (maintained by GitHub). Popular licenses tend
+to be a good choice because they’ve withstood the test of time and are familiar
+to many people. For software, the GNU Public License (GPL) and MIT License are
+particularly popular. For data, writing, art, and other content, <a class="reference external" href="https://creativecommons.org/choose/">Creative
+Commons licenses</a> are popular; section <a class="reference internal" href="#sec-open-access"><span class="std std-ref">Publish as Open Access</span></a> provides
+more details about licensing non-software content.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See also the Open Source Initiative’s <a class="reference external" href="https://opensource.org/faq/#which-license">FAQ answer about which license to
+choose</a> for even more about licensing software.</p>
+</div>
+</section>
+<section id="package-the-code">
+<h3><span class="section-number">5.5.3. </span>Package the Code<a class="headerlink" href="#package-the-code" title="Link to this heading">#</a></h3>
+<p>Many programming languages provide standards and tools for creating libraries
+or packages of code that can be shared with others. For example, R and Python
+both have well-documented package formats and tools to install packages from
+centralized repositories such as CRAN and PyPI. Packaging your code makes it
+easier for others to obtain, install, and run, and thus makes it easier to
+reproduce your results. If you have collaborators, packaging the code early can
+also make it easier to share changes and ensure everyone is working with the
+same version.</p>
+<p>If your research uses a single programming language, look into the best way to
+package code for that language. If it uses multiple languages, packaging the
+code separately for each language is often a good choice. If you’re not sure
+what kind of packaging to use, the Conda format might be a good choice, since
+it’s language-agnostic, and the conda-forge maintainers provide <a class="reference external" href="https://conda-forge.org/docs/maintainer/adding_pkgs/">documentation
+about how to create a package</a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To learn more about creating an R package, see the book <a class="reference external" href="https://r-pkgs.org/">R Packages</a> by
+Wickham &amp; Bryan.</p>
+<p>To learn more about creating a Python package, see pyOpenSci’s <a class="reference external" href="https://www.pyopensci.org/python-package-guide/">Python Package
+Guide</a> or the <a class="reference external" href="https://packaging.python.org/">Python Packaging User Guide</a>.</p>
+</div>
+</section>
+<section id="create-automated-tests-for-the-code">
+<h3><span class="section-number">5.5.4. </span>Create Automated Tests for the Code<a class="headerlink" href="#create-automated-tests-for-the-code" title="Link to this heading">#</a></h3>
+<p>If you develop reusable software as part of your research, it’s a good idea to
+create automated tests that verify the software works as intended. Automated
+tests are specifically helpful for making sure that changes to the code don’t
+accidentally introduce bugs or remove existing features. This is important from
+a reproducible research perspective because bugs introduced over time can make
+it difficult or impossible for others to reproduce your results. Tests can also
+serve as concrete goals to guide development of the software: write a test that
+checks for what the software should be able to do, then write the code to pass
+the test.</p>
+<p>Automated tests are especially important for software that have many developers
+or contributors. A contributor will not necessarily be familiar with all of the
+software’s features (and their implementation and interdependence), so the risk
+of unintentionally breaking something when they make changes is high. Running
+the automated tests can provide an early warning about problems and help
+pinpoint which code to change to resolve them.</p>
+<p>Most programming languages have at least one tool or package for automated
+testing. For popular languages, there are often several.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>If you’d like to write automated tests for R code, we recommend starting with
+the <a class="reference external" href="https://testthat.r-lib.org/">testthat</a> package.</p>
+<p>If you’d like to write automated tests for Python code, we recommend starting
+with the <a class="reference external" href="https://docs.pytest.org/">pytest</a> package.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_reproducible-computing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Reproducible Computing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Appendix: References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-a-license">5.1. Choose a License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#release-the-data">5.2. Release the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-methods">5.3. Open Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-as-open-access">5.4. Publish as Open Access</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-open-data">5.4.1. Publish Open Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-open-access-articles">5.4.2. Publish Open Access Articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-prints-and-post-prints">5.4.2.1. Pre-Prints and Post-Prints</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-licenses">5.4.3. Open Licenses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-your-code">5.5. Publish Your Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-the-code">5.5.1. Document the Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-an-open-source-license">5.5.2. Choose an Open-Source License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package-the-code">5.5.3. Package the Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-automated-tests-for-the-code">5.5.4. Create Automated Tests for the Code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Elise Hellwig, Pamela Reynolds, Beth Tweedy, Nick Ulle, Rebeccah Yterdal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
