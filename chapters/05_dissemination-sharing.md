@@ -1,81 +1,104 @@
 # Dissemination & Sharing
 
 
-(choose-a-license)=
-## Choose a License
+(sec-open-access)=
+## Publish Open Access 
 
-A **license** is a legal document that grants others permission to do, use, or
-possess something. If you plan to make your project widely or publicly
-available, it's a good idea to select a license so that you can retain some
-control over how it's used and protect yourself against certain kinds of legal
-claims.
+Not having access to a piece of research or its underlying data and materials
+can be the main roadblock to reproducibility. Open access not only allows
+anyone to access and read the papers, but it also permits reproducibility,
+replicability, and the opportunity to build on or reuse all or part of your
+work in a future project to advance science and knowledge. Many grant providers
+and institutions may also require your work to be published open access.
 
-Different kinds of licenses are appropriate for different kinds of content.
-There are licenses designed specifically for software and code, as well as
-licenses for other media.
+You should also ensure any of your research outputs follow FAIR principles using the following
+practices:
 
-An **open-source** license is one that mandates access to or distribution of
-original sources for any derivative products. For software, this means that the
-original source code must be accessible. Open-source licenses ensure that
-software can continue to be maintained and extended even if the original
-developers cease development. They also benefit transparency and collaboration,
-since anyone with the software can inspect and modify the code.
+**Findable:**
 
-DataLab uses open-source licenses for a majority of our projects, whether they
-consist of software or other materials (like this reader).
+* Publish or deposit with an open access publisher or repository.
+* Assign a persistent identifier to your materials, such as a Digital Object
+  Identifier (DOI). (This can usually be done by depositing in a stable repository.)
+* Properly cite the data, methods, and other materials in any related published materials.
 
-:::{seealso}
-For licensing software, see [choosealicense.com][gh-cal] (maintained by GitHub)
-or the Open Source Initiative's [FAQ answer about which license to
-choose][osi-cal].
+**Accessible:**
 
-For licensing data, writing, art, or other materials, see Creative Commons'
-[Choose a License page][cc-cal].
+* Publish or deposit in an open access repository.
+* Include proper metadata describing access, authentication, and authorization.
+
+**Interoperable:**
+
+* Publish data, materials, and metadata in standard, non-proprietary formats.
+* {ref}`use-file-formats-effectively`
+
+**Reusable:**
+
+<!-- FIXME: Other links to other sections??? -->
+* Provide metadata and adequate documentation for reuse.
+* Publish under an open license.
+* Properly cite your source data.
+
+:::{important} Open Licenses
+
+Applying an open license to your materials is key to making them openly
+available. Open licenses allow anyone to view, share, and reuse materials. See
+more in the {ref}`open-licenses` section below.
 :::
 
-[gh-cal]: https://choosealicense.com/
-[osi-cal]: https://opensource.org/faq/#which-license
-[cc-cal]: https://creativecommons.org/choose/
 
+(open-data)=
+### Publish Open Data
 
-## Release the Data
+Study data are often stored privately, but sharing your data is an integral
+part of reproducibility. Research simply cannot be reproduced without access to
+the data underlying the results, figures, tables, and conclusions.
 
-Publish or share your research data, so that other researchers can use it to
-reproduce your work and possibly even do new work. In 2016, [Wilkinson et
-al][wilkinson] suggested researchers should make their data **FAIR**:
+**Open data** refers to data shared publicly and licensed under an open license
+so that it can be freely accessed, reused, and shared by anyone. Many grant
+providers, institutions, and publishers now require underlying data to be
+shared openly.
 
-* Findable: uniquely identifiable and citable, such as with a DOI
-* Accessible: freely and publicly available
-* Interoperable: saved in open, non-proprietary formats
-* Reusable: well-documented and with a clear license
+You can deposit your data in open data repositories to make them freely
+available. Whether you want a generalist or specialist repository, look for a
+reliable repository that meets the following requirements:
 
-[wilkinson]: https://doi.org/10.1038/sdata.2016.18
+* Uses open licenses
+* Assigns Persistent Identifiers (PID), such as digital object identifiers
+  (DOI), to the dataset(s)
+* Plans for long-term maintenance, continued access, and preservation of the
+  datasets.
+* Financially stable
+* No burdensome access requirements for readers, such as registration fees,
+  membership requirements, etc.
+* Contact information, documentation, and staff or representatives are
+  available to address issues and offer user support.
 
-The FAIR standards are now widely recommended as best practices.
+Learn more about trustworthy data repository requirements from
+[CoreTrustSeal][cts-repositories-requirements].
 
-You can satisfy the "F" and "A" standards by publishing your data to an
-[open-access repository][oar]. For example, UC Davis is a partner of the
-[Dryad][] open-access repository, and all UC Davis researchers can use Dryad
-for free to publish their data.
+[cts-repositories-requirements]: https://www.coretrustseal.org/why-certification/requirements/
 
-[oar]: https://en.wikipedia.org/wiki/Open-access_repository
-[Dryad]: https://datadryad.org/stash
-
-To satisfy the "I" standard, {ref}`use-file-formats-effectively`. To satisfy
-the "R" standard, a good start is to {ref}`keep-running-notes` and
-{ref}`write-readmes`.
-
-<!-- FIXME: this used to refer to choose-a-license too -->
-
-:::{seealso}
-See UC Davis Library's [Publish, Share, and Preserve Your Data
-guide][library-publish-data] to learn more about how to release your data.
+:::{note}
+Some data may be personal or sensitive. Do not share your data openly if they
+are protected, nationally or commercially sensitive, contain identifying
+information, or you have not obtained proper consent. You can learn more about
+considerations for sensitive data in [The Turing Way][turing-way-sdp], limiting sharing for certain types of data [from the NIH Data Management and Sharing Policy][NIH-policy-FAQ], and a list of resources for de-identifying data on the UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing].
 :::
 
-[library-publish-data]: https://library.ucdavis.edu/data-analysis-and-management/publish-share-and-preserve-your-data/
+:::{seealso}
+See UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing]
+to learn more about how to share your data openly.
 
+Review the {ref}`open-licenses` section below to learn more about publishing
+your data under an open license.
+:::
 
-## Open Methods
+[RDM-guide-data-sharing]: https://guides.library.ucdavis.edu/data-management/data-sharing
+[NIH-policy-FAQ]: https://grants.nih.gov/faqs#/data-management-and-sharing-policy.htm?anchor=56549
+[turing-way-sdp]: https://book.the-turing-way.org/project-design/data-security/sdp/
+
+(open-methods)=
+### Open Methods
 
 You can also release or publish your methods and materials as additional open
 access research products. This practice helps not only make your research
@@ -114,130 +137,12 @@ privacy, confidentiality, security, intellectual property, or other rights or
 requirements. 
 :::
 
-You should also ensure your methods and materials follow FAIR principles using
-the following practices:
-
-**Findable:**
-* Publish or deposit with an open access publisher or repository.
-* Assign a persistent identifier to your materials, such as a Digital Object
-  Identifier (DOI). (This can usually be done by depositing in a repository.)
-* Properly cite the methods and materials in any other related published
-  materials.
-
-**Accessible:**
-* Publish or deposit in an open access repository.
-* Include proper metadata describing access, authentication, and authorization.
-
-**Interoperable:**
-* Publish the materials in standard, non-proprietary formats.
-* {ref}`use-file-formats-effectively`
-
-<!-- FIXME: Other links to other sections??? -->
-**Reusable:**
-* Provide metadata and adequate documentation for reuse.
-* Publish under an open license.
-
 :::{seealso}
 Learn more about licensing in the {ref}`open-licenses` section.
 
 Visit the {ref}`sec-prefer-open-source-software` section for more information
 on open-source code and software.
 :::
-
-
-(sec-open-access)=
-## Publish as Open Access 
-
-Not having access to a piece of research or its underlying data and materials
-can be the main roadblock to reproducibility. Open access not only allows
-anyone to access and read the papers, but it also permits reproducibility,
-replicability, and the opportunity to build on or reuse all or part of your
-work in a future project to advance science and knowledge. Many grant providers
-and institutions may also require your work to be published open access.
-
-:::{important} Open Licenses
-
-Applying an open license to your materials is key to making them openly
-available. Open licenses allow anyone to view, share, and reuse materials. See
-more in the {ref}`open-licenses` section below.
-:::
-
-
-### Publish Open Data
-
-Study data are often stored privately, but sharing your data is an integral
-part of reproducibility. Research simply cannot be reproduced without access to
-the data underlying the results, figures, tables, and conclusions.
-
-**Open data** refers to data shared publicly and licensed under an open license
-so that it can be freely accessed, reused, and shared by anyone. Many grant
-providers, institutions, and publishers now require underlying data to be
-shared openly.
-
-You can deposit your data in open data repositories to make them freely
-available. Whether you want a generalist or specialist repository, look for a
-reliable repository that meets the following requirements:
-
-* Uses open licenses
-* Assigns Persistent Identifiers (PID), such as digital object identifiers
-  (DOI), to the dataset(s)
-* Plans for long-term maintenance, continued access, and preservation of the
-  datasets.
-* Financially stable
-* No burdensome access requirements for readers, such as registration fees,
-  membership requirements, etc.
-* Contact information, documentation, and staff or representatives are
-  available to address issues and offer user support.
-
-Learn more about trustworthy data repository requirements from
-[CoreTrustSeal][cts-repositories-requirements].
-
-[cts-repositories-requirements]: https://www.coretrustseal.org/why-certification/requirements/
-
-<!-- FIXME -->
-:::{note}
-Some data may be personal or sensitive. Do not share your data openly if they
-are protected, nationally or commercially sensitive, contain identifying
-information, or you have not obtained proper consent. You can learn more about
-considerations for these types of data (maybe Turing Way?)
-:::
-
-You should also ensure your data follow FAIR principles using the following
-practices:
-
-**Findable:**
-
-* Publish or deposit in an open access repository.
-* Assign a persistent identifier to your dataset, such as a Digital Object
-  Identifier (DOI). (This can usually be done by depositing in a repository.)
-* Properly cite the data in any related published materials.
-
-**Accessible:**
-
-* Publish or deposit in an open access repository.
-* Include proper metadata describing access, authentication, and authorization.
-
-**Interoperable:**
-
-* Publish data and metadata in standard, non-proprietary formats.
-* {ref}`use-file-formats-effectively`
-
-**Reusable:**
-
-<!-- FIXME: Other links to other sections??? -->
-* Provide metadata and adequate documentation for reuse.
-* Publish under an open license.
-* Properly cite your source data.
-
-:::{seealso}
-See UC Davis Library's [Research Data Management Guide][RDM-guide-data-sharing]
-to learn more about how to share your data openly.
-
-Review the {ref}`open-licenses` section below to learn more about publishing
-your data under an open license.
-:::
-
-[RDM-guide-data-sharing]: https://guides.library.ucdavis.edu/data-management/data-sharing
 
 
 ### Publish Open Access Articles
@@ -308,51 +213,8 @@ Diamond, Gold, and Green Open Access.
 
 [open-access-network]: https://open-access.network/en/information/open-access-primers/green-and-gold
 
-
-(open-licenses)=
-### Open Licenses
-
-A **license** grants others permission to possess, copy, and/or use a piece of
-work in a variety of ways. An **open license** makes a work freely available
-for others to read, copy, distribute, and use without obtaining permission from
-the author or creator. Open licenses also provide free, immediate, and
-perpetual access to the content. 
-
-For code, an open-source license ensures that software can continue to be
-maintained and extended even if the original developers cease development. They
-also promote transparency and collaboration, since anyone with the software can
-inspect and modify the code.
-
-When an open license is applied to a work, the author or creator retains the
-rights to/ownership of the original work, and most open licenses require that
-proper credit be given to the creator.
-
-[Creative Commons][creative-commons] licenses are the most common open licenses
-for articles and datasets. MIT licenses are common for open code, but many more
-are available, as discussed by the [Open Source
-Initiative][open-source-licenses].
-
-[creative-commons]: https://creativecommons.org/
-[open-source-licenses]: https://opensource.org/licenses
-
-Many open licenses allow for any type of use and reuse, including
-modifications, distribution, etc., but authors have options for open licenses
-with certain restrictions such as no commercial use or no derivatives, or a
-requirement that any copies or adaptations be licensed under a similar open
-license.
-
-:::{seealso}
-For licensing data, writing, art, or other materials, see Creative Commons'
-[Choose a License page][cc-cal] for help deciding on a Creative Commons
-license.
-
-For licensing software, see [choosealicense.com][gh-cal] to help you choose an
-open license (maintained by GitHub) or the Open Source Initiative's [FAQ answer
-about which license to choose][osi-cal].
-:::
-
-
-## Publish Your Code
+(open-code)=
+### Publish Your Code
 
 > Ten years ago, your lab devised a new method to preprocess and calibrate data
 > from an ovisometer, a scientific instrument for non-invasive collection of
@@ -387,47 +249,6 @@ Provide documentation with your code, so that others will know how to use it
 (see {ref}`write-readmes`). For code you plan to share, it's especially
 important to include set up or installation instructions, instructions for how
 to run the code, and an overview of what's included with the code.
-
-
-### Choose an Open-Source License
-
-A **license** is a legal document that grants others permission to do, use, or
-possess something. If you plan to make your code or other research materials
-widely/publicly available, it's a good idea to select a license so that you can
-retain some control over how they're used and ensure you receive proper credit.
-
-An **open-source** license is one which guarantees that people can freely
-access, distribute, and create derivatives of a project and its source
-materials. For software, the source material is code. By making the code
-available, open-source licenses provide complete transparency about how the
-software works. They also encourage people to collaborate on the development
-and maintenance of the project. With an open-source license, a project can
-remain vibrant and continue to grow even if the original authors stop
-participating. For all of these reasons, choosing an open-source license is a
-best practice for reproducible research.
-
-DataLab uses open-source licenses for a majority of our projects, whether they
-consist of software or other content (like this reader).
-
-Different kinds of licenses are appropriate for different kinds of content.
-There are licenses designed specifically for software and code, as well as
-licenses for other media. Different licenses also put different conditions on
-use and redistribution. For instance, some licenses restrict commercial use and
-redistribution.
-
-Choosing a license might seem daunting because so many different licenses
-exist, but there are lots of resources available to help. A good starting point
-is [choosealicense.com][gh-cal] (maintained by GitHub). Popular licenses tend
-to be a good choice because they've withstood the test of time and are familiar
-to many people. For software, the GNU Public License (GPL) and MIT License are
-particularly popular. For data, writing, art, and other content, [Creative
-Commons licenses][cc-cal] are popular; section {ref}`sec-open-access` provides
-more details about licensing non-software content.
-
-:::{seealso}
-See also the Open Source Initiative's [FAQ answer about which license to
-choose][osi-cal] for even more about licensing software.
-:::
 
 
 ### Package the Code
@@ -490,9 +311,101 @@ testing. For popular languages, there are often several.
 If you'd like to write automated tests for R code, we recommend starting with
 the [testthat][] package.
 
+[testthat]: https://testthat.r-lib.org/
+
 If you'd like to write automated tests for Python code, we recommend starting
 with the [pytest][] package.
 
-[testthat]: https://testthat.r-lib.org/
 [pytest]: https://docs.pytest.org/
+:::
+
+
+(open-licenses)=
+## Open Licenses
+
+A **license** grants others permission to possess, copy, and/or use a piece of
+work in a variety of ways. An **open license** makes a work freely available
+for others to read, copy, distribute, and use without obtaining permission from
+the author or creator. Open licenses also provide free, immediate, and
+perpetual access to the content. 
+
+For code, an open-source license ensures that software can continue to be
+maintained and extended even if the original developers cease development. They
+also promote transparency and collaboration, since anyone with the software can
+inspect and modify the code. See the {ref}`open-source-license` below for more details.
+
+
+### Choose an Open License for Articles, Data, and other non-code outputs
+
+When an open license is applied to a work, the author or creator retains the
+rights to/ownership of the original work, and most open licenses require that
+proper credit be given to the creator.
+
+[Creative Commons][creative-commons] licenses are the most common open licenses
+for articles and datasets. MIT licenses are common for open code, but many more
+are available, as discussed by the [Open Source
+Initiative][open-source-licenses].
+
+[creative-commons]: https://creativecommons.org/
+[open-source-licenses]: https://opensource.org/licenses
+
+Many open licenses allow for any type of use and reuse, including
+modifications, distribution, etc., but authors have options for open licenses
+with certain restrictions such as no commercial use or no derivatives, or a
+requirement that any copies or adaptations be licensed under a similar open
+license.
+
+:::{seealso}
+For licensing data, writing, art, or other materials, see Creative Commons'
+[Choose a License page][cc-cal] for help deciding on a Creative Commons
+license.
+
+For licensing software, see [choosealicense.com][gh-cal] to help you choose an
+open license (maintained by GitHub) or the Open Source Initiative's [FAQ answer
+about which license to choose][osi-cal].
+:::
+
+[cc-cal]: https://creativecommons.org/choose/
+[gh-cal]: https://choosealicense.com/
+[osi-cal]: https://opensource.org/faq/#which-license
+
+
+(open-source-license)=
+### Choose an Open-Source License for Code
+
+A license grants others permission to use, or possess something. If you plan to make your code or other research materials
+widely/publicly available, it's a good idea to select a license so that you can
+retain some control over how they're used and ensure you receive proper credit.
+
+An **open-source license** is one which guarantees that people can freely
+access, distribute, and create derivatives of a project and its source
+materials. For software, the source material is code. By making the code
+available, open-source licenses provide complete transparency about how the
+software works. They also encourage people to collaborate on the development
+and maintenance of the project. With an open-source license, a project can
+remain vibrant and continue to grow even if the original authors stop
+participating. For all of these reasons, choosing an open-source license is a
+best practice for reproducible research.
+
+DataLab uses open-source licenses for a majority of our projects, whether they
+consist of software or other content (like this reader).
+
+Different kinds of licenses are appropriate for different kinds of content.
+There are licenses designed specifically for software and code, as well as
+licenses for other media. Different licenses also put different conditions on
+use and redistribution. For instance, some licenses restrict commercial use and
+redistribution.
+
+Choosing a license for your software and code might seem daunting because so many different licenses
+exist, but there are lots of resources available to help. A good starting point
+is [choosealicense.com][gh-cal] (maintained by GitHub). Popular licenses tend
+to be a good choice because they've withstood the test of time and are familiar
+to many people. For software, the GNU Public License (GPL) and MIT License are
+particularly popular. For data, writing, art, and other content, [Creative
+Commons licenses][cc-cal] are popular; section {ref}`open-licenses` above provides
+more details about licensing non-software content.
+
+:::{seealso}
+See also the Open Source Initiative's [FAQ answer about which license to
+choose][osi-cal] for even more about licensing software.
 :::
