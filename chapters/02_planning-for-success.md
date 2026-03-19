@@ -377,19 +377,37 @@ Different contexts often benefit from different naming conventions. For
 instance, it's usually a helpful to have separate naming conventions for files
 and for code.
 
-
-### File and Directory Names
-
-:::{important}
-Choose filenames that are human-readable, machine-readable, and have a
-meaningful order when sorted alphabetically.
+:::{figure} /images/xkcd_iso_8601.png
+---
+name: xkcd-iso-8601
+alt:
+---
+"ISO 8601" from ["xkcd"][xkcd] by Randall Munroe ([license][xkcd-license]).
 :::
 
-The UC Davis Library [Research Data Managment Guide][rdm-guide-filenaming]
-provides an overview of these basic principles and how to apply them when
-naming your files and directories.
+[xkcd]: https://xkcd.com/
+[xkcd-license]: https://xkcd.com/license.html
 
-[rdm-guide-filenaming]: https://guides.library.ucdavis.edu/data-management/file-naming
+Choose filenames that are human-readable, machine-readable, and have a
+meaningful order when sorted alphabetically. We recommend the following rules
+for naming files:
+
++ Make the name descriptive (can someone guess the contents from the name?)
++ Avoid spaces, punctuation, accented characters, and other special characters
++ Use lowercase unless there is a compelling reason for uppercase
++ Use underscores `_` to separate fields (distinct pieces of information, such
+  as dates and descriptions)
++ Use dashes `-` to separate words within fields
++ Write dates and times in [ISO 8601 format][iso-8601], which orders units from
+  largest to smallest (for example, year-month-day as in `2023-09-20`; also see
+  {numref}`Figure %s<xkcd-iso-8601>`)
++ Pad numbers with leading zeros to the width of the largest number you
+  anticipate
+
+[iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
+
+DataLab follows these rules for almost all projects, with some simplifying
+exceptions around how we use underscores and dashes.
 
 :::{tip}
 Before starting your project, it's a good idea to check if there are any
@@ -406,11 +424,14 @@ presentation][how-to-name-files].
 
 Prefer an essay over a presentation? See Douglas MacDonald's [On Naming
 Things][on-naming-things].
+
+See the [File Naming Conventions][rdm-guide-filenaming] page in the Library's
+Research Data Management Guide for more suggestions about naming conventions.
 :::
 
 [how-to-name-files]: https://github.com/jennybc/how-to-name-files
 [on-naming-things]: https://www.douganddata.com/2022/07/on-naming-things/
-
+[rdm-guide-filenaming]: https://guides.library.ucdavis.edu/data-management/file-naming
 
 <!-- TODO: Think "Open" -->
 (sec-prefer-open-source-software)=
