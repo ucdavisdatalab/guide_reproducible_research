@@ -1,4 +1,4 @@
-# Preface
+# Overview
 
 A research project is **reproducible** if a different researcher can carry
 out the same analysis with the same data and produce the same overall result.
@@ -46,9 +46,11 @@ We use [this slide deck][slides] when we present this workshop.
 
 [slides]: https://docs.google.com/presentation/d/1uez0jDi5itswL6La3hj9DUucjNR30EKLCeh8KIzK2WA/edit?usp=sharing
 
+<!--
 The entire workshop is summarized by [this cheat sheet][cheat].
 
 [cheat]: https://docs.google.com/document/d/1Ris4HHFZz_3yPJxvVw8vt_qS6WFxV9SlFQ86oznece8/edit?usp=sharing
+-->
 :::
 
 
