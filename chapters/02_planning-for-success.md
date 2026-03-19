@@ -132,7 +132,7 @@ often can and should be considered "data" as well.
 Many projects (such as those with personal health data or other sensitive
 information) require extra consideration when developing your DMSP. You must
 consider things like deidentification of data, secure storage, and other
-privasy considerations. Learn more on the Library [Research Data Management
+privacy considerations. Learn more from the Library's [Research Data Management
 Guide][rdmguide_privacy] or [consult with a librarian][rdm_email]!
 
 [rdmguide_privacy]: https://guides.library.ucdavis.edu/data-management/confidentiality
