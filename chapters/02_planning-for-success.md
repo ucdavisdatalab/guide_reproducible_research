@@ -187,6 +187,13 @@ You may also find these external guides useful:
 (establish-directory-structure)=
 ## Establish a Directory Structure
 
+::::{margin}
+::::{note}
+A **directory** is a container for the files on your computer. It can be
+helpful to think of directories like the folders in a filing cabinet.
+::::
+:::
+
 Create a separate, dedicated directory, often called a **repository**, for each
 of your projects. Store everything related to the project there. This will make
 it easier to find files and also to share specific projects with others. Use
@@ -226,10 +233,13 @@ structure might include:
 For more examples of directory structures, see:
 
 * DataLab's [Project Template][datalab-template]
+* The [Directory Structures][libguide-directory] page in the Library's Research
+  Data Management Guide
 * [Cookiecutter Data Science][cookiecutter]
 * The Turing Way's [Creating Project Repositories guide][turing-repo]
 
 [datalab-template]: https://github.com/datalab-dev/template_project
+[libguide-directory]: https://guides.library.ucdavis.edu/data-management/directories
 [cookiecutter]: https://github.com/drivendata/cookiecutter-data-science
 [turing-repo]: https://the-turing-way.netlify.app/project-design/project-repo/project-repo-advanced
 :::

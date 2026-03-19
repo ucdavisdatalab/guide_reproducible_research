@@ -129,24 +129,6 @@ since they're convenient for data entry.
 ## Write & Maintain READMEs
 
 <!-- FIXME: backticks around file names -->
-::::{margin}
-::::{note}
-A **directory** is a container for the files on your computer. It can be
-helpful to think of directories like the folders in a filing cabinet. Keeping
-your file system organized is important because it makes finding and accessing
-a specific file a lot easier, and enables you to more easily backup and share
-your work on a project. A directory can have multiple directories nested within
-it, which further helps keep the different files, such as your documents and
-datasets, organized. For example, your "research project" directory may contain
-"documentation", "data", and "code" directories that each contain the relative
-files for your project. For more tips about organizing your digital files, see
-the [UC Davis Library Research Data Management Guide on Directory
-Structures][libguide-directory].
-::::
-:::
-
-[libguide-directory]: https://guides.library.ucdavis.edu/data-management/directories
-
 A **README** is one of the most important documents in your research project.
 The README introduces and explains a project, or the contents of a specific
 directory within a project. READMEs should generally be plain-text (`.txt`) or
