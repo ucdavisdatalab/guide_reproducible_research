@@ -13,4 +13,6 @@ parts:
       - file: chapters/03_daily-habits-for-everyone
       - file: chapters/04_reproducible-computing
       - file: chapters/05_dissemination-sharing
+  - caption: "Appendices"
+    chapters:
       - file: chapters/references

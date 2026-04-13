@@ -1,4 +1,4 @@
-# Appendix: References
+# References
 
 Many other people have written excellent guides, articles, and blogs about
 doing reproducible research computing. Here are a few of the ones we think
